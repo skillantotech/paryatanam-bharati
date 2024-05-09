@@ -1,0 +1,6 @@
+.row .column:nth-child(1){
+    color: red;
+}
+.column:first-child {
+    color: aqua;
+}
