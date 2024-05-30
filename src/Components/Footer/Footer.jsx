@@ -1,5 +1,5 @@
 import React from "react";
-import NewsLetter from "../Newsletter/Newsletter";
+import NewsLetter from "./Newsletter/Newsletter";
 import MainFooter from "./MainFooter/MainFooter";
 import BottomFooter from "./MainFooter/BottomFooter";
 
