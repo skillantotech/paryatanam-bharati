@@ -3,7 +3,15 @@ import { Link } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa6";
 import TopHeader from "./TopHeader";
 import MiddleHeader from "./MiddleHeader";
-
+import { IoIosArrowRoundForward } from "react-icons/io";
+import {
+  NavbarMenu,
+  DiscoverSubMenu,
+  TourismSubMenu,
+  PackagesSubmenu,
+  ArtAndCultureSubmenu,
+  CuisineSubmenu,
+} from "./NavData";
 // import { HiBars3CenterLeft, HiXMark } from "react-icons/hi2";
 
 const Header = () => {
@@ -15,97 +23,176 @@ const Header = () => {
       <MiddleHeader />
       <nav className=" border-b shadow-lg relative ">
         <div className="max-width-wrapper justify-center md:h-10 flex items-center relative max-w-screen-xl mx-auto ">
-         
           {/* Nav Links */}
-          <ul className="md:px-2 hidden md:flex gap-2 lg:gap-5">
-            <li className="relative group">
-              <Link
-                to={"/"}
-                className="flex py-4 px-2 font-semibold items-center hover:bg-gray-50 group-hover:text-blue-800"
-              >
-                <span>Home</span>
-              </Link>
-              <div className="absolute h-0.5 w-0 transition-all duration-300 group-hover:w-full group-hover:bg-blue-800"></div>
-            </li>
-            <li className="relative group">
-              <Link
-                to={"/about"}
-                className="flex py-4 px-2 font-semibold items-center whitespace-nowrap hover:bg-gray-50 group-hover:text-blue-800"
-              >
-                <span>About Us</span>
-              </Link>
-              <div className="absolute h-0.5 w-0 transition-all duration-300 group-hover:w-full group-hover:bg-blue-800"></div>
-            </li>
-            {/* Dropdown Navlinks */}
-            <li className="relative parent group">
-              <Link
-                href=""
-                className="flex justify-between py-4 px-2 font-semibold items-center hover:bg-gray-50 group-hover:text-blue-800 space-x-2"
-              >
-                <span>Explore</span>
-                <FaChevronDown className="size-4 font-bold fill-current pb-1 group-hover:text-blue-800" />
-              </Link>
-              <div className="absolute h-0.5 w-0 transition-all duration-300 group-hover:w-full group-hover:bg-blue-800"></div>
 
-              <ul className="child transition duration-300 md:absolute top-full left-0 md:w-48 bg-white md:shadow-lg md:rounded-b group-hover:block hidden ">
-                <li className="relative">
-                  <Link
-                    to="/discover-india"
-                    className="flex px-4 py-3 font-semibold border-t-2 border-blue-800 hover:bg-gray-50 hover:text-blue-800"
-                  >
-                    Discover India
-                  </Link>
-                  {/* <div className="absolute h-0.5 w-0 transition-all duration-300 group-hover:w-full group-hover:bg-blue-800"></div> */}
-                </li>
-                <li className="relative ">
-                  <Link
-                    to="/art-culture"
-                    className="flex px-4 py-3 font-semibold hover:bg-gray-50 hover:text-blue-800"
-                  >
-                    Art & Culture
-                  </Link>
-                  {/* <div className="absolute h-0.5 w-0 transition-all duration-300 group-hover:w-full group-hover:bg-blue-800"></div> */}
-                </li>
-                <li className="relative">
-                  <Link
-                    to="/cuisine"
-                    className="flex px-4 py-3 font-semibold hover:bg-gray-50 hover:text-blue-800"
-                  >
-                    Cuisine
-                  </Link>
-                  {/* <div className="absolute h-0.5 w-0 transition-all duration-300 group-hover:w-full group-hover:bg-blue-800"></div> */}
-                </li>
-              </ul>
-            </li>
+          <ul className="md:px-2 hidden md:flex gap-2 lg:gap-5 ">
+            {NavbarMenu.map((menu, index) => (
+              <li key={`Nav-${index}`} className="group">
+                <div key={`Item-${index}`}
+                  className="flex py-2 px-2 font-semibold items-center group-hover:text-blue-800"
+                >
+                  <Link to={menu.link}>{menu.name}</Link>
+                  {menu.id == 1 && (
+                    <div className="Sb absolute hidden group-hover:flex h-[350px] top-10 left-0 w-full z-50 ">
+                      {
+                        <div className="SubMenu p-5 flex w-full justify-between border-t-4 border-blue-500 rounded-b-xl bg-white shadow-lg">
+                          {DiscoverSubMenu.map((submenu, index) => (
+                            <div key={index} className="flex flex-col gap-2 ">
+                              <div
+                                key={`'DicoverSubMenu'${index}`}
+                                className="flex text-l font-semibold "
+                              >
+                                {submenu.submenu_name}
+                              </div>
+                              <div className="">
+                                <div className="flex flex-col text-black">
+                                  {DiscoverSubMenu[index].submenu_items.map(
+                                    (e, i) => (
+                                      <div
+                                        key={`'${submenu.submenu_name}-${i}'`}
+                                        className=" text-sm font-normal hover:translate-x-1 hover:text-red-700 ease-linear duration-200"
+                                      >
+                                        <Link to={e.link}>{e.name}</Link>
+                                      </div>
+                                    )
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      }
+                    </div>
+                  )}
 
-            <li className="relative group">
-              <Link
-                to={"/blogs"}
-                className="flex py-4 px-2 font-semibold items-center hover:bg-gray-50 group-hover:text-blue-800"
-              >
-                <span>Blogs</span>
-              </Link>
-              <div className="absolute h-0.5 w-0 transition-all duration-300 group-hover:w-full group-hover:bg-blue-800"></div>
-            </li>
-            <li className="relative group">
-              <Link
-                to={"/faq"}
-                className="flex py-4 px-2 font-semibold items-center hover:bg-gray-50 group-hover:text-blue-800"
-              >
-                <span>FAQs</span>
-              </Link>
-              <div className="absolute h-0.5 w-0 transition-all duration-300 group-hover:w-full group-hover:bg-blue-800"></div>
-            </li>
-            <li className="relative group">
-              <Link
-                to={"/contact"}
-                className="flex py-4 px-2 font-semibold items-center hover:bg-gray-50 group-hover:text-blue-800"
-              >
-                <span>Contact</span>
-              </Link>
-              <div className="absolute h-0.5 w-0 transition-all duration-300 group-hover:w-full group-hover:bg-blue-800"></div>
-            </li>
+                  {/* Tourism Submenu */}
+
+                  {menu.id == 2 && (
+                    <div className="relative">
+                      <div className="Sb absolute hidden group-hover:flex top-5 left-[-60px] w-full z-50">
+                        {
+                          <div className="SubMenu flex flex-col justify-between border-t-4 border-blue-500 bg-white shadow-lg ">
+                            {TourismSubMenu.map((submenu, index) => (
+                              <div
+                                key={`'TourismSubMenu'${index} `}
+                                className="flex text-l p-2 px-3 w-[230px] relative items-center font-semibold hover:bg-gray-100 ease-linear duration-300"
+                              >
+                                {submenu.submenu_name}
+                              </div>
+                            ))}
+                          </div>
+                        }
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Packages SubMenu */}
+
+                  {menu.id == 3 && (
+                    <div className="relative">
+                      <div className="Sb absolute hidden group-hover:flex top-5 left-[-70px] w-full z-50">
+                        {
+                          <div className="SubMenu flex flex-col justify-between border-t-4 border-blue-500 bg-white shadow-lg">
+                            {PackagesSubmenu.map((submenu, index) => (
+                              <div
+                                key={`'PackagesSubmenu'${index} `}
+                                className="flex text-l w-[230px] font-semibold p-2 px-3 hover:bg-gray-100 ease-linear duration-300"
+                              >
+                                {submenu.submenu_name}
+                              </div>
+                            ))}
+                          </div>
+                        }
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Art & Culture */}
+
+                  {menu.id == 4 && (
+                    <div className="relative">
+                      <div className="Sb absolute hidden group-hover:flex top-5 left-[-115px] w-full z-50">
+                        {
+                          <div className="SubMenu flex flex-col flex-wrap justify-between border-t-4 border-blue-500 bg-white shadow-lg">
+                            {ArtAndCultureSubmenu.map((submenu, index) => {
+                              {
+                                return (
+                                  <>
+                                    <div
+                                      key={index}
+                                      className="flex text-l px-3 p-2 font-semibold w-[230px] hover:bg-gray-100 ease-linear duration-300"
+                                    >
+                                      {submenu.submenu_name}
+                                    </div>
+                                    {/* <div className="">
+                                        <div className="flex flex-col text-black">
+                                          {ArtAndCultureSubmenu[
+                                            index
+                                          ].submenu_items.map((e) => {
+                                            return (
+                                              <div
+                                                key={index}
+                                                className=" text-sm font-normal hover:translate-x-1 ease-linear duration-200"
+                                              >
+                                                {e.name}
+                                              </div>
+                                            );
+                                          })}
+                                        </div>
+                                      </div> */}
+                                  </>
+                                );
+                              }
+                            })}
+                          </div>
+                        }
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Cuisine */}
+
+                  {menu.id == 5 && (
+                    <div className="Sb absolute hidden group-hover:flex h-[350px] top-10 left-0 w-full z-50">
+                      {
+                        <div className="SubMenu p-5 flex w-full justify-between flex-wrap border-t-4 border-blue-500 bg-white shadow-lg">
+                          {CuisineSubmenu.map((submenu, index) => (
+                            <>
+                              <div className="flex flex-col gap-2 ">
+                                <div
+                                  key={`'CuisineSubMenu'${index} `}
+                                  className="flex text-l font-semibold"
+                                >
+                                  {submenu.submenu_name}
+                                </div>
+                                <div className="">
+                                  <div className="flex flex-col text-black">
+                                    {CuisineSubmenu[index].submenu_items.map(
+                                      (e, i) => {
+                                        return (
+                                          <div
+                                            key={`'${submenu.submenu_name}-${i}'`}
+                                            className=" text-sm font-normal hover:translate-x-1 ease-linear duration-200"
+                                          >
+                                            {e.name}
+                                          </div>
+                                        );
+                                      }
+                                    )}
+                                  </div>
+                                </div>
+                              </div>
+                            </>
+                          ))}
+                        </div>
+                      }
+                    </div>
+                  )}
+                </div>
+              </li>
+            ))}
           </ul>
+
           {/* <div className="flex ml-auto md:ml-0 mr-2 gap-2">
             <Link
               to="/login"
@@ -296,8 +383,9 @@ const Header = () => {
             {/* Responsive NavLinks End */}
           </div>
           {/* Responsive Header End */}
+
+          <div className="w-full h-[60px] shadow-sm md:hidden"></div>
         </div>
-        <div className="w-full h-[60px] shadow-sm md:hidden"></div>
       </nav>
     </header>
   );
