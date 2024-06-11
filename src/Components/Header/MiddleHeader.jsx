@@ -1,9 +1,6 @@
 import React from "react";
 import BrandLogo from "../../../public/assets/paryatanam-logo.svg";
 import { Link } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaCaretDown } from "react-icons/fa";
 
 function MiddleHeader() {
   return (
@@ -19,20 +16,6 @@ function MiddleHeader() {
             alt="Paryatanam Bharati Logo"
           />
         </Link>
-        {/* <div className="SocialLinks md:flex text-4xl overflow-hidden items-center">
-          <Link>
-            <FaFacebook />
-          </Link>
-          <Link>
-            <FaInstagram />
-          </Link>
-          <Link>
-            <FaXTwitter />
-          </Link>
-          <Link>
-            <FaYoutube />
-          </Link>
-        </div> */}
 
         {/* Search Bar */}
         <div className="SearchBar md:flex items-center w-[95vw] md:w-[450px] z-20 absolute top-[75px] md:top-1/2 left-1/2 md:translate-y-[-50%] translate-x-[-50%]">
@@ -75,7 +58,7 @@ function MiddleHeader() {
         <div className="flex items-center ml-5 md:ml-0 mr-2 gap-2">
             <Link
               to="/login"
-              className="bg-black hover:bg-white text-white hover:text-black hover:lg:text-blue-800 border-2 border-black font-semibold px-3 sm:px-4 xl:px-6 py-2 rounded-xl transition-all duration-300 ease-in-out md:static absolute right-16"
+              className="bg-black hover:bg-white text-white hover:text-black  border-2 border-black font-semibold px-3 sm:px-4 xl:px-6 py-2 rounded-xl transition-all duration-300 ease-in-out md:static absolute right-16"
             >
               Sign In
             </Link>

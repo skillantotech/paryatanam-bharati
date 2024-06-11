@@ -2,8 +2,10 @@ import React from "react";
 
 function Newsletter() {
   return (
-    <div className="Newsletter max-w-7xl mt-2 sm:flex sm:justify-between">
-      <div className="Newsletter-intro">
+    
+    <div className="Newsletter mt-2 px-2">
+      <div className="sm:flex sm:justify-between max-w-7xl mx-auto justify-between">
+      <div className="Newsletter-intro ">
         <h3 className=" font-semibold">Join our Newsletter</h3>
         <p className=" text-sm">
           Stay updated with latest travel news and offers
@@ -19,14 +21,16 @@ function Newsletter() {
           <button
             type="submit"
             value="Submit"
-            className=" h-8 px-3 border max-[400px]:w-[100%] border-gray-800 transition-all duration-300 ease-linear hover:bg-slate-900 hover:text-white"
+            className=" h-8 px-3 border max-[400px]:w-[100%] border-gray-800 bg-black text-gray-200 transition-all duration-300 ease-linear hover:border-gray-700 hover:bg-transparent hover:backdrop-blur-md hover:text-white"
           >
             Submit
           </button>
         </form>
         <p className="text-sm mt-1">By subscribing you agree to our privacy policy</p>
       </div>
+      </div>
     </div>
+    
   );
 }
 

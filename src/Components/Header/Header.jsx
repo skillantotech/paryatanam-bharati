@@ -28,7 +28,8 @@ const Header = () => {
           <ul className="md:px-2 hidden md:flex gap-2 lg:gap-5 ">
             {NavbarMenu.map((menu, index) => (
               <li key={`Nav-${index}`} className="group">
-                <div key={`Item-${index}`}
+                <div
+                  key={`Item-${index}`}
                   className="flex py-2 px-2 font-semibold items-center group-hover:text-blue-800"
                 >
                   <Link to={menu.link}>{menu.name}</Link>
@@ -38,22 +39,24 @@ const Header = () => {
                         <div className="SubMenu p-5 flex w-full justify-between border-t-4 border-blue-500 rounded-b-xl bg-white shadow-lg">
                           {DiscoverSubMenu.map((submenu, index) => (
                             <div key={index} className="flex flex-col gap-2 ">
-                              <div
+                              <Link
+                                path={submenu.link}
                                 key={`'DicoverSubMenu'${index}`}
                                 className="flex text-l font-semibold "
                               >
                                 {submenu.submenu_name}
-                              </div>
+                              </Link>
                               <div className="">
                                 <div className="flex flex-col text-black">
                                   {DiscoverSubMenu[index].submenu_items.map(
                                     (e, i) => (
-                                      <div
+                                      <Link
+                                        to={e.link}
                                         key={`'${submenu.submenu_name}-${i}'`}
-                                        className=" text-sm font-normal hover:translate-x-1 hover:text-red-700 ease-linear duration-200"
+                                        className=" text-sm font-normal hover:translate-x-1 hover:text-blue-800 ease-linear duration-200"
                                       >
-                                        <Link to={e.link}>{e.name}</Link>
-                                      </div>
+                                        {e.name}
+                                      </Link>
                                     )
                                   )}
                                 </div>
@@ -73,12 +76,13 @@ const Header = () => {
                         {
                           <div className="SubMenu flex flex-col justify-between border-t-4 border-blue-500 bg-white shadow-lg ">
                             {TourismSubMenu.map((submenu, index) => (
-                              <div
+                              <Link
+                                path={submenu.link}
                                 key={`'TourismSubMenu'${index} `}
                                 className="flex text-l p-2 px-3 w-[230px] relative items-center font-semibold hover:bg-gray-100 ease-linear duration-300"
                               >
                                 {submenu.submenu_name}
-                              </div>
+                              </Link>
                             ))}
                           </div>
                         }
@@ -118,12 +122,13 @@ const Header = () => {
                               {
                                 return (
                                   <>
-                                    <div
+                                    <Link
+                                      path={submenu.link}
                                       key={index}
                                       className="flex text-l px-3 p-2 font-semibold w-[230px] hover:bg-gray-100 ease-linear duration-300"
                                     >
                                       {submenu.submenu_name}
-                                    </div>
+                                    </Link>
                                     {/* <div className="">
                                         <div className="flex flex-col text-black">
                                           {ArtAndCultureSubmenu[
@@ -170,12 +175,13 @@ const Header = () => {
                                     {CuisineSubmenu[index].submenu_items.map(
                                       (e, i) => {
                                         return (
-                                          <div
+                                          <Link
+                                            path={e.link}
                                             key={`'${submenu.submenu_name}-${i}'`}
-                                            className=" text-sm font-normal hover:translate-x-1 ease-linear duration-200"
+                                            className=" text-sm font-normal hover:translate-x-1 hover:text-blue-800 ease-linear duration-200"
                                           >
                                             {e.name}
-                                          </div>
+                                          </Link>
                                         );
                                       }
                                     )}

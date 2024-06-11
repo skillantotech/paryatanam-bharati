@@ -1,6 +1,12 @@
-.row .column:nth-child(1){
-    color: red;
+.Footer-Section {
+    background-image: url(./../../../../public/Black\ And\ Green\ Simple\ Travel\ Banner\ Landscape.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
-.column:first-child {
-    color: aqua;
+.TopHeader{
+    background-image: url(./../../../../public/assets/Black\ And\ Blue\ Simple\ Travel\ Banner\ Landscape.png);
+    background-repeat: no-repeat;
+    background-size: fill;
 }
+

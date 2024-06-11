@@ -6,12 +6,14 @@ import BottomFooter from "./MainFooter/BottomFooter";
 
 function Footer() {
   return (
-    <section className="Footer-Section flex flex-col p-3 gap-2 max-w-7xl mx-auto">
+    <section className="Footer-Section flex flex-col gap-2 w-full py-4 pt-10">
       <NewsLetter />
-      <div className="mt-8">
+      <div className="MainFooter mt-8 px-2">
         <MainFooter />
       </div>
-      <hr className="border border-slate-950"/>
+      <div className="">
+      <hr className="border border-gray-500 max-w-7xl mx-auto"/>
+      </div>
       <BottomFooter/>
     </section>
   );

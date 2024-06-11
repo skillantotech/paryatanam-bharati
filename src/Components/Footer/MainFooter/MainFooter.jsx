@@ -3,26 +3,47 @@ import "./MainFooter.css";
 import BrandLogo from "../../../../public/assets/paryatanam-logo.svg";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function MainFooter() {
   return (
-    <div className=" max-w-7xl row flex flex-wrap justify-between flex-row gap-3">
+    <div className="mx-auto max-w-7xl row flex flex-wrap justify-between flex-row gap-3 text-gray-300">
       <div className="logo flex flex-col w-[220px] gap-y-3">
         <div className="h-[70px] overflow-hidden relative">
-          <img src={BrandLogo} alt="" className="absolute top-[-77.5px] -left-[12px]" />
+          <img
+            src={BrandLogo}
+            alt=""
+            className="absolute top-[-77.5px] -left-[12px]"
+          />
         </div>
-        <div className="text-sm">Discover the rich tapestry of India through our curated tourism experiences. Let us be your trusted companion in exploring the wonders of this diverse land.
+        <div className="text-sm">
+          Discover the rich tapestry of India through our curated tourism
+          experiences. Let us be your trusted companion in exploring the wonders
+          of this diverse land.
         </div>
-        <div className="flex text-2xl gap-3 my-2 text-gray-700 ">
-        <FaFacebook className=" hover:text-slate-950 transition-all duration-300 ease-linear"/>
-        <FaInstagram className=" hover:text-slate-950 transition-all duration-300 ease-linear"/>
-        <FaLinkedin className=" hover:text-slate-950 transition-all duration-300 ease-linear"/>
-        <FaXTwitter className=" hover:text-slate-950 transition-all duration-300 ease-linear"/>
-        <FaYoutube className=" hover:text-slate-950 transition-all duration-300 ease-linear"/>
+        <div className="flex text-2xl gap-3 my-2 text-gray-200 ">
+          <Link>
+            <FaFacebook className=" hover:text-white hover:scale-110 transition-all duration-300 ease-linear" />
+          </Link>
+          <Link>
+            <FaInstagram className=" hover:text-white hover:scale-110 transition-all duration-300 ease-linear" />
+          </Link>
+          <Link>
+            <FaLinkedin className=" hover:text-white hover:scale-110 transition-all duration-300 ease-linear" />
+          </Link>
+          <Link>
+            <FaXTwitter className=" hover:text-white hover:scale-110 transition-all duration-300 ease-linear" />
+          </Link>
+          <Link>
+            <FaYoutube className=" hover:text-white hover:scale-110 transition-all duration-300 ease-linear" />
+          </Link>
         </div>
       </div>
       <div className="column flex flex-col w-40 sm:justify-center gap-y-2">
-        <a href="" className=" text-lg font-semibold mb-1">
+        <a
+          href=""
+          className=" hover:text-white hover:scale-105 ease-linear duration-100 text-lg font-semibold mb-1"
+        >
           Useful Links
         </a>
         <a href="">Explore India</a>
@@ -32,7 +53,10 @@ function MainFooter() {
         <a href="">FAQs</a>
       </div>
       <div className="column flex flex-col w-40 sm:justify-center gap-y-2">
-        <a href="" className=" text-lg font-semibold mb-2">
+        <a
+          href=""
+          className="hover:text-white hover:scale-105 ease-linear duration-100 text-lg font-semibold mb-2"
+        >
           Discover India
         </a>
         <a href="">Explore India</a>
@@ -42,7 +66,10 @@ function MainFooter() {
         <a href="">FAQs</a>
       </div>
       <div className="column flex flex-col w-40 sm:justify-center gap-y-2">
-        <a href="" className=" text-lg font-semibold mb-1">
+        <a
+          href=""
+          className="hover:text-white hover:scale-105 ease-linear duration-100 text-lg font-semibold mb-1"
+        >
           Top Destinations
         </a>
         <a href="">About Us</a>
@@ -52,7 +79,10 @@ function MainFooter() {
         <a href="">Testimonials</a>
       </div>
       <div className="column flex flex-col w-40 sm:justify-center gap-y-2">
-        <a href="" className=" text-lg font-semibold mb-1">
+        <a
+          href=""
+          className="hover:text-white hover:scale-105 ease-linear duration-100 text-lg font-semibold mb-1"
+        >
           Travel Resources
         </a>
         <a href="">FAQs</a>
