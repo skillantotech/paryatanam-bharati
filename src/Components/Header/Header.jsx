@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa6";
 import TopHeader from "./TopHeader";
 import MiddleHeader from "./MiddleHeader";
-import { IoIosArrowRoundForward } from "react-icons/io";
 import {
   NavbarMenu,
   DiscoverSubMenu,
@@ -12,7 +11,6 @@ import {
   ArtAndCultureSubmenu,
   CuisineSubmenu,
 } from "./NavData";
-// import { HiBars3CenterLeft, HiXMark } from "react-icons/hi2";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

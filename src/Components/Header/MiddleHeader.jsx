@@ -1,5 +1,5 @@
 import React from "react";
-import BrandLogo from "../../../public/assets/paryatanam-logo.svg";
+import BrandLogo from "../../assets/Paryatanbharati logo_PNG.png";
 import { Link } from "react-router-dom";
 
 function MiddleHeader() {
@@ -11,7 +11,7 @@ function MiddleHeader() {
 
         <Link className="flex items-center h-[70px] overflow-y-hidden" to="/">
           <img
-            className="h-auto w-[170px] min-w-[170px] mb-3"
+            className="h-70px w-[70px] min-w-[70px] ml-5 mb-3"
             src={BrandLogo}
             alt="Paryatanam Bharati Logo"
           />

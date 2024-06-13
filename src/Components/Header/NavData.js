@@ -1,6 +1,3 @@
-import Punjab from "../../pages/Punjab";
-import Rajasthan from "../../pages/Rajasthan";
-
 export const NavbarMenu = [
   { id: 0, name: "Home", link: "/" },
   { id: 1, name: "Discover India", link: "/discover-india" },
