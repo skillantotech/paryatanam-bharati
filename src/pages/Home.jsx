@@ -41,9 +41,10 @@ const Home = () => {
             <div className="ChooseUsText absolute left-0 top-0 h-full">
               <h3 className="mt-6 text-2xl font-semibold">Local Insights</h3>
               <p className="my-4 mb-0 font-normal leading-relaxed tracking-wide">
-                Benefit from our deep connections and local knowledge, allowing
-                you to discover hidden gems and immerse yourself in authentic
-                cultural experiences.
+                Experience destinations like a local with our insider insights.
+                From hidden gems to off-the-beaten-path attractions, delve into
+                each location's culture and heritage. Discover landmark stories
+                for a richer travel experience.
               </p>
             </div>
           </div>
@@ -53,9 +54,9 @@ const Home = () => {
                 Sustainability Commitment
               </h3>
               <p className="my-4 mb-0 font-normal leading-relaxed tracking-wide">
-                We're committed to responsible tourism, minimizing environmental
-                impact, and supporting local communities to preserve destination
-                beauty and authenticity.
+                We are committed to responsible tourism, minimizing
+                environmental impact, and supporting local communities to
+                preserve destination beauty and authenticity.
               </p>
             </div>
           </div>
