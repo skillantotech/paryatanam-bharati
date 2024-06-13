@@ -2,17 +2,18 @@
 
 import { FaLocationDot } from "react-icons/fa6";
 import { FaQuoteLeft } from "react-icons/fa";
+// import { FaQuoteLeft } from "react-icons/fa6";
 import ProfileLogo from './../../assets/pexels-rahul-dogra-1439977-2779325.jpg'
 
 import { Carousel } from "flowbite-react";
 
 const customTheme = {
   root: {
-    base: "h-full w-full",
+    base: "relative h-full w-full",
     leftControl:
-      "absolute right-52 bottom-[-250px] flex h-full items-center justify-center px-4 focus:outline-none",
+      "absolute right-24 bottom-[-200px] flex h-full items-center justify-center px-4 focus:outline-none",
     rightControl:
-      "absolute right-40 bottom-[-250px] flex h-full items-center justify-center px-4 focus:outline-none",
+      "absolute right-12 bottom-[-200px] flex h-full items-center justify-center px-4 focus:outline-none",
   },
   indicators: {
     active: {
@@ -20,7 +21,7 @@ const customTheme = {
       on: "bg-black dark:bg-gray-800",
     },
     base: "h-3 w-3 rounded-full",
-    wrapper: "absolute bottom-[-30px] left-40 flex -translate-x-1/2 space-x-3",
+    wrapper: "absolute bottom-[-40px] left-14 flex -translate-x-1/2 space-x-3",
   },
   item: {
     base: "absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2",
@@ -32,10 +33,6 @@ const customTheme = {
   control: {
     base: "inline-flex h-10 w-10 border border-black  items-center justify-center rounded-full bg-white/30 group-focus:outline-none group-active:scale-95 ease duration-300 sm:h-10 sm:w-10",
     icon: "h-5 w-10 text-black rounded-full dark:text-gray-800 sm:h-6 sm:w-6",
-  },
-  scrollContainer: {
-    base: "flex h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth rounded-lg",
-    snap: "snap-x",
   },
 };
 
@@ -171,7 +168,7 @@ export function CarouselHome() {
                   <div className="absolute h-12 w-12 rounded-full overflow-hidden border-2 border-gray-300 left-5 bottom-6">
                     <img src={ProfileLogo} alt="" className=""/>
                   </div>
-                  <span className="absolute left-6 text-5xl">
+                  <span className="absolute left-6 opacity-90 text-5xl">
                     <FaQuoteLeft />
                   </span>
                   <p className="text-2xl mt-14 ">{obj.comment}</p>
