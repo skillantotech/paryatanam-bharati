@@ -27,12 +27,13 @@ const Home = () => {
           <div className="ChooseUsCards rounded-md h-[400px] p-8 text-center shadow relative">
             <div className="ChooseUsText absolute left-0 top-0 h-full">
               <h3 className="mt-6 text-2xl font-semibold">
-                Tailored Experiences
+                Seamless Experience
               </h3>
               <p className="my-4 mb-0 font-normal leading-relaxed tracking-wide">
-                We customize everysustainable journey to match your unique interests and
-                preferences, ensuring a personalized and unforgettable
-                adventure.
+                Sit back, relax, and let us handle the details. From
+                transportation arrangements to activity bookings, we take care
+                of all the logistics so you can focus on making memories. Enjoy
+                a hassle-free experience from start to finish.
               </p>
             </div>
           </div>

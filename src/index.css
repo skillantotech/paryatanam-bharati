@@ -15,17 +15,17 @@
 .ChooseUsCards {
   transition: ease 0.3s;
   overflow: hidden;
-  background-image: url(./assets/pexels-parv-choudhary-724334-2870167.jpg);
+  background-image: url(./assets/pexels-rahul-dogra-1439977-2779325.jpg);
   /* filter: blur(1px);
   -webkit-filter: blur(1px); */
   background: linear-gradient(rgb(0, 0, 0, 0.8));
-  background-size: 110% 120%;
+  background-size: 100% 120%;
   background-repeat: no-repeat;
 }
 .ChooseUsCards2 {
   overflow: hidden;
-  background-image: url(./assets/pexels-rahul-dogra-1439977-2779325.jpg);
-  background-size: 100% 120%;
+  background-image: url(./assets/pexels-parv-choudhary-724334-2870167.jpg);
+  background-size: 110% 120%;
   background-repeat: no-repeat;
 }
 .ChooseUsCards3 {
