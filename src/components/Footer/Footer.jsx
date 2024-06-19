@@ -1,11 +1,14 @@
-// import GreenForest from "../../assets/images/footer-images/greenish-jungle.png";
+import GreenForest from "../../assets/images/footer-images/greenish-jungle.png";
 import NewsLetter from "./Newsletter/Newsletter";
 import MainFooter from "./MainFooter/MainFooter";
 // import "./MainFooter/MainFooter.css";
 import BottomFooter from "./MainFooter/BottomFooter";
 
 const Footer = () => (
-  <section className="Footer-Section bg-footer-green-jungle bg-no-repeat bg-cover text-white flex flex-col gap-2 w-full py-4 pt-10">
+  <section
+    className="Footer-Section [notworking(bg-footer-green-jungle)] bg-no-repeat bg-cover text-white flex flex-col gap-2 w-full py-4 pt-10"
+    style={{ backgroundImage: `url(${GreenForest})` }}
+  >
     <NewsLetter />
     <div className="MainFooter mt-8 px-2">
       <MainFooter />
