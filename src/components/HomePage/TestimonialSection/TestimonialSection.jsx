@@ -47,7 +47,7 @@ const TestimonialSection = () => {
   const customerReview = chunkArray(CustomerData, 2);
 
   return (
-    <section className="relative mt-12 mb-24 max-w-7xl mx-auto">
+    <section className="relative mt-12 mb-24 max-w-7xl mx-4 xl:mx-auto">
       <div className="flex flex-col gap-2">
         <h2 className="font-medium uppercase tracking-wider">
           Customer Testimonials

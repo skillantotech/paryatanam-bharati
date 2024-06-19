@@ -9,7 +9,7 @@ import HitButtonSection from "../../components/HomePage/HitButtonSection/HitBUtt
 
 const Home = () => {
   return (
-    <div className="mx-4 xl:mx-0">
+    <>
       <HeroSection />
       <ExplorePackageSection />
       <Tours />
@@ -18,7 +18,7 @@ const Home = () => {
       <BlogSection />
       <HitButtonSection />
       <TestimonialSection />
-    </div>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 const Tour = () => {
   return (
-    <div className="my-20">
+    <div className="my-20 max-w-7xl mx-4 xl:mx-auto">
       <div className="flex pl-32 pr-28 pt-6">
         <div className="font-bold text-3xl">
           <h1 className="my-4">

@@ -2,7 +2,7 @@ const WhyChooseUs = () => {
   return (
     <section
       id="features"
-      className="relative block px-6 py-10 md:py-8 md:px-10 max-w-7xl mx-auto"
+      className="relative block py-10 md:py-8 md:px-10 max-w-7xl mx-4 xl:mx-auto"
     >
       <div className="relative mx-auto max-w-5xl text-center">
         <span className="my-3 flex items-center justify-center font-medium uppercase tracking-wider">

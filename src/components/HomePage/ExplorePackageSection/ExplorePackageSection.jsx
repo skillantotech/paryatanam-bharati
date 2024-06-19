@@ -1,9 +1,9 @@
 // import Packages from "./../../assets/pexels-godson-bright-352845-962464.jpg";
-import packageImage from "../../../assets/images/1.webp";
+// import packageImage from "../../../assets/images/1.webp";
 
 const ExplorePackageSection = () => {
   return (
-    <div className="flex max-w-7xl mx-auto mt-20">
+    <div className="flex max-w-7xl mx-4 xl:mx-auto mt-20">
       <div className="h-80 w-1/2 flex items-center justify-center">
         <img
           src="https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=600"

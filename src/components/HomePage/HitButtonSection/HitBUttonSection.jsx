@@ -1,6 +1,6 @@
 function Adventure() {
   return (
-    <div className="max-w-7xl mx-auto mt-20">
+    <div className=" max-w-7xl mx-4 xl:mx-auto mt-20">
       <div className="flex border-2 border-black p-10">
         <div className="flex flex-col gap-2 w-3/4">
           <h2 className="font-bold text-3xl">

@@ -1,7 +1,7 @@
 const BlogSection = () => {
   return (
-    <div className="max-w-7xl mx-auto">
-      <h5 className="pb-3">Travel Insights</h5>
+    <div className="max-w-7xl mx-4 xl:mx-auto mt-8">
+      <h5 className="pb-2 font-medium uppercase tracking-wider">Travel Insights</h5>
       <h2 className="text-3xl font-bold pb-4">Discover the wonders of India through our blog posts</h2>
           <h5>Explore captivating stories and tips from around the world</h5>
       <div className="flex flex-col md:flex-row">

@@ -2,7 +2,7 @@ import { VscArrowRight } from "react-icons/vsc";
 
 const CuisineSection = () => {
   return (
-    <div className="lg:flex  p-28">
+    <div className="lg:flex max-w-7xl mx-4 xl:mx-auto">
       <div className="p-12">
         <h4 className="font-medium uppercase tracking-wider">Flavors of India</h4>
         <h2 className="pb-5 pt-3 text-3xl sm:text-4xl font-bold">
