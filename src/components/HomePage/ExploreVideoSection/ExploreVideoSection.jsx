@@ -12,10 +12,10 @@ const ExploreVideoSection = () => {
           </div>
 
           <div className="absolute inset-0 flex items-center justify-center cursor-pointer group">
-            <div className="flex items-center justify-center transition-all duration-300 rounded-full w-20 h-20 group-hover:w-28 group-hover:h-28 active:w-24 active:h-24 bg-white/20">
+            <div className="flex items-center justify-center transition-all duration-300 rounded-full w-20 h-20 group-hover:w-28 group-hover:h-28 group-active:w-24 group-active:h-24 bg-white/20">
               <div
                 type="button"
-                className="flex items-center justify-center w-14 h-14 lg:w-16 lg:h-16 text-white transition-all duration-150 rounded-full bg-gradient-to-r from-fuchsia-600 to-blue-600 group-hover:opacity-90 group-hover:scale-105 active:scale-95"
+                className="flex items-center justify-center w-14 h-14 lg:w-16 lg:h-16 text-white transition-all duration-150 rounded-full bg-gradient-to-r from-fuchsia-600 to-blue-600 group-hover:opacity-90 group-hover:scale-105 group-active:scale-95"
               >
                 {/* Play SVG Image */}
                 <svg
