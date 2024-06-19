@@ -13,9 +13,9 @@ export default {
     extend: {
       backgroundImage: {
         "footer-blue-jungle":
-          "url('./src/assets/images/footer-images/blueish-jungle.png')",
+          "url('src/assets/images/footer-images/blueish-jungle.png')",
         "footer-green-jungle":
-          "url('./src/assets/images/footer-images/greenish-jungle.png')",
+          "url('src/assets/images/footer-images/greenish-jungle.png')",
       },
       animation: {
         scrollX: "scrollX 35s linear infinite",

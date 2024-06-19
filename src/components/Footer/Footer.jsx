@@ -1,3 +1,4 @@
+// import GreenForest from "../../assets/images/footer-images/greenish-jungle.png";
 import NewsLetter from "./Newsletter/Newsletter";
 import MainFooter from "./MainFooter/MainFooter";
 import "./MainFooter/MainFooter.css";
