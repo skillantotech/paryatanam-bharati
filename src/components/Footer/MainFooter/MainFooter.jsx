@@ -1,4 +1,4 @@
-import "./MainFooter.css";
+// import "./MainFooter.css";
 import BrandLogo from "../../../../public/assets/logo/Paryatanmbharati logo_PNG.png";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
