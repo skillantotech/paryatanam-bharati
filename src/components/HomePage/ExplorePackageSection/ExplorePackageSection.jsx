@@ -4,13 +4,15 @@
 const ExplorePackageSection = () => {
   return (
     <div className="flex max-w-7xl mx-4 xl:mx-auto mt-20">
-      <div className="h-80 w-1/2 flex items-center justify-center">
-        <img
-          src="https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=600"
-          // src={packageImage}
-          alt="Placeholder"
-          className="object-cover h-full max-w-full"
-        />
+      <div className="w-1/2">
+        <div className="h-80 flex items-center justify-center">
+          <img
+            src="https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=600"
+            // src={packageImage}
+            alt="Placeholder"
+            className="object-cover h-full max-w-full"
+          />
+        </div>
       </div>
       <div className="w-1/2 flex flex-col justify-center px-8 relative">
         <h1 className="text-3xl font-bold mb-4">Custom Travel Packages</h1>

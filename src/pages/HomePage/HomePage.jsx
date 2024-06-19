@@ -6,12 +6,14 @@ import TestimonialSection from "../../components/HomePage/TestimonialSection/Tes
 import WhyChooseUs from "../../components/HomePage/WhyChooseUs/WhyChooseUs";
 import Tours from "../../components/HomePage/ExploreAbout/Tour";
 import HitButtonSection from "../../components/HomePage/HitButtonSection/HitBUttonSection";
+import ExploreVideoSection from "../../components/HomePage/ExploreVideoSection/ExploreVideoSection";
 
 const Home = () => {
   return (
     <>
       <HeroSection />
-      <ExplorePackageSection />
+      {/* <ExplorePackageSection /> */}
+      <ExploreVideoSection />
       <Tours />
       <WhyChooseUs />
       <CuisineSection />
