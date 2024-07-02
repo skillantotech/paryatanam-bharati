@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom classes */
+@layer utilities {
+  /* .animation-reverse {
+    animation-direction: reverse;
+  } */
+}
+
+.ChooseUsText {
+  transform: translateY(270px);
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  padding-top: 4rem;
+  background: linear-gradient(to bottom, transparent 0%, black 100%);
+  transition: ease 0.3s all;
+  backdrop-filter: drop-shadow(2px);
+}
+.ChooseUsCards {
+  transition: ease 0.3s;
+  overflow: hidden;
+  background-image: url("../src/assets/images/why-choose-us/pexels-rahul-dogra-1439977-2779325.jpg");
+  /* filter: blur(1px);
+  -webkit-filter: blur(1px); */
+  background: linear-gradient(rgb(0, 0, 0, 0.8));
+  background-size: 100% 120%;
+  background-repeat: no-repeat;
+}
+.ChooseUsCards2 {
+  overflow: hidden;
+  background-image: url("../src/assets/images/why-choose-us/pexels-parv-choudhary-724334-2870167.jpg");
+  background-size: 110% 120%;
+  background-repeat: no-repeat;
+}
+.ChooseUsCards3 {
+  overflow: hidden;
+  background-image: url("../src/assets/images/why-choose-us/pexels-agnieszka-palmowska-23342-631909.jpg");
+  background-size: auto 120%;
+  background-repeat: no-repeat;
+}
+@keyframes BlurAnimation {
+  from {
+    backdrop-filter: blur(3px);
+  }
+  to {
+    backdrop-filter: blur(3px);
+  }
+}
+
+.ChooseUsCards:hover .ChooseUsText {
+  transform: translateY(0);
+  animation: BlurAnimation ease;
+  transition: ease 0.4s all;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.35s;
+}
+.ChooseUsCards2:hover .ChooseUsText {
+  transform: translateY(0);
+  animation: BlurAnimation ease;
+  transition: ease 0.4s all;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.35s;
+}
+.ChooseUsCards3:hover .ChooseUsText {
+  transform: translateY(0);
+  animation: BlurAnimation ease;
+  transition: ease 0.4s all;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.35s;
+}
