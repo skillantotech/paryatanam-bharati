@@ -5,8 +5,8 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import Home from "./pages/HomePage/HomePage";
-import LogIn from "./pages/LogIn";
-import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn/SignIn";
+import SignUp from "./pages/SignUp/SignUp";
 import About from "./pages/About";
 import DiscoverIndia from "./pages/DiscoverIndia";
 import ArtAndCulture from "./pages/ArtAndCulture";
@@ -31,7 +31,7 @@ const router = createBrowserRouter(
           <Route path="faq" element={<FAQs />} />
           <Route path="contact" element={<Contact />} />
         </Route>
-        <Route path="login" element={<LogIn />} />
+        <Route path="signin" element={<SignIn />} />
         <Route path="sign-up" element={<SignUp />} />
       </Route>
       <Route path="*" element={<NotFound />} />

@@ -57,7 +57,7 @@ const TopHeader = () => {
         {/* Login and SignUp */}
         <div className="flex items-center ml-5 md:ml-0 mr-2 gap-2">
           <Link
-            to="/login"
+            to="/signin"
             className="bg-black hover:bg-white text-white hover:text-black hover:lg:text-blue-800 border-2 border-black font-semibold px-3 sm:px-4 xl:px-6 py-2 rounded-md transition-all duration-300 ease-in-out md:static absolute right-16"
           >
             Sign In
