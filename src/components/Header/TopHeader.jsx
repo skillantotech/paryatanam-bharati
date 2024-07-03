@@ -58,16 +58,16 @@ const TopHeader = () => {
         <div className="flex items-center ml-5 md:ml-0 mr-2 gap-2">
           <Link
             to="/signin"
-            className="bg-black hover:bg-white text-white hover:text-black hover:lg:text-blue-800 border-2 border-black font-semibold px-3 sm:px-4 xl:px-6 py-2 rounded-md transition-all duration-300 ease-in-out md:static absolute right-16"
+            className="bg-black hover:bg-gray-800 lg:bg-transparent lg:hover:bg-slate-200 text-white hover:text-black lg:text-black lg:hover:text-blue-800 border-2 border-black lg:border-none font-semibold px-3 sm:px-4 xl:px-6 py-2 rounded-md transition-all duration-300 ease-in-out md:static absolute right-16"
           >
             Sign In
           </Link>
-          {/* <Link
+          <Link
               to="/sign-up"
-              className="  bg-black hover:bg-white text-white hover:text-black border-2 border-black font-semibold px-4 xl:px-6 py-2 xl:py-3 rounded-xl transition-all duration-300 ease-in-out whitespace-nowrap lg:flex items-center hidden h-12"
+              className="  bg-black hover:bg-gray-800 text-white border-2 border-black font-semibold px-4 xl:px-6 py-2 xl:py-3 rounded-md transition-all duration-300 ease-in-out whitespace-nowrap lg:flex items-center hidden h-12"
             >
               Sign Up
-            </Link> */}
+            </Link>
         </div>
       </div>
     </div>

@@ -7,8 +7,8 @@ import {
   DiscoverSubMenu,
   TourismSubMenu,
   PackagesSubmenu,
-  ArtAndCultureSubmenu,
-  CuisineSubmenu,
+  ServicesSubmenu,
+  ExploreSubmenu,
 } from "../../../Data/NavData";
 
 const NavBar = ({ isSticky }) => {
@@ -16,24 +16,28 @@ const NavBar = ({ isSticky }) => {
   const [isExploreOpen, setIsExploreOpen] = useState(false);
 
   return (
-    <nav
-      className={`absolute w-full z-10 ${
-        isSticky ? "bg-white text-black shadow-lg" : "text-white"
-      }`}
-    >
-      <div className="max-width-wrapper justify-center md:h-10 flex items-center relative max-w-screen-xl mx-auto ">
+    <>
+      <nav className="max-width-wrapper justify-center md:h-10 flex items-center relative max-w-screen-xl mx-auto ">
         {/* Nav Links */}
         <ul className="md:px-2 hidden md:flex gap-2 lg:gap-5 ">
           {NavbarMenu.map((menu, index) => (
             <li key={`Nav-${index}`} className="group">
               <div
                 key={`Item-${index}`}
-                className="flex py-2 px-2 font-semibold items-center group-hover:text-blue-800"
+                // className="flex py-2 px-2 font-semibold items-center group-hover:text-blue-800"
+                className={`flex py-2 px-2 font-semibold items-center ${
+                  isSticky && "group-hover:text-blue-800"
+                }`}
               >
-                <Link to={menu.link} className="flex flex-nowrap items-center gap-2">
+                <Link
+                  to={menu.link}
+                  className="flex flex-nowrap items-center gap-2"
+                >
                   {menu.name}
-                  {menu.submenu && <FaChevronDown />}
+                  {menu.submenu && <FaChevronDown className="text-sm mt-1" />}
                 </Link>
+
+                {/* Discover Submenu */}
                 {menu.id == 1 && (
                   <div className="Sb absolute hidden group-hover:flex h-[350px] top-10 left-0 w-full z-50 ">
                     {
@@ -43,7 +47,7 @@ const NavBar = ({ isSticky }) => {
                             <Link
                               path={submenu.link}
                               key={`'DicoverSubMenu'${index}`}
-                              className="flex text-l font-semibold "
+                              className="flex text-l font-semibold text-blue-800"
                             >
                               {submenu.submenu_name}
                             </Link>
@@ -69,29 +73,8 @@ const NavBar = ({ isSticky }) => {
                   </div>
                 )}
 
-                {/* Tourism Submenu */}
-                {menu.id == 2 && (
-                  <div className="relative">
-                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-60px] w-full z-50">
-                      {
-                        <div className="SubMenu flex flex-col justify-between border-t-4 border-blue-500 bg-white shadow-lg ">
-                          {TourismSubMenu.map((submenu, index) => (
-                            <Link
-                              path={submenu.link}
-                              key={`TourismSubMenu${index} `}
-                              className="flex text-l p-2 px-3 w-[230px] relative items-center font-semibold hover:bg-gray-100 ease-linear duration-300"
-                            >
-                              {submenu.submenu_name}
-                            </Link>
-                          ))}
-                        </div>
-                      }
-                    </div>
-                  </div>
-                )}
-
                 {/* Packages SubMenu */}
-                {menu.id == 3 && (
+                {menu.id == 2 && (
                   <div className="relative">
                     <div className="Sb absolute hidden group-hover:flex top-5 left-[-70px] w-full z-50">
                       {
@@ -99,7 +82,7 @@ const NavBar = ({ isSticky }) => {
                           {PackagesSubmenu.map((submenu, index) => (
                             <div
                               key={`PackagesSubmenu${index} `}
-                              className="flex text-l w-[230px] font-semibold p-2 px-3 hover:bg-gray-100 ease-linear duration-300"
+                              className="flex text-l w-[230px] font-semibold p-2 px-3 text-blue-800 hover:bg-gray-100 ease-linear duration-300"
                             >
                               {submenu.submenu_name}
                             </div>
@@ -110,19 +93,65 @@ const NavBar = ({ isSticky }) => {
                   </div>
                 )}
 
-                {/* Art & Culture */}
-                {menu.id == 4 && (
+                {/* Services SubMenu */}
+                {menu.id == 3 && (
                   <div className="relative">
                     <div className="Sb absolute hidden group-hover:flex top-5 left-[-115px] w-full z-50">
                       {
                         <div className="SubMenu flex flex-col flex-wrap justify-between border-t-4 border-blue-500 bg-white shadow-lg">
-                          {ArtAndCultureSubmenu.map((submenu, index) => {
+                          {ServicesSubmenu.map((submenu, index) => {
                             {
                               return (
                                 <Link
                                   path={submenu.link}
                                   key={`ArtAndCultureSubmenu${index} `}
-                                  className="flex text-l px-3 p-2 font-semibold w-[230px] hover:bg-gray-100 ease-linear duration-300"
+                                  className="flex text-l px-3 p-2 font-semibold w-[230px] text-blue-800 hover:bg-gray-100 ease-linear duration-300"
+                                >
+                                  {submenu.submenu_name}
+                                </Link>
+                              );
+                            }
+                          })}
+                        </div>
+                      }
+                    </div>
+                  </div>
+                )}
+
+                {/* Tourism Submenu */}
+                {menu.id == 4 && (
+                  <div className="relative">
+                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-60px] w-full z-50">
+                      {
+                        <div className="SubMenu flex flex-col justify-between border-t-4 border-blue-500 bg-white shadow-lg ">
+                          {TourismSubMenu.map((submenu, index) => (
+                            <Link
+                              path={submenu.link}
+                              key={`TourismSubMenu${index} `}
+                              className="flex text-l p-2 px-3 w-[230px] relative items-center font-semibold text-blue-800 hover:bg-gray-100 ease-linear duration-300"
+                            >
+                              {submenu.submenu_name}
+                            </Link>
+                          ))}
+                        </div>
+                      }
+                    </div>
+                  </div>
+                )}
+
+                {/* Explore */}
+                {menu.id == 5 && (
+                  <div className="relative">
+                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-115px] w-full z-50">
+                      {
+                        <div className="SubMenu flex flex-col flex-wrap justify-between border-t-4 border-blue-500 bg-white shadow-lg">
+                          {ExploreSubmenu.map((submenu, index) => {
+                            {
+                              return (
+                                <Link
+                                  path={submenu.link}
+                                  key={`ArtAndCultureSubmenu${index} `}
+                                  className="flex text-l px-3 p-2 font-semibold w-[230px] text-blue-800 hover:bg-gray-100 ease-linear duration-300"
                                 >
                                   {submenu.submenu_name}
                                 </Link>
@@ -136,7 +165,7 @@ const NavBar = ({ isSticky }) => {
                 )}
 
                 {/* Cuisine */}
-                {menu.id == 5 && (
+                {/* {menu.id == 5 && (
                   <div className="Sb absolute hidden group-hover:flex h-[350px] top-10 left-0 w-full z-50">
                     {
                       <div className="SubMenu p-5 flex w-full justify-between flex-wrap border-t-4 border-blue-500 bg-white shadow-lg">
@@ -145,7 +174,7 @@ const NavBar = ({ isSticky }) => {
                             key={`'CuisineSubMenu'${index} `}
                             className="flex flex-col gap-2 "
                           >
-                            <div className="flex text-l font-semibold">
+                            <div className="flex text-l font-semibold text-blue-800">
                               {submenu.submenu_name}
                             </div>
                             <div className="">
@@ -170,7 +199,7 @@ const NavBar = ({ isSticky }) => {
                       </div>
                     }
                   </div>
-                )}
+                )} */}
               </div>
             </li>
           ))}
@@ -365,9 +394,9 @@ const NavBar = ({ isSticky }) => {
           {/* Responsive NavLinks End */}
         </div>
         {/* Responsive Header End */}
-      </div>
+      </nav>
       <div className="w-full h-[60px] shadow-sm md:hidden"></div>
-    </nav>
+    </>
   );
 };
 

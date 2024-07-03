@@ -1,12 +1,12 @@
 export const NavbarMenu = [
   { id: 0, name: "Home", link: "/", submenu: false },
   { id: 1, name: "Discover India", link: "/discover-india", submenu: true },
-  { id: 2, name: "Tourism", link: "/tourism", submenu: true },
-  { id: 3, name: "Packages", link: "/packages", submenu: true },
-  { id: 4, name: "Art and Culture", link: "/art-culture", submenu: true },
-  { id: 5, name: "Cuisine", link: "/cuisine", submenu: true },
+  { id: 2, name: "Packages", link: "/packages", submenu: true },
+  { id: 3, name: "Booking Services", link: "/services", submenu: true },
+  { id: 4, name: "Tourism", link: "/tourism", submenu: true },
+  { id: 5, name: "Explore", link: "/explore", submenu: true },
   { id: 6, name: "Blogs", link: "/blogs", submenu: false },
-  { id: 7, name: "FAQ", link: "/faq", submenu: false },
+  { id: 7, name: "FAQs", link: "/faqs", submenu: false },
   { id: 8, name: "Contact", link: "/contact", submenu: false },
 ];
 
@@ -198,40 +198,29 @@ export const DiscoverSubMenu = [
 ];
 
 export const TourismSubMenu = [
-  // {
-  //   submenu_name: "Adventure-Tourism",
-  //   link: "Adventure-Tourism",
-  //   submenu_items: [
-  //     {
-  //       name: "Trekking",
-  //       link: "Trekking",
-  //     },
-  //     {
-  //       name: "Skiing",
-  //       link: "Skiing",
-  //     },
-  //     {
-  //       name: "Motor Biking",
-  //       link: "Motor-Biking",
-  //     },
-  //     {
-  //       name: "Peak Climbing",
-  //       link: "Peak-Climbing",
-  //     },
-  //     {
-  //       name: "Mountain Biking",
-  //       link: "Mountain-Biking",
-  //     },
-  //     {
-  //       name: "River Rafting",
-  //       link: "River-Rafting",
-  //     },
-  //     {
-  //       name: "Safari",
-  //       link: "Safari",
-  //     },
-  //   ],
-  // },
+  {
+    submenu_name: "Pilgrimage Tourism",
+    link: "pilgrimage-tourism",
+  },
+  {
+    submenu_name: "Tribal Tourism",
+    link: "tribal-tourism",
+  },
+  {
+    submenu_name: "Medical Tourism",
+    link: "medical-tourism",
+  },
+  {
+    submenu_name: "Indian Wildlife Tourism",
+    link: "wildlife-tourism",
+  },
+  {
+    submenu_name: "Adventure Tourism",
+    link: "cultural-tourism",
+  },
+];
+
+export const AdventureTourismSubmenu = [
   {
     submenu_name: "Trekking",
     link: "Trekking",
@@ -239,51 +228,42 @@ export const TourismSubMenu = [
   {
     submenu_name: "Skiing",
     link: "Skiing",
-    submenu_items: [],
   },
   {
     submenu_name: "Motor Biking",
     link: "Motor-Biking",
-    submenu_items: [],
   },
   {
     submenu_name: "Peak Climbing",
     link: "Peak-Climbing",
-    submenu_items: [],
   },
   {
     submenu_name: "Mountain Biking",
     link: "Mountain-Biking",
-    submenu_items: [],
   },
   {
     submenu_name: "River Rafting",
     link: "River-Rafting",
-    submenu_items: [],
   },
   {
     submenu_name: "Safari",
     link: "Safari",
-    submenu_items: [],
-  },
-  {
-    submenu_name: "Indian Wildlife Tourism",
-    link: "Indian-Wildlife-Tourism",
-    submenu_items: [],
-  },
-  {
-    submenu_name: "Tribal Tourism",
-    link: "Tribal-Tourism",
-    submenu_items: [],
-  },
-  {
-    submenu_name: "Medical Tourism",
-    link: "Medical-Tourism",
-    submenu_items: [],
   },
 ];
 
 export const PackagesSubmenu = [
+  {
+    submenu_name: "Heritage Tours",
+    link: "Heritage-tours",
+  },
+  {
+    submenu_name: "Museums",
+    link: "Museums",
+  },
+  {
+    submenu_name: "Yoga & Ayurveda",
+    link: "Yoga-&-Ayurveda",
+  },
   {
     submenu_name: "Destination Wedding",
     link: "Destination-Wedding",
@@ -299,18 +279,6 @@ export const PackagesSubmenu = [
   {
     submenu_name: "Hill Station",
     link: "Hill-Station",
-  },
-  {
-    submenu_name: "Heritage Tours",
-    link: "Heritage-tours",
-  },
-  {
-    submenu_name: "Museums",
-    link: "Museums",
-  },
-  {
-    submenu_name: "Yoga & Ayurveda",
-    link: "Yoga-&-Ayurveda",
   },
   {
     submenu_name: "Pilgrimage",
@@ -341,6 +309,28 @@ export const PackagesSubmenu = [
         link: "Muslim",
       },
     ],
+  },
+];
+
+export const ExploreSubmenu = [
+  {
+    submenu_name: "Art & Culture",
+    link: "art-culture",
+  },
+  {
+    submenu_name: "Cuisine",
+    link: "cuisine",
+  },
+];
+
+export const ServicesSubmenu = [
+  {
+    submenu_name: "Stay",
+    link: "stay",
+  },
+  {
+    submenu_name: "Travel",
+    link: "Travel",
   },
 ];
 

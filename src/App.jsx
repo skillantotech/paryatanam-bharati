@@ -28,7 +28,7 @@ const router = createBrowserRouter(
           <Route path="art-culture" element={<ArtAndCulture />} />
           <Route path="cuisine" element={<Cuisine />} />
           <Route path="blogs" element={<Blogs />} />
-          <Route path="faq" element={<FAQs />} />
+          <Route path="faqs" element={<FAQs />} />
           <Route path="contact" element={<Contact />} />
         </Route>
         <Route path="signin" element={<SignIn />} />
