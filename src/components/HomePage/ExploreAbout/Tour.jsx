@@ -1,5 +1,5 @@
-import HeritageImage from "../../../assets/images/Tour-image/pexels-azhar-muhammedu-152002-3021382.jpg";
-import CultureImage from "../../../assets/images/Tour-image/pexels-azhar-muhammedu-152002-3021382.jpg";
+import HeritageImage from "../../../assets/images/Tour-image/pexels-photo-2121549.jpg";
+import CultureImage from "../../../assets/images/Tour-image/pexels-photo-8325306.jpg";
 import LargeImage from "../../../assets/images/Tour-image/pexels-bhavitya-3126568.jpg";
 
 const Tour = () => {
