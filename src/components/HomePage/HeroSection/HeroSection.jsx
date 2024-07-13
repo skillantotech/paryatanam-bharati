@@ -20,7 +20,7 @@ const HeroSection = () => {
 
       {/* Hero Contents */}
       <div className="h-full flex flex-col items-center justify-around text-center text-white z-[1] pb-1">
-        <div className="hero-texts mt-1 md:mt-2 lg:mt-12 flex flex-col gap-2 lg:gap-4">
+        <div className="hero-texts mt-1 md:mt-2 lg:mt-12 flex flex-col gap-4">
           <h3 className="text-3xl md:text-4xl xl:text-5xl font-semibold mx-auto w-[90%] md:w-[60%] lg:w-[50%]">
             Discover the Magic of India&apos;s Landmarks
           </h3>

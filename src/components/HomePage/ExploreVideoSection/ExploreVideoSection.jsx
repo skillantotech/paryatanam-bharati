@@ -2,6 +2,7 @@ import { useState } from "react";
 // import { Modal } from "flowbite-react";
 import { IoClose } from "react-icons/io5";
 import { VscArrowRight } from "react-icons/vsc";
+import { Link } from "react-router-dom";
 
 const ExploreVideoSection = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -39,16 +40,6 @@ const ExploreVideoSection = () => {
               </div>
             </div>
           </div>
-          {/* <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/42OaWwyyet4?si=2b0NK7ZXX3aOJoof"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe> */}
         </div>
 
         {/* Modal */}
@@ -107,15 +98,15 @@ const ExploreVideoSection = () => {
           </p>
           <div className="flex justify-start items-center mt-5 gap-5">
             {/* <button className="border border-black font-semibold px-4 py-2 hover:bg-black hover:text-white transition-all duration-300 rounded"> */}
-            <button className="font-semibold px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 rounded">
+            <Link to={"/sign-up"} className="font-semibold px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 rounded">
               Sign Up
-            </button>
+            </Link>
             <button className="group flex items-center font-semibold">
-            Learn More
-            <div className="ps-2 group-hover:translate-x-2 transition-all duration-300 ease-out">
-              <VscArrowRight />
-            </div>
-          </button>
+              Learn More
+              <div className="ps-2 group-hover:translate-x-2 transition-all duration-300 ease-out">
+                <VscArrowRight />
+              </div>
+            </button>
           </div>
         </div>
       </div>

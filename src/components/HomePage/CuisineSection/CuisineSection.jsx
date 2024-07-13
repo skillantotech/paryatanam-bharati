@@ -1,4 +1,5 @@
 import { VscArrowRight } from "react-icons/vsc";
+import { Link } from "react-router-dom";
 
 const CuisineSection = () => {
   return (
@@ -50,9 +51,12 @@ const CuisineSection = () => {
         </div>
         <div className="flex justify-start items-center gap-5 mt-6">
           {/* <button className="border border-black font-semibold px-4 py-2 hover:bg-black hover:text-white transition-all duration-300 rounded"> */}
-          <button className="font-semibold px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 rounded">
+          <Link
+            to={"/sign-up"}
+            className="font-semibold px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 rounded"
+          >
             Sign Up
-          </button>
+          </Link>
           <button className="group flex items-center font-semibold">
             Learn More
             <div className="ps-2 group-hover:translate-x-2 transition-all duration-300 ease-out">
