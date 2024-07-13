@@ -46,13 +46,13 @@ const TopHeader = () => {
                 <input
                   type="search"
                   id="search-dropdown"
-                  className="block p-2.5 h-10 z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:border-blue-500 focus:outline-none w-full"
+                  className="block p-2.5 h-10 z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-400 focus:border-blue-500 focus:ring-2 focus:outline-none duration-150 w-full"
                   placeholder="Search..."
                   required
                 />
                 <button
                   type="submit"
-                  className="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-black rounded-e-lg focus:ring-4 focus:outline-none"
+                  className="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-gray-600 rounded-e-lg"
                 >
                   <svg
                     className="w-4 h-4"
@@ -84,6 +84,7 @@ const TopHeader = () => {
             {smallScreen ? "Sign In" : "Login"}
           </Link>
           <Link
+            onClick={() => window.scrollTo(0, 0)}
             to="/sign-up"
             // className="bg-black hover:bg-gray-800 text-white border-2 border-black font-semibold px-4 xl:px-6 py-2 rounded-md transition-all duration-300 ease-in-out whitespace-nowrap lg:flex items-center hidden"
             className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-md transition-all duration-300 ease-in-out whitespace-nowrap lg:flex items-center hidden"

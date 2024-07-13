@@ -30,7 +30,7 @@ const NavBar = ({ isSticky }) => {
                 }`}
               >
                 <Link
-                  to={menu.link}
+                  to={menu?.link}
                   className="flex flex-nowrap items-center gap-2"
                 >
                   {menu.name}
@@ -44,23 +44,21 @@ const NavBar = ({ isSticky }) => {
                       <div className="SubMenu p-5 flex w-full justify-between border-t-4 border-blue-500 rounded-b-xl bg-white shadow-lg">
                         {DiscoverSubMenu.map((submenu, index) => (
                           <div key={index} className="flex flex-col gap-2 ">
-                            <Link
-                              path={submenu.link}
-                              key={`'DicoverSubMenu'${index}`}
+                            <div
                               className="flex text-l font-semibold text-blue-800"
                             >
                               {submenu.submenu_name}
-                            </Link>
+                            </div>
                             <div className="">
                               <div className="flex flex-col text-black">
                                 {DiscoverSubMenu[index].submenu_items.map(
-                                  (e, i) => (
+                                  (submenu_item, i) => (
                                     <Link
-                                      to={e.link}
-                                      key={`'${submenu.submenu_name}-${i}'`}
-                                      className=" text-sm font-normal hover:translate-x-1 hover:text-blue-800 ease-linear duration-200"
+                                      to="discover-india"
+                                      key={i}
+                                      className=" text-base font-normal hover:translate-x-1 hover:text-blue-800 ease-linear duration-200"
                                     >
-                                      {e.name}
+                                      {submenu_item.name}
                                     </Link>
                                   )
                                 )}

@@ -52,6 +52,7 @@ const CuisineSection = () => {
         <div className="flex justify-start items-center gap-5 mt-6">
           {/* <button className="border border-black font-semibold px-4 py-2 hover:bg-black hover:text-white transition-all duration-300 rounded"> */}
           <Link
+            onClick={() => window.scrollTo(0, 0)}
             to={"/sign-up"}
             className="font-semibold px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 rounded"
           >

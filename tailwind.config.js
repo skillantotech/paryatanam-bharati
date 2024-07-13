@@ -20,6 +20,7 @@ export default {
       animation: {
         scrollX: "scrollX 35s linear infinite",
         reverseScrollX: "reverseScrollX 35s linear infinite",
+        fadeIn: "fadeIn 1s ease-in-out",
       },
       keyframes: {
         scrollX: {
@@ -30,6 +31,10 @@ export default {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },
         },
+        fadeIn: {
+          from: { opacity: 0 },
+          to: { opacity: 1 },
+        }
       },
     },
     // eslint-disable-next-line no-undef

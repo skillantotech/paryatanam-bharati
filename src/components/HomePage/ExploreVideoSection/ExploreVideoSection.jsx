@@ -98,7 +98,7 @@ const ExploreVideoSection = () => {
           </p>
           <div className="flex justify-start items-center mt-5 gap-5">
             {/* <button className="border border-black font-semibold px-4 py-2 hover:bg-black hover:text-white transition-all duration-300 rounded"> */}
-            <Link to={"/sign-up"} className="font-semibold px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 rounded">
+            <Link to={"/sign-up"} onClick={() => window.scrollTo(0, 0)} className="font-semibold px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 rounded">
               Sign Up
             </Link>
             <button className="group flex items-center font-semibold">
