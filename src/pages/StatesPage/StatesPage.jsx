@@ -1,4 +1,4 @@
-import Breadcrumbs from "../../components/StatesPage/Breadcrumbs/Breadcrumbs";
+// import Breadcrumbs from "../../components/StatesPage/Breadcrumbs/Breadcrumbs";
 import Hero from "../../components/StatesPage/HeroSection/Hero";
 import HillStationSlider from "../../components/StatesPage/HillStationSlider/HillStationSlider";
 import Overview from "../../components/StatesPage/Overview/Overview";
@@ -15,6 +15,8 @@ import Tourist from "../../components/StatesPage/Tourist/Tourist";
 // import HolidayCard from "../../components/StatesPage/HolidayCard/HolidayCard";
 import ExploreCard from "../../components/StatesPage/ExploreCard/ExploreCard";
 import QuickLinks from "../../components/StatesPage/QuickLinks/QuickLinks";
+import { Link } from "react-router-dom";
+import { HiHome } from "react-icons/hi";
 // import CardContainer from "../../components/StatesPage/CardContainer/CardContainer";
 
 const StatesPage = () => {
@@ -22,7 +24,16 @@ const StatesPage = () => {
     <div>
       <Hero />
       <HillStationSlider />
-      <Breadcrumbs />
+      {/* Breadcrumbs */}
+      <div className="max-w-7xl mx-4 xl:mx-auto flex flex-row items-center justify-start gap-2 text-base font-semibold text-gray-500">
+            <Link to={"/"} className="item flex items-center gap-2 text-gray-500 hover:text-gray-700 duration-150">
+              <HiHome />
+              Home
+            </Link>
+            /<Link to={"/blogs"} className="item text-gray-500 hover:text-gray-700 duration-150">Blogs</Link>/
+            <div className="item text-gray-900">StatesPage</div>
+          </div>
+          {/* Breadcrumb Ends */}
       <Overview />
       {/* <HeadlineCards/> */}
       {/* <BestTimeToVisit/> */}

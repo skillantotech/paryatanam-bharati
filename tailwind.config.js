@@ -17,6 +17,10 @@ export default {
       //   "footer-green-jungle":
       //   "url('src/assets/images/footer-images/greenish-jungle.png')",
       // },
+      backgroundImage: {
+        "black-tobottom":
+          "linear-gradient(to bottom, transparent 0%, black 100%)",
+      },
       animation: {
         scrollX: "scrollX 35s linear infinite",
         reverseScrollX: "reverseScrollX 35s linear infinite",

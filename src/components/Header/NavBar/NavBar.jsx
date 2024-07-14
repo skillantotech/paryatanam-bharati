@@ -29,13 +29,20 @@ const NavBar = ({ isSticky }) => {
                   isSticky && "group-hover:text-blue-800"
                 }`}
               >
-                <Link
-                  to={menu?.link}
-                  className="flex flex-nowrap items-center gap-2"
-                >
-                  {menu.name}
-                  {menu.submenu && <FaChevronDown className="text-sm mt-1" />}
-                </Link>
+                {menu?.link ? (
+                  <Link
+                    to={menu.link}
+                    className="flex flex-nowrap items-center gap-2"
+                  >
+                    {menu.name}
+                    {menu.submenu && <FaChevronDown className="text-sm mt-1" />}
+                  </Link>
+                ) : (
+                  <div className="flex flex-nowrap items-center gap-2 cursor-pointer">
+                    {menu.name}
+                    {menu.submenu && <FaChevronDown className="text-sm mt-1" />}
+                  </div>
+                )}
 
                 {/* Discover Submenu */}
                 {menu.id == 1 && (
@@ -44,9 +51,7 @@ const NavBar = ({ isSticky }) => {
                       <div className="SubMenu p-5 flex w-full justify-between border-t-4 border-blue-500 rounded-b-xl bg-white shadow-lg">
                         {DiscoverSubMenu.map((submenu, index) => (
                           <div key={index} className="flex flex-col gap-2 ">
-                            <div
-                              className="flex text-l font-semibold text-blue-800"
-                            >
+                            <div className="flex text-l font-semibold text-blue-800">
                               {submenu.submenu_name}
                             </div>
                             <div className="">

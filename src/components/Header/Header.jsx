@@ -32,11 +32,13 @@ const Header = () => {
 
   return (
     <header
-      className={`mx-auto mb-14 md:mb-0 z-10 transition-all duration-300 sticky ${
-        isSticky && location.pathname === "/"
-          ? "top-[-100px] translate-y-[100px]"
-          : ""
-      } ${location.pathname !== "/" && "top-0"}
+      className={`mx-auto z-10 transition-all duration-300 sticky ${
+        isSticky &&
+        location.pathname === "/" &&
+        "top-[-100px] translate-y-[100px]"
+      }
+        ${!isSticky && location.pathname === "/" && "mb-14 md:mb-0"}
+        ${location.pathname !== "/" && "top-0"}
       `}
     >
       <TopHeader />

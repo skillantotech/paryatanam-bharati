@@ -2,20 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom classes */
-@layer utilities {
-  /* .animation-reverse {
-    animation-direction: reverse;
-  } */
-}
-
 @layer base {
   html {
     font-family: "Proxima Nova", system-ui, sans-serif;
   }
 }
 
-.transition-bg {
-  transition: background-image 1s ease-in-out;
+/* Custom classes */
+@layer utilities {
+  .transition-bg {
+    transition: background-image 1s ease-in-out;
+  }
 }
 

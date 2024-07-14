@@ -1,47 +1,57 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Overview = () => {
   const destinations = [
     {
       name: "Jaipur",
-      description: "The capital city Jaipur has been recognized as a UNESCO World Heritage Site. Dotted with numerous heritage sites, the Pink City is an unmissable destination."
+      description:
+        "The capital city Jaipur has been recognized as a UNESCO World Heritage Site. Dotted with numerous heritage sites, the Pink City is an unmissable destination.",
     },
     {
       name: "Udaipur",
-      description: "Dubbed the City of Lakes, Udaipur is adorned with many man-made lakes, palaces, and the Aravalli Hills which make it a popular tourist destination in Rajasthan."
+      description:
+        "Dubbed the City of Lakes, Udaipur is adorned with many man-made lakes, palaces, and the Aravalli Hills which make it a popular tourist destination in Rajasthan.",
     },
     {
       name: "Jodhpur",
-      description: "Home to the impressive Mehrangarh Fort and Umaid Bhavan, Jodhpur, the second-largest city in Rajasthan is a history lover’s paradise."
+      description:
+        "Home to the impressive Mehrangarh Fort and Umaid Bhavan, Jodhpur, the second-largest city in Rajasthan is a history lover’s paradise.",
     },
     {
       name: "Jaisalmer",
-      description: "The Golden City, Jaisalmer is flanked by the Thar Desert and adorned with a living fort. Reflecting the rich history of Rajasthan, Jaisalmer is a land of experiences you cannot forget."
+      description:
+        "The Golden City, Jaisalmer is flanked by the Thar Desert and adorned with a living fort. Reflecting the rich history of Rajasthan, Jaisalmer is a land of experiences you cannot forget.",
     },
     {
       name: "Ranthambore National Park",
-      description: "One of the major tiger reserves in India, Ranthambore National Park boasts rich wildlife, historical monuments, and an enthralling wildlife safari experience."
+      description:
+        "One of the major tiger reserves in India, Ranthambore National Park boasts rich wildlife, historical monuments, and an enthralling wildlife safari experience.",
     },
     {
       name: "Pushkar",
-      description: "One of the oldest cities in India, Pushkar is a religious destination which also has a hippie vibe. Its 52 ghats and one-of-its-kind Brahma Temple attract many from across the world."
+      description:
+        "One of the oldest cities in India, Pushkar is a religious destination which also has a hippie vibe. Its 52 ghats and one-of-its-kind Brahma Temple attract many from across the world.",
     },
     {
       name: "Bikaner",
-      description: "Displaying the opulence of Rajasthan’s culture and history, Bikaner is popular as a world’s largest camel research and breeding farms and is home to the unique rat temple, Karni Mata."
+      description:
+        "Displaying the opulence of Rajasthan’s culture and history, Bikaner is popular as a world’s largest camel research and breeding farms and is home to the unique rat temple, Karni Mata.",
     },
     {
       name: "Ajmer",
-      description: "Famed as an important Muslim pilgrimage, Ajmer is a sacred destination in Rajasthan that is also known for historical opulence."
+      description:
+        "Famed as an important Muslim pilgrimage, Ajmer is a sacred destination in Rajasthan that is also known for historical opulence.",
     },
     {
       name: "Chittorgarh",
-      description: "The largest fort not only in Rajasthan but in India, Chittorgarh is known for its architectural brilliance and different periods of history that it has been the witness of."
+      description:
+        "The largest fort not only in Rajasthan but in India, Chittorgarh is known for its architectural brilliance and different periods of history that it has been the witness of.",
     },
     {
       name: "Kumbhalgarh",
-      description: "Boasting one of the longest walls in the world, Kumbhalgarh is the second-largest fort in India. This impressive fort is not to be missed witnessing in Rajasthan."
-    }
+      description:
+        "Boasting one of the longest walls in the world, Kumbhalgarh is the second-largest fort in India. This impressive fort is not to be missed witnessing in Rajasthan.",
+    },
   ];
 
   const [visibleDestinations, setVisibleDestinations] = useState(3);
@@ -55,9 +65,7 @@ const Overview = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-4 xl:mx-auto py-12">
-
-
+    <div className="max-w-7xl mx-4 xl:mx-auto mt-8 mb-12">
       <div className="prose lg:prose-xl">
         <h2 className="text-3xl font-bold mb-4">About Rajasthan Tourism</h2>
         <p className="mb-6">
@@ -305,13 +313,16 @@ const Overview = () => {
           Top 10 Most Visited Destinations in Rajasthan
         </h3>
         <ul className="space-y-6">
-          {destinations.slice(0, visibleDestinations).map((destination, index) => (
-            <li key={index}>
-              <p>
-                <strong>{destination.name} :</strong> {destination.description}
-              </p>
-            </li>
-          ))}
+          {destinations
+            .slice(0, visibleDestinations)
+            .map((destination, index) => (
+              <li key={index}>
+                <p>
+                  <strong>{destination.name} :</strong>{" "}
+                  {destination.description}
+                </p>
+              </li>
+            ))}
         </ul>
         {visibleDestinations < destinations.length ? (
           <button
@@ -334,4 +345,3 @@ const Overview = () => {
 };
 
 export default Overview;
-
