@@ -7,7 +7,7 @@ const BlogsPage = () => {
     <>
       <BlogsHeader />
       <BlogsShowcase />
-        <BlogsDetails />
+      <BlogsDetails />
     </>
   );
 };

@@ -25,12 +25,11 @@ const StatesPage = () => {
       <Hero />
       <HillStationSlider />
       {/* Breadcrumbs */}
-      <div className="max-w-7xl mx-4 xl:mx-auto flex flex-row items-center justify-start gap-2 text-base font-semibold text-gray-500">
+      <div className="max-w-7xl mx-4 xl:mx-auto flex flex-row items-center justify-start gap-2 text-base font-semibold text-blue-500">
             <Link to={"/"} className="item flex items-center gap-2 text-gray-500 hover:text-gray-700 duration-150">
               <HiHome />
               Home
-            </Link>
-            /<Link to={"/blogs"} className="item text-gray-500 hover:text-gray-700 duration-150">Blogs</Link>/
+            </Link>/
             <div className="item text-gray-900">StatesPage</div>
           </div>
           {/* Breadcrumb Ends */}

@@ -11,7 +11,7 @@ const BlogsDetails = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const blogtoshow = BlogData.filter((e) => e.BlogTitle == `${Title}`);
+  const blogtoshow = BlogData.filter((e) => e.BlogTitle === `${Title}`);
   // console.log(blogtoshow);
   return (
     <div className="max-w-7xl mx-auto overflow-hidden flex flex-col gap-4 lg:flex-row px-4">
@@ -21,7 +21,7 @@ const BlogsDetails = () => {
           className="max-w-5xl flex flex-col gap-5 py-5"
         >
           {/* Breadcrumbs */}
-          <div className="flex flex-row items-center justify-start gap-2 text-base font-semibold text-gray-500">
+          <div className="flex flex-row items-center justify-start gap-2 text-base font-semibold text-blue-500">
             <Link
               to={"/"}
               className="item flex items-center gap-2 text-gray-500 hover:text-gray-700 duration-150"
