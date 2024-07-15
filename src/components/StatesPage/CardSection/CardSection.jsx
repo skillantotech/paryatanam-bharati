@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Data } from "../../../Data/StatesData/Data";
 import { VscChevronRight } from "react-icons/vsc";
 
-
 const CardSection = () => {
   const [visibleItems, setVisibleItems] = useState(3);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -21,18 +20,18 @@ const CardSection = () => {
       <div className="flex justify-start max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
         <h2 className="font-bold text-2xl">Best Places to Visit in Rajasthan</h2>
       </div>
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-y-7 gap-x-10 max-w-7xl place-items-center mx-auto mt-5 px-4 sm:px-8 md:px-10 lg:px-10 transition-all duration-500">
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-y-7 gap-x-10 max-w-7xl mx-auto mt-5 px-4 sm:px-8 md:px-10 lg:px-10 transition-all duration-500">
         {Data.slice(0, visibleItems).map((card, index) => (
-          <div key={index} className="w-auto">
+          <div key={index} className="w-auto ">
             <div className="h-56 overflow-hidden">
               <img
-                className="h-full w-full hover:scale-110 duration-300"
+                className="h-full w-full object-cover hover:scale-110 duration-300"
                 src={card.thumbnail}
                 alt={card.name}
               />
             </div>
-            <div className="text-start">
-              <h2 className="text-xl font-bold pt-3">{card.name}</h2>
+            <div className="text-start mt-4">
+              <h2 className="text-xl font-bold">{card.name}</h2>
               <div className="flex mt-4">
                 <div className="h-auto border-l-4 border-[#3B82F6]"></div>
                 <h5 className="text-sm pl-4">{card.desc}</h5>
@@ -52,9 +51,9 @@ const CardSection = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center mt-10 ">
+      <div className="flex justify-center mt-10">
         <a
-          className="font-bold text-lg cursor-pointer group relative transition-all duration-500 ease-in-out "
+          className="font-bold text-lg cursor-pointer group relative transition-all duration-500 ease-in-out"
           onClick={handleToggleView}
         >
           {isExpanded ? "View Less" : "View More"}
@@ -66,3 +65,4 @@ const CardSection = () => {
 };
 
 export default CardSection;
+
