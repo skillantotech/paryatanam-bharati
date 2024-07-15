@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 // This customTheme is for flowbite
 const customTheme = {
   root: {
-    base: "h-full relative w-full ",
+    base: "h-full relative w-full",
     leftControl:
       "absolute left-1/2 -translate-x-[65px] lg:left-[86.5%] lg:-translate-x-[0px] bottom-[-53px] flex items-center justify-center px-4 focus:outline-none",
     rightControl:

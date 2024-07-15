@@ -1,43 +1,47 @@
+import HeritageImage from "../../../assets/images/Tour-image/pexels-photo-2121549.jpg";
+import CultureImage from "../../../assets/images/Tour-image/pexels-photo-8325306.jpg";
+import LargeImage from "../../../assets/images/Tour-image/pexels-bhavitya-3126568.jpg";
+
 const Tour = () => {
   return (
-    <div className="my-20 max-w-7xl mx-4 xl:mx-auto">
-      <div className="flex pl-32 pr-28 pt-6">
-        <div className="font-bold text-3xl">
-          <h1 className="my-4">
+    <div className="max-w-7xl mx-4 xl:mx-auto mt-10">
+      <div className=" md:flex flex-row">
+        <div className="font-bold md:text-4xl text-3xl md:pl-0 pb-5 pl-4 mx-auto">
+          <h1 className="">
             Explore India's Rich Heritage, Festivals,and Arts in Vibrant Colors
           </h1>
         </div>
 
         <div className="">
           <div className="">
-            <p className="p-5">
+            <p className="font-normal ml-4">
               Immerse yourself in the captivating world of Indian art, culture,
               and traditions. Discover the vibrant festivals, exquisite
               craftsmanship, and mesmerizing performances that make India truly
               unique.
             </p>
           </div>
-          <div className=" flex">
-            <div className="p-3">
+          <div className=" flex ">
+            <div className="p-4">
               <img
-                className="size-16"
-                src="https://images.pexels.com/photos/949592/pexels-photo-949592.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=""
+                className="size-16 object-cover"
+                src={HeritageImage}
+                alt="HeritageImage"
               />
-              <h2 className="font-bold p-1">Heritage</h2>
-              <p className="">
+              <h2 className="font-bold md:text-lg text-base pt-2">Heritage</h2>
+              <p className="font-normal pt-2">
                 Uncover the diverse cultural heritage of India through its
                 ancient monuments. architecture, and traditions.
               </p>
             </div>
-            <div className="p-3">
+            <div className="p-4">
               <img
-                className="size-16"
-                src="https://images.pexels.com/photos/949592/pexels-photo-949592.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=""
+                className="size-16 object-cover"
+                src={CultureImage}
+                alt="uniqueImage"
               />
-              <h2 className="font-bold p-1">Festivals</h2>
-              <p className="">
+              <h2 className="font-bold md:text-lg text-base pt-2">Festivals</h2>
+              <p className="font-normal pt-1">
                 Experience the joy and vibrancy of India's colorful festivals
                 that celebrate its rich cultural tapestry.
               </p>
@@ -45,11 +49,11 @@ const Tour = () => {
           </div>
         </div>
       </div>
-      <div className="mt-6">
+      <div className="pt-6 w-auto h-screen">
         <img
-          className="size-10/12 h-96 mx-auto"
-          src="https://images.pexels.com/photos/1542620/pexels-photo-1542620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt=""
+          className="object-cover w-full h-full rounded"
+          src={LargeImage}
+          alt="LargeImage"
         />
       </div>
     </div>

@@ -1,10 +1,10 @@
 export const NavbarMenu = [
   { id: 0, name: "Home", link: "/", submenu: false },
-  { id: 1, name: "Discover India", link: "/discover-india", submenu: true },
-  { id: 2, name: "Packages", link: "/packages", submenu: true },
-  { id: 3, name: "Booking Services", link: "/services", submenu: true },
-  { id: 4, name: "Tourism", link: "/tourism", submenu: true },
-  { id: 5, name: "Explore", link: "/explore", submenu: true },
+  { id: 1, name: "Discover India", submenu: true },
+  { id: 2, name: "Packages", submenu: true },
+  { id: 3, name: "Booking Services", submenu: true },
+  { id: 4, name: "Tourism", submenu: true },
+  { id: 5, name: "Explore", submenu: true },
   { id: 6, name: "Blogs", link: "/blogs", submenu: false },
   { id: 7, name: "FAQs", link: "/faqs", submenu: false },
   { id: 8, name: "Contact", link: "/contact", submenu: false },
@@ -13,185 +13,142 @@ export const NavbarMenu = [
 export const DiscoverSubMenu = [
   {
     submenu_name: "Northern India",
-    link: "northern-india",
     submenu_items: [
       {
         name: "Rajasthan",
-        link: "Rajasthan",
       },
       {
         name: "Punjab",
-        link: "Punjab",
       },
       {
         name: "Haryana",
-        link: "Haryana",
       },
       {
         name: "Delhi",
-        link: "Delhi",
       },
       {
         name: "Himanchal Pradesh",
-        link: "Himanchal-pradesh",
       },
       {
         name: "Uttar Pradesh",
-        link: "Uttar-pradesh",
       },
       {
         name: "Uttarakhand",
-        link: "Uttarakhand",
       },
       {
         name: "Jammu & Kashmir",
-        link: "Jammu-&-Kashmir",
       },
       {
         name: "Ladakh",
-        link: "Ladakh",
       },
       {
         name: "Chandigarh",
-        link: "Chandigarh",
       },
     ],
   },
   {
     submenu_name: "Southern India",
-    link: "southern-india",
     submenu_items: [
       {
         name: "Kerala",
-        link: "Kerala",
       },
       {
         name: "Karnataka",
-        link: "Karnataka",
       },
       {
         name: "Tamil Nadu",
-        link: "Tamil-Nadu",
       },
       {
         name: "Telangana",
-        link: "Telangana",
       },
       {
         name: "Andra Pradesh",
-        link: "Andra-Pradesh",
       },
     ],
   },
   {
     submenu_name: "Eastern India",
-    link: "eastern-india",
     submenu_items: [
       {
         name: "Odisha",
-        link: "Odisha",
       },
       {
         name: "West Bengal",
-        link: "West-Bengal",
       },
       {
         name: "Jharkhand",
-        link: "Jharkhand",
       },
       {
         name: "Bihar",
-        link: "Bihar",
       },
       {
         name: "Assam",
-        link: "Assam",
       },
     ],
   },
   {
     submenu_name: "Western India",
-    link: "western-india",
     submenu_items: [
       {
         name: "Gujarat",
-        link: "Gujarat",
       },
       {
         name: "Maharashtra",
-        link: "Maharashtra",
       },
       {
         name: "Goa",
-        link: "Goa",
       },
     ],
   },
   {
     submenu_name: "North-Eastern India",
-    link: "north-eastern-india",
     submenu_items: [
       {
         name: "Arunachal Pradesh",
-        link: "Arunachal-Pradesh",
       },
       {
         name: "Nagaland",
-        link: "Nagaland",
       },
       {
         name: "Manipur",
-        link: "Manipur",
       },
       {
         name: "Mizoram",
-        link: "Mizoram",
       },
       {
         name: "Tripura",
-        link: "Tripura",
       },
       {
         name: "Meghalaya",
-        link: "Meghalaya",
       },
       {
         name: "Sikkim",
-        link: "Sikkim",
       },
     ],
   },
   {
     submenu_name: "Union Territories",
-    link: "north-eastern-india",
     submenu_items: [
       {
         name: "Andaman & Nicobar Islands",
-        link: "Andaman-&-Nicobar-Islands",
       },
       {
         name: "Lakshadweep",
-        link: "Lakshadweep",
       },
       {
         name: "Dadra & Nagar Haveli & Daman & Diu",
-        link: "Dadra-&-Nagar-Haveli-&-Daman-&-Diu",
       },
       {
         name: "Chandigarh",
-        link: "Chandigarh",
       },
       {
         name: "Puducherry",
-        link: "Puducherry",
       },
       {
         name: "Delhi",
-        link: "Delhi",
       },
       {
         name: "Jammu & Kashmir",
-        link: "Jammu-&-Kashmir",
       },
     ],
   },

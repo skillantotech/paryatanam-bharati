@@ -1,10 +1,13 @@
 import { VscArrowRight } from "react-icons/vsc";
+import { Link } from "react-router-dom";
 
 const CuisineSection = () => {
   return (
-    <div className="lg:flex max-w-7xl mx-4 xl:mx-auto">
-      <div className="p-12">
-        <h4 className="font-medium uppercase tracking-wider">Flavors of India</h4>
+    <div className="flex flex-col lg:flex-row max-w-7xl mx-4 xl:mx-auto gap-4">
+      <div className="lg:py-8">
+        <h4 className="font-medium uppercase tracking-wider">
+          Flavors of India
+        </h4>
         <h2 className="pb-5 pt-3 text-3xl sm:text-4xl font-bold">
           Explore India's diverse cuisine and rich culinary heritage
         </h2>
@@ -18,46 +21,54 @@ const CuisineSection = () => {
         </p>
         <div className="flex pt-6 gap-3">
           <div>
-            <img
-              className="h-14 "
-              src="https://static.vecteezy.com/system/resources/previews/020/975/671/original/zomato-logo-zomato-icon-transparent-free-png.png"
-              alt=""
-            />
-            <h2 className="font-bold text-2xl">Zomato</h2>
+            <div className="logoContainer h-16 w-16 -mx-2 -my-1">
+              <img
+                className="h-full w-full object-center rounded"
+                src="https://static.vecteezy.com/system/resources/previews/020/975/671/original/zomato-logo-zomato-icon-transparent-free-png.png"
+                alt=""
+              />
+            </div>
+            <h2 className="font-bold text-2xl text-red-500">Zomato</h2>
             <p className="pt-3">
               Explore the vibrant Flavors and Unique ingredients that make
               Indian Cuisine so extraordinary
             </p>
           </div>
           <div>
-            <img
-              className="h-12"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHegQvy1HVVf4ifHvTMXh6E0WFDuGuZquolvlS6ghsxG7oGUQrgCrgrKQ2IoNRMV_tGwc&usqp=CAU"
-              alt=""
-            />
-            <h2 className="font-bold text-2xl">Swiggy</h2>
+            <div className="logoContainer h-12 w-12 mb-1">
+              <img
+                className="h-full w-full object-cover rounded"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHegQvy1HVVf4ifHvTMXh6E0WFDuGuZquolvlS6ghsxG7oGUQrgCrgrKQ2IoNRMV_tGwc&usqp=CAU"
+                alt=""
+              />
+            </div>
+            <h2 className="font-bold text-2xl text-orange-400">Swiggy</h2>
             <p className="pt-3">
               Embark on unforgettable culinary tours that will immerse you in
               India's rich food cultures
             </p>
           </div>
         </div>
-        <div className="flex justify-start">
-          <button className="mt-5  border-2 border-slate-900 p-1 hover:bg-black hover:text-white rounded-sm">
-            Learn More
-          </button>
-          <button className="ml-10 mt-5 group flex items-center">
+        <div className="flex justify-start items-center gap-5 mt-6">
+          {/* <button className="border border-black font-semibold px-4 py-2 hover:bg-black hover:text-white transition-all duration-300 rounded"> */}
+          <Link
+            onClick={() => window.scrollTo(0, 0)}
+            to={"/sign-up"}
+            className="font-semibold px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 rounded"
+          >
             Sign Up
-            <div className="ps-2 group-hover:translate-x-3 transition-all duration-300 ease-out">
+          </Link>
+          <button className="group flex items-center font-semibold">
+            Learn More
+            <div className="ps-2 group-hover:translate-x-2 transition-all duration-300 ease-out">
               <VscArrowRight />
             </div>
           </button>
         </div>
       </div>
 
-      
       <img
-        className="object-cover "
+        className="object-cover rounded"
         src="https://static.toiimg.com/thumb/74596320.cms?width=600&resizemode=4"
         alt="img"
       />

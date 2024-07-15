@@ -8,14 +8,15 @@ import Home from "./pages/HomePage/HomePage";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import About from "./pages/About";
-import DiscoverIndia from "./pages/DiscoverIndia";
 import ArtAndCulture from "./pages/ArtAndCulture";
 import Cuisine from "./pages/Cuisine";
-import Blogs from "./pages/Blogs";
+import BlogsPage from "./pages/BlogsPage/BlogsPage";
 import FAQs from "./pages/FAQs";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import MainLayout from "./Layouts/MainLayout";
+import StatesPage from "./pages/StatesPage/StatesPage";
+import BlogsDetails from "./components/BlogsPage/BlogsDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,10 +25,11 @@ const router = createBrowserRouter(
         <Route element={<MainLayout />}>
           <Route index path="" element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="discover-india" element={<DiscoverIndia />} />
+          <Route path="discover-india" element={<StatesPage />} />
           <Route path="art-culture" element={<ArtAndCulture />} />
           <Route path="cuisine" element={<Cuisine />} />
-          <Route path="blogs" element={<Blogs />} />
+          <Route path="blogs" element={<BlogsPage />} />
+          <Route path="blogDetails/:Title" element={<BlogsDetails />} />
           <Route path="faqs" element={<FAQs />} />
           <Route path="contact" element={<Contact />} />
         </Route>

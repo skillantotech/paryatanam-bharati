@@ -19,7 +19,7 @@ const NavBar = ({ isSticky }) => {
     <>
       <nav className="max-width-wrapper justify-center md:h-10 flex items-center relative max-w-screen-xl mx-auto ">
         {/* Nav Links */}
-        <ul className="md:px-2 hidden md:flex gap-2 lg:gap-5 ">
+        <ul className="md:px-2 hidden lg:flex gap-2 lg:gap-5 ">
           {NavbarMenu.map((menu, index) => (
             <li key={`Nav-${index}`} className="group">
               <div
@@ -29,13 +29,20 @@ const NavBar = ({ isSticky }) => {
                   isSticky && "group-hover:text-blue-800"
                 }`}
               >
-                <Link
-                  to={menu.link}
-                  className="flex flex-nowrap items-center gap-2"
-                >
-                  {menu.name}
-                  {menu.submenu && <FaChevronDown className="text-sm mt-1" />}
-                </Link>
+                {menu?.link ? (
+                  <Link
+                    to={menu.link}
+                    className="flex flex-nowrap items-center gap-2"
+                  >
+                    {menu.name}
+                    {menu.submenu && <FaChevronDown className="text-sm mt-1" />}
+                  </Link>
+                ) : (
+                  <div className="flex flex-nowrap items-center gap-2 cursor-pointer">
+                    {menu.name}
+                    {menu.submenu && <FaChevronDown className="text-sm mt-1" />}
+                  </div>
+                )}
 
                 {/* Discover Submenu */}
                 {menu.id == 1 && (
@@ -44,23 +51,19 @@ const NavBar = ({ isSticky }) => {
                       <div className="SubMenu p-5 flex w-full justify-between border-t-4 border-blue-500 rounded-b-xl bg-white shadow-lg">
                         {DiscoverSubMenu.map((submenu, index) => (
                           <div key={index} className="flex flex-col gap-2 ">
-                            <Link
-                              path={submenu.link}
-                              key={`'DicoverSubMenu'${index}`}
-                              className="flex text-l font-semibold text-blue-800"
-                            >
+                            <div className="flex text-l font-semibold text-blue-800">
                               {submenu.submenu_name}
-                            </Link>
+                            </div>
                             <div className="">
                               <div className="flex flex-col text-black">
                                 {DiscoverSubMenu[index].submenu_items.map(
-                                  (e, i) => (
+                                  (submenu_item, i) => (
                                     <Link
-                                      to={e.link}
-                                      key={`'${submenu.submenu_name}-${i}'`}
-                                      className=" text-sm font-normal hover:translate-x-1 hover:text-blue-800 ease-linear duration-200"
+                                      to="discover-india"
+                                      key={i}
+                                      className=" text-base font-normal hover:translate-x-1 hover:text-blue-800 ease-linear duration-200"
                                     >
-                                      {e.name}
+                                      {submenu_item.name}
                                     </Link>
                                   )
                                 )}
@@ -220,25 +223,14 @@ const NavBar = ({ isSticky }) => {
           </div> */}
 
         {/* Responsive Header */}
-        <div className="md:hidden ">
-          {/* Icon Style 1 */}
-          {/* <div
-            className="me-1 p-2 z-20 active:scale-75 transition-all duration-300 ease-in-out rounded-full md:hidden text-black cursor-pointer"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? (
-              <HiXMark className="size-6 fill-current" />
-            ) : (
-              <HiBars3CenterLeft className="size-6 fill-current" />
-            )}
-          </div> */}
-          {/* Icon Style 2 */}
+        <div className="lg:hidden">
           <div
-            className="me-1 p-2 z-20 rounded-full md:hidden text-black cursor-pointer absolute right-1 bottom-[4px]"
+            className="me-1 p-2 z-20 rounded-full lg:hidden text-black cursor-pointer absolute right-1 bottom-[4px] md:bottom-11"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <button className="relative flex overflow-hidden items-center mx-auto justify-center rounded-full w-[40px] h-[40px] transform transition-all duration-200 shadow-md">
-              {/* Menu Icon */}
+            {/* Menu Icon */}
+            <button className="bg-white relative flex overflow-hidden items-center mx-auto justify-center rounded-full w-[40px] h-[40px] transform transition-all duration-200 shadow-md">
+              {/* Bars Icon */}
               <div
                 className={`flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden`}
               >
@@ -285,7 +277,7 @@ const NavBar = ({ isSticky }) => {
               isOpen
                 ? "translate-x-0 opacity-100"
                 : "opacity-0 -translate-x-full"
-            } absolute top-[60px] inset-x-0 z-20 w-full h-fit px-6 py-4 transition-all duration-300 ease-in-out bg-amber-400 md:hidden`}
+            } absolute top-[60px] inset-x-0 z-20 w-full h-fit px-6 py-4 transition-all duration-300 ease-in-out bg-amber-400 lg:hidden`}
           >
             <ul className="flex flex-col items-start h-full gap-4 trassition-all duration-300">
               <li className="relative group w-full">

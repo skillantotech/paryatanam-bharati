@@ -17,9 +17,14 @@ export default {
       //   "footer-green-jungle":
       //   "url('src/assets/images/footer-images/greenish-jungle.png')",
       // },
+      backgroundImage: {
+        "black-tobottom":
+          "linear-gradient(to bottom, transparent 0%, black 100%)",
+      },
       animation: {
         scrollX: "scrollX 35s linear infinite",
         reverseScrollX: "reverseScrollX 35s linear infinite",
+        fadeIn: "fadeIn 1s ease-in-out",
       },
       keyframes: {
         scrollX: {
@@ -30,6 +35,10 @@ export default {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },
         },
+        fadeIn: {
+          from: { opacity: 0 },
+          to: { opacity: 1 },
+        }
       },
     },
     // eslint-disable-next-line no-undef
