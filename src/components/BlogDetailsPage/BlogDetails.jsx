@@ -1,10 +1,10 @@
 import { Link, useParams } from "react-router-dom";
 import { BlogData } from "../../Data/BlogsData/BlogData";
-import Article from "./Article";
+import LatestArticle from "./LatestArticle";
 import { useEffect } from "react";
 import { HiHome } from "react-icons/hi";
 
-const BlogsDetails = () => {
+const BlogDetails = () => {
   const { Title } = useParams();
 
   useEffect(() => {
@@ -69,9 +69,9 @@ const BlogsDetails = () => {
           <p className="text-lg text-gray-700">{blog.BlogDescription}</p>
         </div>
       ))}
-      <div>{blogtoshow.length > 0 && <Article data={blogtoshow} />}</div>
+      <div>{blogtoshow.length > 0 && <LatestArticle data={blogtoshow} />}</div>
     </div>
   );
 };
 
-export default BlogsDetails;
+export default BlogDetails;

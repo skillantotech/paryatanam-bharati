@@ -16,7 +16,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import MainLayout from "./Layouts/MainLayout";
 import StatesPage from "./pages/StatesPage/StatesPage";
-import BlogsDetails from "./components/BlogsPage/BlogsDetails";
+import BlogDetails from "./components/BlogDetailsPage/BlogDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,7 +29,7 @@ const router = createBrowserRouter(
           <Route path="art-culture" element={<ArtAndCulture />} />
           <Route path="cuisine" element={<Cuisine />} />
           <Route path="blogs" element={<BlogsPage />} />
-          <Route path="blogDetails/:Title" element={<BlogsDetails />} />
+          <Route path="blogDetails/:Title" element={<BlogDetails />} />
           <Route path="faqs" element={<FAQs />} />
           <Route path="contact" element={<Contact />} />
         </Route>

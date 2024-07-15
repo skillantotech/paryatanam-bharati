@@ -112,7 +112,7 @@ const BlogsHeader = () => {
                         return (
                           <div
                             key={`${e.BlogAuthor}-tag-${index}`}
-                            className="text-sm text-white bg-blue-600 sm:bg-transparent sm:border-white border p-1 px-3 rounded-full"
+                            className="text-sm text-white bg-blue-600 sm:bg-transparent sm:border-white border py-1 px-3 rounded-full"
                           >
                             {tags}
                           </div>

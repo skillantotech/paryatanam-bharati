@@ -22,8 +22,8 @@ const tabTheme = {
         default: {
           base: "rounded-t-lg",
           active: {
-            on: "bg-gray-100 text-cyan-600  ",
-            off: "text-gray-500 hover:bg-gray-50 hover:text-gray-600 ",
+            on: "bg-gray-100 text-cyan-600",
+            off: "text-gray-500 hover:bg-gray-50 hover:text-gray-600",
           },
         },
         underline: {
@@ -78,7 +78,7 @@ function BlogsShowcase() {
           theme={tabTheme}
           onActiveTabChange={(tab) => setActiveTab(tab)}
         >
-          <Tabs.Item theme={tabTheme} active title={"All"}>
+          <Tabs.Item active title={"All"}>
             <AllBlogsShowcase />
           </Tabs.Item>
           <Tabs.Item active title={"Tourism"}>

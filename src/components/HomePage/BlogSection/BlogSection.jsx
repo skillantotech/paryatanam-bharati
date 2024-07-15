@@ -53,7 +53,7 @@ const BlogSection = () => {
       </div>
 
         <div className="flex justify-center items-center mt-8">
-        <Link to="/blogs" className="group flex items-center font-semibold">
+        <Link to="/blogs" onClick={() => window.scrollTo(0, 0)} className="group flex items-center font-semibold">
             View More
             <div className="ps-2 group-hover:translate-x-2 transition-all duration-300 ease-out">
               <VscArrowRight />
