@@ -1,7 +1,92 @@
 import { Datepicker } from "flowbite-react";
 import { useState, useEffect } from "react";
+// import { CustomFlowbiteTheme } from "flowbite-react";
 // import DatePicker from "react-datepicker";
 // import "react-datepicker/dist/react-datepicker.css";
+
+const DatePickerTheme = {
+  "root": {
+    "base": "relative",
+    "inner":"dark:bg-blue-100" 
+  },
+  "popup": {
+    "root": {
+      "base": "absolute top-10 z-50 block pt-2 ",
+      "inline": "relative top-0 z-auto",
+      "inner": "inline-block rounded-lg bg-white p-4 shadow-lg bg-white"
+    },
+    "header": {
+      "base": "",
+      "title": "px-2 py-3 text-center font-semibold text-gray-900 dark:text-black",
+      "selectors": {
+        "base": "mb-2 flex justify-between",
+        "button": {
+          "base": "rounded-lg dark:bg-white px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:bg-white dark:text-black dark:hover:bg-blue-600",
+          "prev": "",
+          "next": "",
+          "view": ""
+        }
+      }
+    },
+    "view": {
+      "base": "p-1"
+    },
+    "footer": {
+      "base": "mt-2 flex space-x-2",
+      "button": {
+        "base": "w-full rounded-lg px-5 py-2 text-center text-sm font-medium focus:ring-4 focus:ring-cyan-300",
+        "today": "bg-blue-700 text-white hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700",
+        "clear": "border border-gray-300 bg-white text-gray-900 hover:bg-gray-100 dark:border-gray-600 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+      }
+    }
+  },
+  "views": {
+    "days": {
+      "header": {
+        "base": "mb-1 grid grid-cols-7",
+        "title": "h-6 text-center text-sm font-medium leading-6 text-gray-500 dark:text-gray-400"
+      },
+      "items": {
+        "base": "grid w-64 grid-cols-7",
+        "item": {
+          "base": "block flex-1 cursor-pointer rounded-lg border-0 text-center text-sm font-semibold leading-9 text-gray-900 hover:bg-gray-100 dark:text-black dark:hover:bg-gray-600",
+          "selected": "bg-blue-600 text-white hover:bg-blue-600",
+          "disabled": "text-gray-500"
+        }
+      }
+    },
+    "months": {
+      "items": {
+        "base": "grid w-64 grid-cols-4 ",
+        "item": {
+          "base": "block flex-1 cursor-pointer rounded-lg border-0 text-center text-sm font-semibold leading-9 text-gray-900 hover:bg-gray-100 dark:text-black dark:hover:bg-gray-600",
+          "selected": "bg-blue-600 text-white hover:bg-blue-600",
+          "disabled": "text-gray-500"
+        }
+      }
+    },
+    "years": {
+      "items": {
+        "base": "grid w-64 grid-cols-4",
+        "item": {
+          "base": "block flex-1 cursor-pointer rounded-lg border-0 text-center text-sm font-semibold leading-9 text-gray-900 hover:bg-gray-100 dark:text-black dark:hover:bg-gray-600",
+          "selected": "bg-blue-700 text-white hover:bg-blue-600",
+          "disabled": "text-gray-500"
+        }
+      }
+    },
+    "decades": {
+      "items": {
+        "base": "grid w-64 grid-cols-4 ",
+        "item": {
+          "base": "block flex-1 cursor-pointer rounded-lg border-0 text-center text-sm font-semibold leading-9 text-gray-900 hover:bg-blue-100 dark:text-black dark:hover:bg-blue-600",
+          "selected": "bg-blue-700 text-black hover:bg-blue-600",
+          "disabled": "text-gray-500"
+        }
+      }
+    }
+  }
+}
 
 const StateInfo = () => {
   const [activeSection, setActiveSection] = useState("");
@@ -175,6 +260,7 @@ const StateInfo = () => {
                   id="datepicker"
                   name="date"
                   className="border p-2 w-full"
+                  theme={DatePickerTheme}
                 />
               </div>
               <div className="form-half lg:ml-2">

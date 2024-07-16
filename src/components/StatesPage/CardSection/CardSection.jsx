@@ -18,11 +18,13 @@ const CardSection = () => {
   return (
     <>
       <div className="flex justify-start max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
-        <h2 className="font-bold text-2xl">Best Places to Visit in Rajasthan</h2>
+        <h2 className="font-bold text-2xl pl-12">
+          Best Places to Visit in Rajasthan
+        </h2>
       </div>
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-y-7 gap-x-10 max-w-7xl mx-auto mt-5 px-4 sm:px-8 md:px-10 lg:px-10 transition-all duration-500">
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-y-7 gap-x-10 max-w-7xl place-items-center mx-auto mt-5 px-4 sm:px-8 md:px-10 lg:px-10">
         {Data.slice(0, visibleItems).map((card, index) => (
-          <div key={index} className="w-auto ">
+          <div key={index} className="h-96 w-72">
             <div className="h-56 overflow-hidden">
               <img
                 className="h-full w-full object-cover hover:scale-110 duration-300"
@@ -34,7 +36,7 @@ const CardSection = () => {
               <h2 className="text-xl font-bold">{card.name}</h2>
               <div className="flex mt-4">
                 <div className="h-auto border-l-4 border-[#3B82F6]"></div>
-                <h5 className="text-sm pl-4">{card.desc}</h5>
+                <h5 className="text-sm pl-4 line-clamp-2">{card.desc}</h5>
               </div>
               <div className="mt-8 flex justify-between items-center">
                 <h3 className="font-semibold bg-[#3B82F6] text-white rounded-2xl text-center px-4 py-1 hover:bg-blue-700 transition-colors duration-300">
@@ -65,4 +67,3 @@ const CardSection = () => {
 };
 
 export default CardSection;
-

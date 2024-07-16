@@ -22,12 +22,12 @@ function Tourist() {
           Popular Tourist Attractions in Rajasthan
         </h2>
       </div>
-      <div className="max-w-7xl mx-4 xl:mx-auto mt-5">
+      <div className="max-w-7xl mx-4 xl:mx-auto mt-5 transition-all duration-500 ease-in-out">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 place-items-center">
           {TouristData.slice(0, visibleItems).map((tour, index) => (
             <div
               key={index}
-              className="h-[400px] w-auto max-w-md mx-auto overflow-hidden transition-transform duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 "
+              className="h-[400px] w-auto max-w-md mx-auto overflow-hidden transition-transform duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
             >
               <div className="relative h-60 w-auto overflow-hidden">
                 <img
@@ -39,7 +39,7 @@ function Tourist() {
               <div className="bg-white">
                 <h3 className="text-xl font-bold py-4">{tour.placename}</h3>
                 <div className="border-l-4 border-[#3B82F6]">
-                  <p className="text-gray-700 p-3">{tour.desc}</p>
+                  <p className="text-gray-700 p-3 line-clamp-5">{tour.desc}</p>
                 </div>
                 {/* <button className="flex items-center text-orange-600 font-bold hover:text-orange-900">
                   {tour.button}
@@ -50,13 +50,13 @@ function Tourist() {
           ))}
         </div>
         <div className="flex justify-center mt-6">
-          <a
-            className="font-bold text-lg cursor-pointer group relative  transition-all duration-500 ease-in-out"
+          <button
+            className="font-bold text-lg cursor-pointer group relative transition-all duration-500 ease-in-out"
             onClick={handleToggleView}
           >
             {isExpanded ? "View Less" : "View More"}
             <div className="absolute left-0 right-0 bottom-0 h-[3px] bg-[#3B82F6] w-0 group-hover:w-full transition-all duration-300"></div>
-          </a>
+          </button>
         </div>
       </div>
     </>
@@ -64,3 +64,5 @@ function Tourist() {
 }
 
 export default Tourist;
+
+

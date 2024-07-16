@@ -37,7 +37,7 @@ const StatesPage = () => {
       <Overview />
       {/* <HeadlineCards/> */}
       {/* <BestTimeToVisit/> */}
-      {/* <Packages /> */}
+      <Packages />
       <CardSection />
       {/* <HowToReach/> */}
       <StateFAQs />
