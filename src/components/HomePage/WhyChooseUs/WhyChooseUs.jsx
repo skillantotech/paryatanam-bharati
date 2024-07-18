@@ -86,7 +86,7 @@ const WhyChooseUs = () => {
                   </h2>
                 </div>
                 <div className="flex flex-col justify-between flex-grow">
-                  <p className="leading-relaxed text-base text-white line-clamp-[8] sm:line-clamp-none">
+                  <p className="leading-relaxed text-center text-base text-white line-clamp-[8] sm:line-clamp-none">
                     {feature.description}
                   </p>
                   {/* <a

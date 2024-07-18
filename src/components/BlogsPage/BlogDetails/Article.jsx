@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { BlogData } from "../../Data/BlogsData/BlogData";
+import { BlogData } from "../../../Data/BlogsData/BlogData";
 
 const Article = ({ data }) => {
   return (

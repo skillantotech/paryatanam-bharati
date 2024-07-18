@@ -6,6 +6,9 @@
   html {
     font-family: "Proxima Nova", system-ui, sans-serif;
   }
+  * {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Custom classes */
@@ -13,5 +16,12 @@
   .transition-bg {
     transition: background-image 1s ease-in-out;
   }
+  no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
-

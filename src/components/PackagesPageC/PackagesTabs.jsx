@@ -1,18 +1,18 @@
+import React from "react";
 import { Tabs } from "flowbite-react";
 import { useRef, useState } from "react";
-import AllBlogsShowcase from "./BlogsShowcaseTabs/AllBlogsShowcase";
-import TourismShowcase from "./BlogsShowcaseTabs/TourismShowcase";
-import ArtAndCultureShowcase from "./BlogsShowcaseTabs/ArtAndCultureShowcase";
-import CuisineShowcase from "./BlogsShowcaseTabs/CuisineShowcase";
+import PackagesStateWise from "./PackageShowcaseTabs/PackagesStateWise";
+import CustomTab from "../CustomTab/CustomTab";
+import CustomTabItem from "../CustomTab/CustomTabItem";
 
 const tabTheme = {
-  base: "flex flex-col gap-2",
+  base: "flex flex-col gap-2 flex-nowrap",
   tablist: {
-    base: "flex text-center",
+    base: "flex text-center flex-nowrap",
     variant: {
-      default: "flex-wrap border-b border-gray-200 ",
-      underline: "-mb-px flex-wrap border-b border-gray-200 ",
-      pills: "flex-wrap space-x-2 text-sm font-medium text-gray-500 ",
+      default: "border-b border-gray-200 flex-nowrap",
+      underline: "-mb-px flex-nowrap border-b border-gray-200 ",
+      pills: "flex-nowrap space-x-2 text-sm font-medium text-gray-500 ",
       fullWidth:
         "grid w-full grid-flow-col divide-x divide-gray-200 rounded-none text-sm font-medium shadow ",
     },
@@ -63,40 +63,38 @@ const tabTheme = {
   tabpanel: "py-3",
 };
 
-function BlogsShowcase() {
+const PackagesTabs = () => {
   const tabsRef = useRef(null);
   const [activeTab, setActiveTab] = useState(0); //incase tab state is needed in future
   // const [pageCount, setPageCount] = useState(0);
 
   return (
-    <div className="max-w-7xl mx-auto">
-      <div className="flex flex-col mx-4 ">
-        <Tabs
-          aria-label="Default tabs"
-          variant="default"
-          ref={tabsRef}
-          theme={tabTheme}
-          onActiveTabChange={(tab) => setActiveTab(tab)}
-        >
-          <Tabs.Item theme={tabTheme} active title={"All"}>
-            <AllBlogsShowcase />
-          </Tabs.Item>
-          <Tabs.Item active title={"Tourism"}>
-            <TourismShowcase />
-          </Tabs.Item>
-          <Tabs.Item active title={"Art & Culture"}>
-            <ArtAndCultureShowcase />
-          </Tabs.Item>
-          <Tabs.Item active title={"Cuisine"}>
-            <CuisineShowcase />
-          </Tabs.Item>
-        </Tabs>
-        {/* <div className="text-sm text-gray-500 dark:text-gray-400">
-          Active tab: {activeTab}
-        </div> */}
-      </div>
-    </div>
-  );
-}
+    <>
+      <section className="my-5">
+        <div className="text-3xl max-w-7xl flex flex-col gap-4 mx-auto mb-5 ">
+          <h2 className="mx-4">Most Popular Pilgrimage Packages in India</h2>
+        </div>
 
-export default BlogsShowcase;
+        <CustomTab>
+          <CustomTabItem label="Odisha">
+            <PackagesStateWise stateName={"Odisha"} />
+          </CustomTabItem>
+          <CustomTabItem label="Maharashtra">
+            <PackagesStateWise stateName={"Maharashtra"} />
+          </CustomTabItem>
+          <CustomTabItem label="Tamil Nadu">
+            <PackagesStateWise stateName={"Tamil Nadu"} />
+          </CustomTabItem>
+          <CustomTabItem label="Karnataka">
+            <PackagesStateWise stateName={"Karnataka"} />
+          </CustomTabItem>
+          <CustomTabItem label="Uttarakhand">
+            <PackagesStateWise stateName={"Uttarakhand"} />
+          </CustomTabItem>
+        </CustomTab>
+      </section>
+    </>
+  );
+};
+
+export default PackagesTabs;

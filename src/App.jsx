@@ -16,7 +16,8 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import MainLayout from "./Layouts/MainLayout";
 import StatesPage from "./pages/StatesPage/StatesPage";
-import BlogsDetails from "./components/BlogsPage/BlogsDetails";
+import BlogsDetails from "./components/BlogsPage/BlogDetails/BlogsDetails";
+import PackagesPage from "./pages/PackagesPage/PackagesPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
           <Route path="blogDetails/:Title" element={<BlogsDetails />} />
           <Route path="faqs" element={<FAQs />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="packages" element={<PackagesPage />} />
         </Route>
         <Route path="signin" element={<SignIn />} />
         <Route path="sign-up" element={<SignUp />} />
