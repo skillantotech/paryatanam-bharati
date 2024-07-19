@@ -53,26 +53,31 @@ const ContactPage = () => {
 
                 <div className="mt-8 lg:w-1/2 lg:mx-6">
                     <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-white shadow-2xl rounded-xl dark:bg-gray-900 lg:max-w-xl">
-                        <h1 className="text-xl font-medium text-gray-700 dark:text-gray-200">Contact form</h1>
+                        <h1 className="text-3xl font-semibold text-gray-700 dark:text-gray-200">Contact form</h1>
 
-                        <p className="mt-2 text-gray-500 dark:text-gray-400">
+                        <p className="mt-2 text-gray-500 dark:text-gray-400 text-lg">
                             Ask us everything and we would love
                             to hear from you
                         </p>
 
                         <form className="mt-6">
                             <div className="flex-1">
-                                <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Full Name</label>
+                                <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Full Name<span className="text-red-500"> *</span></label>
                                 <input type="text" placeholder="Skillanto" className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                             </div>
 
                             <div className="flex-1 mt-6">
-                                <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email address</label>
+                                <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email address<span className="text-red-500"> *</span></label>
+                                <input type="email" placeholder="skillanto@example.com" className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
+                            </div>
+
+                            <div className="flex-1 mt-6">
+                                <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Phone Number</label>
                                 <input type="email" placeholder="skillanto@example.com" className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                             </div>
 
                             <div className="w-full mt-6">
-                                <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Message</label>
+                                <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Message<span className="text-red-500"> *</span></label>
                                 <textarea className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" placeholder="Message"></textarea>
                             </div>
 
