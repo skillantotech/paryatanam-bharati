@@ -42,11 +42,12 @@ const StatesPage = () => {
       {/* <HowToReach/> */}
       <StateFAQs />
       <StateInfo />
-      <Travel />
       <Tourist />
       {/* <Slider/> */}
       {/* <HolidayCard/> */}
       <ExploreCard />
+      <Travel />
+
       <QuickLinks />
       {/* <div className="bg-gray-800 min-h-screen flex items-center justify-center">
     <CardContainer/>

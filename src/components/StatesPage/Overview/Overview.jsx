@@ -71,7 +71,6 @@ const Overview = () => {
   const handleLoadLess = () => {
     setVisibleDestinations(3);
   };
-
   return (
     <div className="max-w-7xl mx-4 xl:mx-auto mt-8 mb-12">
       <div className="prose lg:prose-xl">
@@ -317,9 +316,7 @@ const Overview = () => {
           prices. With our travel deals you have the opportunity to discover
           Rajasthan the way you want.
         </p>
-        <h3 className="text-2xl font-bold mb-2">
-          Top 10 Most Visited Destinations in Rajasthan
-        </h3>
+        <h3 className="text-2xl font-bold mb-2">Top 10 Most Visited Destinations in Rajasthan</h3>
         <div
           ref={contentRef}
           style={{
@@ -341,14 +338,14 @@ const Overview = () => {
         {visibleDestinations < destinations.length ? (
           <button
             onClick={handleLoadMore}
-            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded"
+            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded transition duration-300 ease-in-out"
           >
             Load More
           </button>
         ) : (
           <button
             onClick={handleLoadLess}
-            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded"
+            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded transition duration-300 ease-in-out"
           >
             Load Less
           </button>

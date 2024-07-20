@@ -22,7 +22,7 @@ const CardSection = () => {
           Best Places to Visit in Rajasthan
         </h2>
       </div>
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-y-7 gap-x-10 max-w-7xl place-items-center mx-auto mt-5 px-4 sm:px-8 md:px-10 lg:px-10">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 gap-y-7 gap-x-10 max-w-7xl place-items-center mx-auto mt-5 px-4 sm:px-8 md:px-10 lg:px-10">
         {Data.slice(0, visibleItems).map((card, index) => (
           <div key={index} className="h-96 w-72">
             <div className="h-56 overflow-hidden">

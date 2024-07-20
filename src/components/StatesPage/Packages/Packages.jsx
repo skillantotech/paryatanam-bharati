@@ -16,15 +16,15 @@ function Packages() {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto sm:px-10 px-4">
-        <div className="flex justify-between items-center p-2">
+      <div className="max-w-7xl mx-auto sm:px-10 ">
+        <div className="flex justify-between items-center ">
           <h2 className="text-2xl font-bold text-center md:text-left">
             Best Selling Rajasthan Tour Packages
           </h2>
         </div>
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8 sm:grid-cols-2 grid-cols-1 place-items-center transition-all duration-500">
           {PackagesData.slice(0, visibleItems).map((sell, index) => (
-            <div key={index} className="h-48 w-60 mt-10">
+            <div key={index} className="h-48 w-60 mt-6">
               <div className="h-32 w-60">
                 <img className="h-full w-full object-cover" src={sell.thumbnail} alt={sell.days} />
               </div>
