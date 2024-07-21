@@ -12,7 +12,7 @@ import ArtAndCulture from "./pages/ArtAndCulture";
 import Cuisine from "./pages/Cuisine";
 import BlogsPage from "./pages/BlogsPage/BlogsPage";
 import FAQs from "./pages/FAQs";
-import Contact from "./pages/Contact";
+import Contact from "./pages/ContactPage/ContactPage";
 import NotFound from "./pages/NotFound";
 import MainLayout from "./Layouts/MainLayout";
 import StatesPage from "./pages/StatesPage/StatesPage";
