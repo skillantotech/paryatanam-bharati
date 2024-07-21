@@ -212,7 +212,7 @@ const SignUp = () => {
                 Already have an account?{" "}
                 <Link
                   to={"/signin"}
-                  title=""
+                  onClick={() => window.scrollTo(0, 0)}
                   className="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"
                 >
                   Login

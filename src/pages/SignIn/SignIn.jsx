@@ -127,7 +127,7 @@ const SignIn = () => {
                   type="submit"
                   className="inline-flex items-center justify-center w-full px-4 py-2.5 text-base font-semibold text-white transition-all duration-200 border border-transparent rounded-md bg-gradient-to-r from-fuchsia-600 to-blue-600 focus:outline-none hover:opacity-80 focus:opacity-80"
                 >
-                  Sign in
+                  Login
                 </button>
               </div>
             </form>
@@ -158,7 +158,7 @@ const SignIn = () => {
               Don't have an account?{" "}
               <Link
                 to={"/sign-up"}
-                title=""
+                onClick={() => window.scrollTo(0, 0)}
                 className="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"
               >
                 Create an account

@@ -79,7 +79,7 @@ const NavBar = ({ isSticky }) => {
                 {/* Packages SubMenu */}
                 {menu.id == 2 && (
                   <div className="relative">
-                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-70px] w-full z-50">
+                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-90px] w-full z-50">
                       {
                         <div className="SubMenu flex flex-col justify-between border-t-4 border-blue-500 bg-white shadow-lg">
                           {PackagesSubmenu.map((submenu, index) => (
@@ -99,7 +99,7 @@ const NavBar = ({ isSticky }) => {
                 {/* Services SubMenu */}
                 {menu.id == 3 && (
                   <div className="relative">
-                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-115px] w-full z-50">
+                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-147px] w-full z-50">
                       {
                         <div className="SubMenu flex flex-col flex-wrap justify-between border-t-4 border-blue-500 bg-white shadow-lg">
                           {ServicesSubmenu.map((submenu, index) => {
@@ -124,7 +124,7 @@ const NavBar = ({ isSticky }) => {
                 {/* Tourism Submenu */}
                 {menu.id == 4 && (
                   <div className="relative">
-                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-60px] w-full z-50">
+                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-84px] w-full z-50">
                       {
                         <div className="SubMenu flex flex-col justify-between border-t-4 border-blue-500 bg-white shadow-lg ">
                           {TourismSubMenu.map((submenu, index) => (
@@ -145,7 +145,7 @@ const NavBar = ({ isSticky }) => {
                 {/* Explore */}
                 {menu.id == 5 && (
                   <div className="relative">
-                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-115px] w-full z-50">
+                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-77px] w-full z-50">
                       {
                         <div className="SubMenu flex flex-col flex-wrap justify-between border-t-4 border-blue-500 bg-white shadow-lg">
                           {ExploreSubmenu.map((submenu, index) => {

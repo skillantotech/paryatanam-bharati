@@ -13,7 +13,7 @@ const Accordion = ({ id, question, answer, isOpen, setOpenAccordionId }) => {
           style={{ transition: "width 0.3s ease-in-out" }}
         ></div>
       </div>
-      <div className="grid grid-cols-[auto_1fr_auto] gap-y-2 gap-x-4 sm:gap-y-8 sm:gap-x-6 border-t-4 border-gray-300 shadow-lg rounded-tl-lg p-4 sm:p-6 pt-4 sm:pt-6 items-center">
+      <div className="grid grid-cols-[auto_1fr_auto] gap-y-4 gap-x-4 sm:gap-y-8 sm:gap-x-6 border-t-4 border-gray-300 shadow-lg rounded-tl-lg p-4 sm:p-6 pt-4 sm:pt-6 items-center">
         <p className="text-blue-500 text-lg sm:text-xl font-medium ">{id}</p>
         <p className="text-black-500 text-lg sm:text-xl font-medium">
           {question}
