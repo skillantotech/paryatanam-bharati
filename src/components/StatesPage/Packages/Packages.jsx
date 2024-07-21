@@ -40,7 +40,7 @@ function Packages() {
             </div>
           ))}
         </div>
-        <div className="flex justify-center mt-14">
+        <div className="flex justify-center mt-16">
           <a
             className="font-semibold text-lg cursor-pointer group relative transition-all duration-500 ease-in-out"
             onClick={handleToggleView}

@@ -38,8 +38,8 @@ function Tourist() {
               </div>
               <div className="bg-white">
                 <h3 className="text-xl font-bold py-4">{tour.placename}</h3>
-                <div className="border-l-4 border-[#3B82F6]">
-                  <p className="text-gray-700 p-3 line-clamp-5">{tour.desc}</p>
+                <div className="border-l-4 border-blue-500">
+                  <p className="text-gray-700 px-3 py-2 line-clamp-3">{tour.desc}</p>
                 </div>
                 {/* <button className="flex items-center text-orange-600 font-bold hover:text-orange-900">
                   {tour.button}
@@ -49,13 +49,13 @@ function Tourist() {
             </div>
           ))}
         </div>
-        <div className="flex justify-center mt-6">
+        <div className="flex justify-center mt-4">
           <button
-            className="font-bold text-lg cursor-pointer group relative transition-all duration-500 ease-in-out"
+            className="font-semibold text-lg cursor-pointer group relative transition-all duration-500 ease-in-out"
             onClick={handleToggleView}
           >
             {isExpanded ? "View Less" : "View More"}
-            <div className="absolute left-0 right-0 bottom-0 h-[3px] bg-[#3B82F6] w-0 group-hover:w-full transition-all duration-300"></div>
+            <div className="absolute left-0 right-0 bottom-0 h-[2px] rounded bg-blue-500 w-0 group-hover:w-full transition-all duration-300"></div>
           </button>
         </div>
       </div>
