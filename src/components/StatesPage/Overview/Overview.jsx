@@ -1,4 +1,4 @@
-import { useState,useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Overview = () => {
   const destinations = [
@@ -324,18 +324,24 @@ const Overview = () => {
           ref={contentRef}
           style={{
             transition: "height 0.5s ease-in-out",
-            height: visibleDestinations < destinations.length ? "auto" : contentHeight,
+            height:
+              visibleDestinations < destinations.length
+                ? "auto"
+                : contentHeight,
             overflow: "hidden",
           }}
         >
           <ul className="space-y-6">
-            {destinations.slice(0, visibleDestinations).map((destination, index) => (
-              <li key={index}>
-                <p>
-                  <strong>{destination.name} :</strong> {destination.description}
-                </p>
-              </li>
-            ))}
+            {destinations
+              .slice(0, visibleDestinations)
+              .map((destination, index) => (
+                <li key={index}>
+                  <p>
+                    <strong>{destination.name} :</strong>{" "}
+                    {destination.description}
+                  </p>
+                </li>
+              ))}
           </ul>
         </div>
         {visibleDestinations < destinations.length ? (

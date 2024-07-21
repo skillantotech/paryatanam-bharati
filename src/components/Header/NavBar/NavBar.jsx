@@ -59,7 +59,7 @@ const NavBar = ({ isSticky }) => {
                                 {DiscoverSubMenu[index].submenu_items.map(
                                   (submenu_item, i) => (
                                     <Link
-                                      to="discover-india"
+                                      to="discover-india/place"
                                       key={i}
                                       className=" text-base font-normal hover:translate-x-1 hover:text-blue-800 ease-linear duration-200"
                                     >

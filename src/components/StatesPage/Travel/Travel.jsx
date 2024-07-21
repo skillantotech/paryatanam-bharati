@@ -3,9 +3,9 @@ import { TravelData } from "../../../Data/StatesData/TravelData";
 import { VscArrowRight } from "react-icons/vsc";
 function Travel() {
   return (
-    <div className="max-w-7xl mx-auto place-items-center mt-6 ">
-      <div className="flex items-center w-full px-4">
-        <h2 className=" text-center text-2xl font-semibold">
+    <div className="max-w-7xl xl:mx-auto mx-4 place-items-center mt-6">
+      <div className="flex items-center w-full">
+        <h2 className=" text-center text-2xl font-bold">
           Exclusive Collection Of Travel Blogs
         </h2>
         {/* <a className="font-bold ml-auto text-lg border-b-2 border-[#3B82F6]" href="">View More</a> */}

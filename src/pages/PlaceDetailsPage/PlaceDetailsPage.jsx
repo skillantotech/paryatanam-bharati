@@ -1,0 +1,36 @@
+
+
+import Breadcrumbs from "../../components/PlaceDetailsPage/Breadcrumbs/Breadcrumbs";
+import HeroSection from "../../components/PlaceDetailsPage/HeroSection/HeroSection";
+import Itinerary from "../../components/PlaceDetailsPage/Itinerary/Itenerary";
+import Toptouristcard from "../../components/PlaceDetailsPage/Toptouristcard/Toptouristcard";
+import Packagesrajastancard from "../../components/PlaceDetailsPage/Packagerajasthancard/Packagesrajastancard";
+import InclusionExclusionTabs from "../../components/PlaceDetailsPage/InclusionExclusionTabs/InclusionExclusionTabs";
+import Jodhpurholidaycard from "../../components/PlaceDetailsPage/Jodhpurholidaycard/Jodhpurholidaycard";
+import Jodhpurothercard from "../../components/PlaceDetailsPage/JodhpurOtherCard/Jodhpurothercard";
+import Hoteljodhpurcard from "../../components/PlaceDetailsPage/Hoteljodhpurcard/Hoteljodhpurcard";
+import Rajastantravelcard from "../../components/PlaceDetailsPage/Rajasthantravelcard/Rajastantravelcard";
+import BlogSection from "../../components/PlaceDetailsPage/BlogSection/BlogSection";
+
+const PlaceDetailsPage = () => {
+  return (
+    <div className="text-center">
+      <Breadcrumbs />
+      <HeroSection />
+      <Itinerary />
+      <Toptouristcard />
+      <Packagesrajastancard />
+
+      <InclusionExclusionTabs />
+      {/* <Jodhpurcard/> */}
+      <Jodhpurholidaycard />
+      <Jodhpurothercard />
+      <Hoteljodhpurcard />
+      <Rajastantravelcard />
+
+      <BlogSection />
+    </div>
+  );
+};
+
+export default PlaceDetailsPage;

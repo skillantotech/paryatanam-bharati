@@ -99,7 +99,7 @@ const StateInfo = () => {
 
       if (
         window.scrollY >= sectionTop &&
-        window.scrollY < sectionTop + sectionHeight
+        window.scrollY <= sectionTop + sectionHeight
       ) {
         setActiveSection(section.id);
         return;
@@ -114,9 +114,9 @@ const StateInfo = () => {
   }, []);
 
   return (
-    <section id="main-sticky" className="overview max-w-7xl mx-4 xl:mx-auto">
+    <section className="overview max-w-7xl mx-4 xl:mx-auto">
       {/* Sticky Header Section */}
-      <div id="main-sticky-2" className="sticky md:top-[103px] top-[123px] bg-white z-[1]">
+      <div className="sticky md:top-[103px] top-[123px] bg-white z-[1]">
         <div className="container mx-auto py-4">
           <h2 className="text-2xl font-bold mb-4">
             Rajasthan Essential Information
@@ -297,7 +297,7 @@ const StateInfo = () => {
             <input
               type="hidden"
               name="itinerary"
-              value="https://www.tourmyindia.com/states/rajasthan/"
+              value=""
             />
             <div className="form-group mb-4">
               <button
