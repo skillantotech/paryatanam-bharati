@@ -6,7 +6,7 @@ function BlogPagination({ presentPage, pagecounting, pageChangeFunction }) {
   //   const [currentPage, setCurrentPage] = useState(1);
 
   return (
-    <div className="flex overflow-x-auto sm:justify-center mt-10">
+    <div className="flex overflow-x-auto justify-center mt-10">
       <Pagination
         layout="pagination"
         currentPage={presentPage}
