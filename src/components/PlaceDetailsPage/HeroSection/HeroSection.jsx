@@ -34,7 +34,7 @@ const HeroSection = () => {
   return (
     <div className="max-w-7xl mx-auto pt-2 pb-10">
       <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-bold mb-8">
+        <h1 className="text-3xl text-center font-bold mb-8">
           Mehrangarh Fort<span className="text-blue-600"> Jodhpur</span>
         </h1>
         <div className="flex flex-col lg:flex-row gap-6">
