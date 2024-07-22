@@ -14,7 +14,7 @@ import BlogSection from "../../components/PlaceDetailsPage/BlogSection/BlogSecti
 
 const PlaceDetailsPage = () => {
   return (
-    <div className="text-center">
+    <div>
       <Breadcrumbs />
       <HeroSection />
       <Itinerary />
