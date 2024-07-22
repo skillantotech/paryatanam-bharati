@@ -37,7 +37,7 @@ const HeroSection = () => {
         <h1 className="text-3xl font-bold mb-8">
           Mehrangarh Fort<span className="text-blue-600"> Jodhpur</span>
         </h1>
-        <div className="flex flex-wrap">
+        <div className="flex flex-col lg:flex-row gap-6">
           {/* Left side with image carousel */}
           <div className="w-full lg:w-1/2 relative">
             <div className="relative h-[400px] w-full overflow-hidden rounded-lg mx-auto">
@@ -106,9 +106,9 @@ const HeroSection = () => {
             </button>
           </div>
           {/* Right side with content */}
-          <div className=" w-full lg:w-1/2 ">
-            <div className="p-6 text-gray-600 text-left">
-              <p className="mb-4  text-lg">
+          <div className="w-full lg:w-1/2 ">
+            <div className="text-gray-600 text-left">
+              <p className="mb-4 text-lg">
                 Mehrangarh Fort holds the pride of place in Jodhpur because of its splendid architecture and the diverse history associated with it. Considered as one of the most formidable and magnificent forts of Rajasthan, Mehrangarh fort was built by Rao Jodha in the year 1459. The fort is spread over an area of 5 km and is built on 125 m high hill in the outskirts of Jodhpur city.
               </p>
               <p className="mb-4 text-lg">
