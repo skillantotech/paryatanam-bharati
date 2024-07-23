@@ -249,103 +249,98 @@ const Itinerary = () => {
                       </svg>
                     </span>
                   </span>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {item.tags.map((tag, tagIndex) => (
-                      <span
-                        key={tagIndex}
-                        className="border-2 border-blue-500 hover:bg-blue-50 bg-blue-500 duration-150  hover:text-blue-500 text-white font-semibold px-2 py-1 text-xs rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                   <div
-                  className={`overflow-hidden transition-all duration-500 ${
-                    activeItem === index ? "max-h-screen" : "max-h-0"
-                  }`}
-                >
-                {/* border border-t-0 border-gray-300 rounded-b-md bg-gray-50 shadow-md */}
-                   <div className="mt-4 p-4 ">
-                    <p>{item.description}</p>
+
+                  <div
+                    className={`overflow-hidden transition-all duration-500 ${
+                      activeItem === index ? "max-h-screen" : "max-h-0"
+                    }`}
+                  >
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {item.tags.map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="border-2 border-blue-500 hover:bg-blue-50 bg-blue-500 duration-150  hover:text-blue-500 text-white font-semibold px-2 py-1 text-xs rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="mt-4 p-4 ">
+                      <p>{item.description}</p>
+                    </div>
                   </div>
                 </div>
-                </div>
-             
               </div>
             </div>
           ))}
         </div>
       </div>
       {/* Form */}
-       <div className="w-full lg:w-1/3 lg:ml-8 mt-8 lg:mt-0 sticky top-20 border shadow-lg p-6 rounded-lg bg-white text-left">
-        <h2 className="text-2xl font-bold mb-6 text-gray-800 text-center">Book Now</h2>
-        <form
-          className="booking"
-          name="contactus"
-          id="contactus"
-          method="post"
-          action=""
-        >
-          <div className="form-group mb-6">
-            <label className="block mb-2 text-gray-700">Your Full Name</label>
+      <div className="w-full lg:w-1/4 lg:ml-8 mt-8 lg:mt-0 sticky top-20 border shadow-lg p-6 rounded-lg bg-white text-left">
+        <h2 className="text-2xl font-bold mb-5 text-gray-800 text-center">Book Now</h2>
+        <form name="contactus" method="post" action="">
+          <div className="mb-5">
+            <label className="block mb-1 text-gray-700">Your Full Name</label>
             <input
               type="text"
               name="fname"
               id="to"
-              className="border p-3 w-full rounded-lg"
+              className="border p-1 w-full rounded-lg focus:ring-2 focus:ring-blue-500"
               autoComplete="off"
             />
           </div>
-          <div className="form-group mb-6">
-            <label className="block mb-2 text-gray-700">Tour Description</label>
+          <div className="mb-5">
+            <label className="block mb-1 text-gray-700">Tour Description</label>
             <textarea
               name="message"
               id="from"
-              className="border p-3 w-full rounded-lg"
+              className="border p-1 w-full rounded-lg focus:ring-2 focus:ring-blue-500"
               autoComplete="off"
               rows="4"
-              cols="50"
             ></textarea>
           </div>
-          <div className="form-group mb-6">
-            <label className="block mb-2 text-gray-700">Departure Date</label>
+          <div className="mb-5">
+            <label className="block mb-1 text-gray-700">Departure Date</label>
             <Datepicker
               id="datepicker"
               name="date"
-              className="border p-3 w-full rounded-lg"
+              className="border p-1 w-full rounded-lg focus:ring-2 focus:ring-blue-500"
               theme={DatePickerTheme}
             />
           </div>
-          <div className="form-group mb-6">
+          <div className="mb-5">
             <label className="block mb-2 text-gray-700">Number of Days</label>
             <input
+              type="number"
               name="duration_of_stay"
               id="duration_of_stay"
-              className="border p-3 w-full rounded-lg"
+              className="border p-1 w-full rounded-lg focus:ring-2 focus:ring-blue-500"
               autoComplete="off"
             />
           </div>
-          <div className="form-group mb-6">
+          <div className="mb-5">
+            <label className="block mb-2 text-gray-700">Email</label>
             <input
-              className="border p-3 w-full rounded-lg"
               type="email"
               id="email"
               name="email"
+              className="border p-2 w-full rounded-lg focus:ring-2 focus:ring-blue-500"
               placeholder="Email"
               required
             />
           </div>
-          <div className="form-group mb-6">
+          <div className="mb-5">
+            <label className="block mb-1 text-gray-700">Contact No</label>
             <input
-              className="border p-3 w-full rounded-lg"
               type="tel"
               id="contact"
               name="contact"
+              className="border p-1 w-full rounded-lg focus:ring-2 focus:ring-blue-500"
               placeholder="Contact No"
             />
           </div>
           <input type="hidden" name="itinerary" value="" />
-          <div className="form-group">
+          <div>
             <button
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg w-full"
               type="submit"
@@ -355,9 +350,10 @@ const Itinerary = () => {
             </button>
           </div>
         </form>
-      </div> 
+      </div>
     </div>
   );
 };
 
 export default Itinerary;
+
