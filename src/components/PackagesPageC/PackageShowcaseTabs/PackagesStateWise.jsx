@@ -28,8 +28,8 @@ const PackagesStateWise = ({stateName}) => {
               <div className="h-auto border-l-4 border-[#3B82F6]"></div>
               <h5 className="text-sm pl-4 line-clamp-2 self-center">{card.headline}</h5>
             </div>
-            <div className="mt-8 flex justify-between items-center">
-              <Link className="font-semibold bg-[#3B82F6] text-white rounded-full flex  px-4 py-1 hover:bg-blue-700 transition-colors duration-300">
+            <div className="mt-8 flex justify-between hidden items-center">
+              <Link className="font-semibold  bg-[#3B82F6] text-white rounded-full flex  px-4 py-1 hover:bg-blue-700 transition-colors duration-300">
                 ₹{card.packagePrice}
               </Link>
               <button className="flex items-center text-blue-500 group">
