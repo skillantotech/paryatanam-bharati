@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 function MainFooter() {
   return (
     <div className="mx-auto max-w-7xl row flex flex-wrap justify-between flex-row gap-3 text-gray-300">
-      <div className="logo flex flex-col w-[220px] gap-y-3">
-        <div className="h-[70px] overflow-hidden">
+      <div className="logo flex-grow md:flex-grow-0 md:w-[220px] flex flex-col gap-y-3">
+        <div className="h-[70px] overflow-hidden self-start md:self-auto">
           <img
             src={BrandLogo}
             alt=""

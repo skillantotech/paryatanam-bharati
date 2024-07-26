@@ -18,6 +18,7 @@ import MainLayout from "./Layouts/MainLayout";
 import StatesPage from "./pages/StatesPage/StatesPage";
 import BlogsDetails from "./components/BlogsPage/BlogDetails/BlogsDetails";
 import PackagesPage from "./pages/PackagesPage/PackagesPage";
+import CultureDetails from "./components/CultureDetails/CultureDetails"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -34,6 +35,8 @@ const router = createBrowserRouter(
           <Route path="faqs" element={<FAQs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="packages" element={<PackagesPage />} />
+          <Route path="culturedetails" element={<CultureDetails />} />
+
         </Route>
         <Route path="signin" element={<SignIn />} />
         <Route path="sign-up" element={<SignUp />} />

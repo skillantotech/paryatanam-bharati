@@ -51,13 +51,13 @@ const WhyChooseUs = () => {
         {BrandFeatures.map((feature, i) => (
           <div
             key={i}
-            className="py-4 px-2 sm:p-4 w-80 sm:w-96 h-[400px] sm:h-[430px] cursor-pointer"
+            className="py-4 sm:p-4 w-80 sm:w-96 h-[400px] sm:h-[430px] cursor-pointer"
           >
             <div
               className="object-cover flex rounded-lg h-full p-8 flex-col relative group overflow-hidden"
               style={{
                 background: feature.backgroundImage,
-                backgroundSize: "100%",
+                backgroundSize: "100% 110%",
               }}
             >
               <div

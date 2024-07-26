@@ -70,11 +70,11 @@ const PackagesTabs = () => {
 
   return (
     <>
-      <section className="my-5">
+      <section className="my-5 mx-4 xl:mx-auto">
         <div className="text-3xl max-w-7xl flex flex-col gap-4 mx-auto mb-5 ">
-          <h2 className="mx-4">Most Popular Pilgrimage Packages in India</h2>
+          <h2 className="">Most Popular Pilgrimage Packages in India</h2>
         </div>
-
+        <div className="">
         <CustomTab>
           <CustomTabItem label="Odisha">
             <PackagesStateWise stateName={"Odisha"} />
@@ -92,6 +92,7 @@ const PackagesTabs = () => {
             <PackagesStateWise stateName={"Uttarakhand"} />
           </CustomTabItem>
         </CustomTab>
+        </div>
       </section>
     </>
   );

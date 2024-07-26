@@ -10,7 +10,7 @@ const CustomTab = ({ children, customTheme }) => {
   return (
     <div className="tabs max-w-7xl mx-auto flex flex-col ">
       <ul
-        className={`tab-list flex gap-2 cursor-pointer mx-4 border-gray-300 overflow-x-scroll no-scrollbar py-1 ${
+        className={`tab-list flex gap-2 cursor-pointer border-gray-300 overflow-x-scroll no-scrollbar py-1 ${
           customTheme ? "sm:justify-center" : ""
         }`}
       >
@@ -31,7 +31,7 @@ const CustomTab = ({ children, customTheme }) => {
           );
         })}
       </ul>
-      <div className="tab-content mx-4 overflow-hidden">
+      <div className={`tab-content overflow-hidden`}>
         {children.map((child) => {
           if (child.props.label !== activeTab) return undefined;
           return child.props.children;

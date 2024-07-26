@@ -44,6 +44,9 @@ export const DiscoverSubMenu = [
       {
         name: "Chandigarh",
       },
+      {
+        name: "Madhya Pradesh"
+      }
     ],
   },
   {

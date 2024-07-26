@@ -2,8 +2,8 @@ import React from "react";
 
 const HeroAbout = React.forwardRef((props, ref) => (
   <>
-    <div className="max-w-7xl mx-4 xl:mx-auto place-items-center my-10">
-      <div className=" flex flex-col gap-10 lg:flex-row">
+    <div className="max-w-7xl mx-4 xl:mx-auto place-items-center my-10 ">
+      <div className=" flex flex-col sm:gap-10 lg:flex-row">
         <div className="justify-center md:justify-end ">
           <img
             ref={ref}

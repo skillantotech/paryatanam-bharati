@@ -15,7 +15,7 @@ const BlogSection = () => {
         Explore captivating stories and tips from around the world
       </h5>
 
-      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-14">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-10 sm:gap-y-14">
         {LatestBlogs.map((blog, index) => (
           <div
             key={index}

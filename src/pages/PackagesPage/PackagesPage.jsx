@@ -7,11 +7,11 @@ import HeroAbout from "../../components/PackagesPageC/HeroAbout";
 import OtherPackagesTabs from "../../components/PackagesPageC/OtherPackagesTabs";
 
 const PackagesPage = () => {
-  const heroAboutRef = useRef(null);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const heroAboutRef = useRef(null);
 
   const scrollToAbout = () => {
     if (heroAboutRef.current) {

@@ -8,9 +8,9 @@ import CustomTabItem from "./../components/CustomTab/CustomTabItem";
 const customTheme = true;
 
 const FaqPage = () => {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section className="h-[68vh] flex items-center bg-no-repeat bg-cover bg-[url('https://nebulaaitsolutions.com/assets/images/faq-banner.webp')]">

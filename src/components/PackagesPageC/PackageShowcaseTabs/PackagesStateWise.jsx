@@ -12,7 +12,7 @@ const PackagesStateWise = ({stateName}) => {
   return (
     <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 mx-auto mt-5  ">
       {filterData[0].packageCity.map((card, index) => (
-        <div key={index} className=" md:w-80 ">
+        <div key={index} className=" grid md:w-80 overflow-hidden">
           <div className="flex h-56 overflow-hidden">
             <img
               className="h-full w-full object-cover aspect-[16/9] hover:scale-110 duration-300"
@@ -28,7 +28,7 @@ const PackagesStateWise = ({stateName}) => {
               <div className="h-auto border-l-4 border-[#3B82F6]"></div>
               <h5 className="text-sm pl-4 line-clamp-2 self-center">{card.headline}</h5>
             </div>
-            <div className="mt-8 flex justify-between hidden items-center">
+            <div className="mt-8 justify-between hidden items-center">
               <Link className="font-semibold  bg-[#3B82F6] text-white rounded-full flex  px-4 py-1 hover:bg-blue-700 transition-colors duration-300">
                 ₹{card.packagePrice}
               </Link>

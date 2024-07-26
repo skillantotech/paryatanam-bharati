@@ -2,7 +2,7 @@ import React from 'react';
 
 const CustomTabItem = ({ children }) => {
   return (
-    <div className="tab-content">
+    <div className="tab-content ">
       {children}
     </div>
   );
