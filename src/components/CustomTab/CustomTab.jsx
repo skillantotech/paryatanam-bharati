@@ -20,10 +20,10 @@ const CustomTab = ({ children, customTheme }) => {
           return (
             <li
               key={label}
-              className={` px-4 py-2 border-2 flex items-center text-nowrap rounded-full ease-linear duration-150 hover:bg-blue-400 hover:text-white ${
+              className={`px-4 py-1 font-semibold border-2 flex items-center text-nowrap rounded-full ease-linear duration-150 ${
                 label === activeTab
-                  ? "tab-list-item active border-blue-500 bg-blue-500 font-semibold text-white"
-                  : "tab-list-item"
+                  ? "tab-list-item active border-blue-500 bg-blue-500 text-white"
+                  : "tab-list-item text-gray-600 border-gray-300 hover:bg-blue-100 hover:border-blue-100 hover:text-blue-600"
               }`}
               onClick={() => onClickTabItem(label)}
             >

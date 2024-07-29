@@ -11,7 +11,7 @@ import About from "./pages/About";
 import ArtAndCulture from "./pages/ArtAndCulture";
 import Cuisine from "./pages/CuisinePage/CuisinePage";
 import BlogsPage from "./pages/BlogsPage/BlogsPage";
-import FAQs from "./pages/FAQs";
+import FAQs from "./pages/FAQsPage/FAQsPage";
 import Contact from "./pages/ContactPage/ContactPage";
 import NotFound from "./pages/NotFound";
 import MainLayout from "./Layouts/MainLayout";
