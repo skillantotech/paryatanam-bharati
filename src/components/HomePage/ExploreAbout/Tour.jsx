@@ -5,24 +5,24 @@ import LargeImage from "../../../assets/images/Tour-image/pexels-bhavitya-312656
 const Tour = () => {
   return (
     <div className="max-w-7xl mx-4 xl:mx-auto mt-10">
-      <div className=" md:flex flex-row">
-        <div className="font-bold md:text-4xl text-3xl md:pl-0 pb-5 pl-4 mx-auto">
+      <div className=" flex flex-col lg:flex-row gap-4">
+        <div className="font-bold md:text-4xl text-3xl mx-auto">
           <h1 className="">
             Explore India's Rich Heritage, Festivals,and Arts in Vibrant Colors
           </h1>
         </div>
 
-        <div className="">
+        <div className="flex flex-col gap-4">
           <div className="">
-            <p className="font-normal ml-4">
+            <p className="font-normal ">
               Immerse yourself in the captivating world of Indian art, culture,
               and traditions. Discover the vibrant festivals, exquisite
               craftsmanship, and mesmerizing performances that make India truly
               unique.
             </p>
           </div>
-          <div className=" flex ">
-            <div className="p-4">
+          <div className=" flex gap-4">
+            <div className="">
               <img
                 className="size-16 object-cover"
                 src={HeritageImage}
@@ -34,7 +34,7 @@ const Tour = () => {
                 ancient monuments. architecture, and traditions.
               </p>
             </div>
-            <div className="p-4">
+            <div className="">
               <img
                 className="size-16 object-cover"
                 src={CultureImage}
@@ -49,9 +49,9 @@ const Tour = () => {
           </div>
         </div>
       </div>
-      <div className="pt-6 w-auto h-screen">
+      <div className="pt-6 w-auto md:h-screen">
         <img
-          className="object-cover w-full h-full rounded"
+          className="object-cover w-full h-full rounded aspect-[1/1] md:aspect-auto"
           src={LargeImage}
           alt="LargeImage"
         />

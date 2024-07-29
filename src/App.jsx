@@ -9,7 +9,7 @@ import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import About from "./pages/About";
 import ArtAndCulture from "./pages/ArtAndCulture";
-import Cuisine from "./pages/Cuisine";
+import Cuisine from "./pages/CuisinePage/CuisinePage";
 import BlogsPage from "./pages/BlogsPage/BlogsPage";
 import FAQs from "./pages/FAQs";
 import Contact from "./pages/ContactPage/ContactPage";
@@ -18,6 +18,8 @@ import MainLayout from "./Layouts/MainLayout";
 import StatesPage from "./pages/StatesPage/StatesPage";
 import BlogDetails from "./components/BlogDetailsPage/BlogDetails";
 import PlaceDetailsPage from "./pages/PlaceDetailsPage/PlaceDetailsPage";
+import PackagesPage from "./pages/PackagesPage/PackagesPage";
+import CultureDetails from "./components/CultureDetails/CultureDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,20 +28,28 @@ const router = createBrowserRouter(
         <Route element={<MainLayout />}>
           <Route index path="" element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="discover-india/place">
-            <Route path="" element={<StatesPage />} />
-            <Route path="place-details" element={<PlaceDetailsPage />} />
-          </Route>
+
+          <Route path="discover-india/place" element={<StatesPage />} />
+          <Route path="place-details" element={<PlaceDetailsPage />} />
+
+          <Route path="packages" element={<PackagesPage />} />
+
           <Route path="art-culture" element={<ArtAndCulture />} />
+          <Route path="culturedetails" element={<CultureDetails />} />
+
           <Route path="cuisine" element={<Cuisine />} />
+
           <Route path="blogs" element={<BlogsPage />} />
           <Route path="blogDetails/:Title" element={<BlogDetails />} />
+
           <Route path="faqs" element={<FAQs />} />
           <Route path="contact" element={<Contact />} />
         </Route>
+
         <Route path="signin" element={<SignIn />} />
         <Route path="sign-up" element={<SignUp />} />
       </Route>
+
       <Route path="*" element={<NotFound />} />
     </>
   )

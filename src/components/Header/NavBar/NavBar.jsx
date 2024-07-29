@@ -85,12 +85,12 @@ const NavBar = ({ isSticky }) => {
                       {
                         <div className="SubMenu flex flex-col justify-between border-t-4 border-blue-500 rounded-b-md bg-white shadow-lg">
                           {TourismSubMenu.map((submenu, index) => (
-                            <div
+                            <Link
                               key={`PackagesSubmenu${index} `}
                               className="flex w-[230px] font-semibold p-2 px-3 text-blue-800 hover:bg-gray-100 ease-linear duration-300"
                             >
                               {submenu.submenu_name}
-                            </div>
+                            </Link>
                           ))}
                         </div>
                       }
@@ -154,7 +154,7 @@ const NavBar = ({ isSticky }) => {
                             {
                               return (
                                 <Link
-                                  path={submenu.link}
+                                  to={submenu.link}
                                   key={`ArtAndCultureSubmenu${index} `}
                                   className="flex px-3 p-2 font-semibold w-[180px] text-blue-800 hover:bg-gray-100 ease-linear duration-300"
                                 >

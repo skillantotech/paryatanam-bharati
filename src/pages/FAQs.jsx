@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { FAQData } from "../Data/FAQData/FAQPageData";
 import { FaQuestion } from "react-icons/fa6";
-import { FaQuestionCircle } from "react-icons/fa";
 import CustomTab from "./../components/CustomTab/CustomTab";
 import CustomTabItem from "./../components/CustomTab/CustomTabItem";
 
@@ -24,7 +23,7 @@ const FaqPage = () => {
               billing. Can't find what you're looking for?
             </h3>
             <div className="text-center">
-              <button className=" mt-3 p-4 text-xl rounded font-semibold text-md bg-blue-600 text-white border-2 border-blue-600">
+              <button className="mt-3 p-4 text-xl rounded font-semibold text-md bg-blue-600 hover:bg-blue-700 duration-150 text-white">
                 Get in touch
               </button>
             </div>
