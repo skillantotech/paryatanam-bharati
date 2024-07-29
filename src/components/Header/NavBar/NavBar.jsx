@@ -86,6 +86,7 @@ const NavBar = ({ isSticky }) => {
                         <div className="SubMenu flex flex-col justify-between border-t-4 border-blue-500 rounded-b-md bg-white shadow-lg">
                           {TourismSubMenu.map((submenu, index) => (
                             <Link
+                              to={"packages"}
                               key={`PackagesSubmenu${index} `}
                               className="flex w-[230px] font-semibold p-2 px-3 text-blue-800 hover:bg-gray-100 ease-linear duration-300"
                             >
