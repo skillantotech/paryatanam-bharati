@@ -46,7 +46,7 @@ const CuisinePage = () => {
   return (
     <>
       <Cuisinehero scrollToAbout={scrollToAbout} />
-      <div className="max-w-7xl mx-4 xl:mx-auto ">
+      <div className="max-w-7xl mx-4 xl:mx-auto">
         <div className="text-3xl my-5 ">
           Explore the Regional Foods of India
         </div>

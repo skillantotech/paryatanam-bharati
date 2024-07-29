@@ -19,7 +19,7 @@ import StatesPage from "./pages/StatesPage/StatesPage";
 import BlogDetails from "./components/BlogDetailsPage/BlogDetails";
 import PlaceDetailsPage from "./pages/PlaceDetailsPage/PlaceDetailsPage";
 import PackagesPage from "./pages/PackagesPage/PackagesPage";
-import CultureDetails from "./components/CultureDetails/CultureDetails";
+import CultureDetailsPage from "./pages/CultureDetailsPage/CultureDetailsPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -35,7 +35,7 @@ const router = createBrowserRouter(
           <Route path="packages" element={<PackagesPage />} />
 
           <Route path="art-culture" element={<ArtAndCulture />} />
-          <Route path="culturedetails" element={<CultureDetails />} />
+          <Route path="culture-details" element={<CultureDetailsPage />} />
 
           <Route path="cuisine" element={<Cuisine />} />
 
