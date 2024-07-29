@@ -90,7 +90,7 @@ const DatePickerTheme = {
 };
 
 const Itinerary = () => {
-  const [activeItem, setActiveItem] = useState(-1);
+  const [activeItem, setActiveItem] = useState(0);
 
   const toggleAccordion = (index) => {
     setActiveItem(index === activeItem ? -1 : index);
