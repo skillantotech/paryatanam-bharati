@@ -11,7 +11,7 @@ const DatePickerTheme = {
     "root": {
       "base": "absolute top-10 z-50 block pt-2 ",
       "inline": "relative top-0 z-auto",
-      "inner": "inline-block rounded-lg bg-white p-4 shadow-lg bg-white"
+      "inner": "inline-block rounded-lg bg-white p-4 shadow-lg"
     },
     "header": {
       "base": "",
@@ -261,8 +261,8 @@ const StateInfo = () => {
                 <Datepicker
                   id="datepicker"
                   name="date"
-                  className="border p-2 w-full"
-                  theme={DatePickerTheme}
+                theme={DatePickerTheme}
+                className="[&_input]:rounded-none [&_input]:border-gray-200 [&_input]:bg-white"
                 />
               </div>
               <div className="form-half mb-4">

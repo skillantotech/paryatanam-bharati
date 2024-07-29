@@ -39,8 +39,8 @@ const StatesPage = () => {
       <Packages />
       <CardSection />
       {/* <HowToReach/> */}
-      <StateFAQs />
       <StateInfo />
+      <StateFAQs />
       <Tourist />
       {/* <Slider/> */}
       {/* <HolidayCard/> */}

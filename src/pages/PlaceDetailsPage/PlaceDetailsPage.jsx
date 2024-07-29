@@ -1,5 +1,3 @@
-
-
 import Breadcrumbs from "../../components/PlaceDetailsPage/Breadcrumbs/Breadcrumbs";
 import HeroSection from "../../components/PlaceDetailsPage/HeroSection/HeroSection";
 import Itinerary from "../../components/PlaceDetailsPage/Itinerary/Itenerary";
@@ -20,14 +18,12 @@ const PlaceDetailsPage = () => {
       <Itinerary />
       <Toptouristcard />
       <Packagesrajastancard />
-
       <InclusionExclusionTabs />
       {/* <Jodhpurcard/> */}
       <Jodhpurholidaycard />
       <Jodhpurothercard />
       <Hoteljodhpurcard />
       <Rajastantravelcard />
-
       <BlogSection />
     </div>
   );

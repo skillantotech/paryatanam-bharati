@@ -17,14 +17,14 @@ const CardSection = () => {
 
   return (
     <>
-      <div className="flex justify-start max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
-        <h2 className="font-bold text-2xl pl-12">
+      <div className="flex justify-start max-w-7xl xl:mx-auto mx-4 mt-20">
+        <h2 className="font-bold text-2xl">
           Best Places to Visit in Rajasthan
         </h2>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 gap-y-7 gap-x-10 max-w-7xl place-items-center mx-auto mt-5 px-4 sm:px-8 md:px-10 lg:px-10">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 gap-y-7 gap-x-10 place-items-center mt-5 sm:px-8 md:px-10 lg:px-10">
         {Data.slice(0, visibleItems).map((card, index) => (
-          <div key={index} className="h-96 w-72">
+          <div key={index} className="h-96 w-80">
             <div className="h-56 overflow-hidden">
               <img
                 className="h-full w-full object-cover hover:scale-110 duration-300"

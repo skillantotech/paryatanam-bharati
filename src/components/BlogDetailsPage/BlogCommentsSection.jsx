@@ -333,7 +333,7 @@ const BlogCommentsSection = () => {
         </div>
       </article>
 
-      <div className="self-center px-4 py-1 mb-4 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full w-fit cursor-pointer">
+      <div className="self-center px-4 py-1 mb-4 text-sm font-semibold text-blue-600 bg-blue-100 hover:text-blue-700 hover:bg-blue-200 transition-all duration-150 rounded-full w-fit cursor-pointer">
         View More
       </div>
     </div>
