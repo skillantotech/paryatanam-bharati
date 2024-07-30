@@ -27,6 +27,10 @@ const router = createBrowserRouter(
           <Route path="about" element={<About />} />
           <Route path="discover-india" element={<StatesPage />} />
           <Route path="art-culture" element={<ArtAndCulture />} />
+          {/* <Route path="art-culture">
+            <Route path="/" element={<ArtandCulture />} />
+            <Route path="/details/:section/:item" element={<DetailPage />} />
+          </Route> */}
           <Route path="cuisine" element={<Cuisine />} />
           <Route path="blogs" element={<BlogsPage />} />
           <Route path="blogDetails/:Title" element={<BlogsDetails />} />

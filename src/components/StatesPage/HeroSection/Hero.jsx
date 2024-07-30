@@ -25,7 +25,7 @@ const Hero = () => {
 
   return (
     <div 
-      className="relative bg-cover bg-center bg-no-repeat transition-bg duration-1000 ease-in-out h-[calc(100vh-136px)] md:h-[calc(100vh-124px)]"
+      className="relative bg-cover bg-center h-[60vh] bg-no-repeat transition-bg duration-1000 ease-in-out  "
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="absolute w-full h-full text-gray-200 bg-black/50 flex flex-col justify-center items-center">
