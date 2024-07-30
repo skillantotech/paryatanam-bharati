@@ -319,13 +319,13 @@ function ArtandCulture() {
             <div className="rounded duration-500 ease-in-out group-hover:scale-110 cursor-pointer">
               <div className="h-72 w-full">
                 <img
-                  className="h-full w-full"
+                  className="rounded h-full w-full object-cover group-hover:brightness-100 brightness-[0.8] duration-300 ease-in-out"
                   src="https://images.unsplash.com/photo-1479813183133-f2e9b38ed6c4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGRhbmNlJTIwaW4lMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D"
                   alt="Dance"
                 />
               </div>
-              <div className="w-52 text-center absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <button className="border-2 text-white p-4 w-full rounded text-xl font-bold transition-colors duration-500 ease-in-out group-hover:bg-blue-500">
+              <div className="w-52 text-center absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+                <button className="border-2 text-white p-4 w-full rounded text-xl font-bold group-hover:font-semibold  duration-500 ease-in-out group-hover:text-black group-hover:bg-white ">
                   Dance
                 </button>
               </div>
@@ -338,13 +338,13 @@ function ArtandCulture() {
             <div className="rounded duration-500 ease-in-out group-hover:scale-110 cursor-pointer">
               <div className="h-96 w-full">
                 <img
-                  className="h-full w-full "
+                  className=" rounded h-full w-full object-cover group-hover:brightness-100 brightness-[0.8] duration-300 ease-in-out"
                   src="https://images.unsplash.com/photo-1706188024768-886ba6a876b4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YXJjaGFlb2xvZ3l8ZW58MHx8MHx8fDA%3D"
                   alt="Fairs & Festivals"
                 />
               </div>
               <div className="w-52 text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <button className="border-2 text-white w-full p-4 rounded text-xl font-bold transition-colors duration-500 ease-in-out group-hover:bg-blue-500 ">
+                <button className="border-2 text-white p-4 w-full rounded text-xl font-bold group-hover:font-semibold  duration-500 ease-in-out group-hover:text-black group-hover:bg-white">
                   Fairs & Festivals
                 </button>
               </div>
@@ -358,13 +358,13 @@ function ArtandCulture() {
             <div className="relative  rounded duration-500 ease-in-out group-hover:scale-110 cursor-pointer">
               <div className="h-80 w-full">
                 <img
-                  className="rounded h-full w-full"
+                  className="rounded h-full w-full object-cover group-hover:brightness-100 brightness-[0.8] duration-300 ease-in-out"
                   src="https://cdn.pixabay.com/photo/2024/06/06/04/33/temple-8811724_1280.jpg"
                   alt="Archaeology"
                 />
               </div>
               <div className="w-52 text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <button className="border-2 text-white w-full p-4 rounded text-xl font-bold transition-colors duration-500 ease-in-out group-hover:bg-blue-500 g">
+                <button className="border-2 text-white p-4 w-full rounded text-xl font-bold group-hover:font-semibold  duration-500 ease-in-out group-hover:text-black group-hover:bg-white">
                   Archaeology
                 </button>
               </div>
@@ -378,13 +378,13 @@ function ArtandCulture() {
             <div className="relative rounded duration-500 ease-in-out group-hover:scale-110 cursor-pointer">
               <div className="h-96 w-full">
                 <img
-                  className="rounded h-full w-full"
+                  className=" rounded h-full w-full object-cover group-hover:brightness-100 brightness-[0.8] duration-300 ease-in-out"
                   src="https://images.unsplash.com/photo-1471478331149-c72f17e33c73?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bXVzaWN8ZW58MHx8MHx8fDA%3D"
                   alt="Music"
                 />
               </div>
               <div className="w-52 text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <button className="border-2 text-white p-4 w-full rounded text-xl font-bold transition-colors duration-500 ease-in-out group-hover:bg-blue-500">
+                <button className="border-2 text-white p-4 w-full rounded text-xl font-bold group-hover:font-semibold  duration-500 ease-in-out group-hover:text-black group-hover:bg-white">
                   Music
                 </button>
               </div>
@@ -398,13 +398,13 @@ function ArtandCulture() {
             <div className="relative  rounded duration-500 ease-in-out group-hover:scale-110 cursor-pointer">
               <div className="h-80 w-full">
                 <img
-                  className="rounded h-full w-full "
+                  className=" rounded h-full w-full object-cover group-hover:brightness-100 brightness-[0.8] duration-300 ease-in-out "
                   src="https://images.unsplash.com/photo-1662717400948-990d71f9e3a8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGFuZGljcmFmdHMlMjBpbiUyMGluZGlhfGVufDB8fDB8fHww"
                   alt="Handicrafts"
                 />
               </div>
               <div className="w-52 text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <button className="border-2 text-white  p-4 w-full rounded text-xl font-bold transition-colors duration-500 ease-in-out group-hover:bg-blue-500 ">
+                <button className="border-2 text-white p-4 w-full rounded text-xl font-bold group-hover:font-semibold  duration-500 ease-in-out group-hover:text-black group-hover:bg-white ">
                   Handicrafts
                 </button>
               </div>
@@ -417,13 +417,13 @@ function ArtandCulture() {
             <div className="relative  rounded duration-500 ease-in-out group-hover:scale-110 cursor-pointer">
               <div className="h-96 w-full">
                 <img
-                  className="rounded h-full w-full "
+                  className=" rounded h-full w-full object-cover group-hover:brightness-100 brightness-[0.8] duration-300 ease-in-out "
                   src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGxpdGVyYXR1cmV8ZW58MHx8MHx8fDA%3D"
                   alt="Literature"
                 />
               </div>
               <div className="w-52 text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <button className="border-2 text-white p-4 w-full rounded text-xl font-bold transition-colors duration-500 ease-in-out group-hover:bg-blue-500 ">
+                <button className="border-2 text-white p-4 w-full rounded text-xl font-bold group-hover:font-semibold  duration-500 ease-in-out group-hover:text-black group-hover:bg-white ">
                   Literature
                 </button>
               </div>
@@ -436,13 +436,13 @@ function ArtandCulture() {
             <div className="relative rounded duration-500 ease-in-out group-hover:scale-110 cursor-pointer">
               <div className="h-80 w-full">
                 <img
-                  className="rounded h-full w-full"
+                  className="rounded h-full w-full object-cover group-hover:brightness-100 brightness-[0.8] duration-300 ease-in-out"
                   src="https://images.unsplash.com/photo-1517174953755-428506882aa8?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9udW1lbnRzfGVufDB8fDB8fHww"
                   alt="Monuments"
                 />
               </div>
               <div className="w-52 text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <button className="border-2 text-white 00 p-4 w-full rounded text-xl font-bold transition-colors duration-500 ease-in-out group-hover:bg-blue-500 ">
+                <button className="border-2 text-white p-4 w-full rounded text-xl font-bold group-hover:font-semibold  duration-500 ease-in-out group-hover:text-black group-hover:bg-white ">
                   Monuments
                 </button>
               </div>
@@ -455,13 +455,13 @@ function ArtandCulture() {
             <div className="relative  rounded duration-500 ease-in-out group-hover:scale-110 cursor-pointer">
               <div className="h-96 w-full">
                 <img
-                  className="rounded h-full w-full "
+                  className="rounded h-full w-full object-cover group-hover:brightness-100 brightness-[0.8] duration-300 ease-in-out "
                   src="https://images.unsplash.com/photo-1682687221363-72518513620e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGVyaXRhZ2V8ZW58MHx8MHx8fDA%3D"
                   alt="Heritage"
                 />
               </div>
               <div className="w-52 text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <button className="border-2 text-white p-4 w-full rounded text-xl font-bold transition-colors duration-500 ease-in-out group-hover:bg-blue-500 ">
+                <button className="border-2 text-white p-4 w-full rounded text-xl font-bold group-hover:font-semibold  duration-500 ease-in-out group-hover:text-black group-hover:bg-white ">
                   Heritage
                 </button>
               </div>
@@ -474,13 +474,13 @@ function ArtandCulture() {
             <div className="relative  rounded duration-500 ease-in-out group-hover:scale-110 cursor-pointer">
               <div className="h-80 w-full">
                 <img
-                  className="rounded h-full w-full"
+                  className=" rounded h-full w-full object-cover group-hover:brightness-100 brightness-[0.8] duration-300 ease-in-out"
                   src="https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFpbnRpbmd8ZW58MHx8MHx8fDA%3D"
                   alt="Painting"
                 />
               </div>
               <div className="w-52 text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <button className="border-2 text-white  p-4 w-full rounded text-xl font-bold transition-colors duration-500 ease-in-out group-hover:bg-blue-500 ">
+                <button className="bborder-2 text-white p-4 w-full rounded text-xl font-bold group-hover:font-semibold  duration-500 ease-in-out group-hover:text-black group-hover:bg-white ">
                   Painting
                 </button>
               </div>
@@ -491,14 +491,14 @@ function ArtandCulture() {
 
       {modalIsOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 transition-opacity duration-300">
-          <div className="relative bg-white h-[60vh] overflow-y-scroll w-[60vw] sm:w-[50vw] rounded-lg shadow-lg transition-transform duration-300 transform scale-95">
-            <div className="flex justify-between w-full sticky z-10 left-0 top-0 px-4 py-4 items-center overflow-hidden bg-white shadow-sm">
-              <h3 className="text-2xl text-gray-800 font-bold mb-4">
+          <div className="relative bg-white h-[60vh] overflow-y-scroll w-[80vw] sm:w-[90vw] sm:text-sm rounded-lg shadow-lg transition-transform duration-300 transform scale-95">
+            <div className="flex justify-between w-full sticky z-10 left-0 top-0 px-4 py-4 items-center overflow-hidden bg-white shadow-sm ">
+              <h3 className="text-2xl text-gray-800 font-bold mb-4 ">
                 {currentSection.charAt(0).toUpperCase() +
                   currentSection.slice(1)}
               </h3>
               <button
-                className="  text-gray-500 hover:text-gray-800 transition-colors duration-200"
+                className="  text-gray-500 hover:text-gray-500 transition-colors duration-200"
                 onClick={closeModal}
               >
                 <FaTimes className="text-2xl" />
@@ -509,13 +509,13 @@ function ArtandCulture() {
                 {data[currentSection].map((section, index) => (
                   <Accordion.Panel key={index}>
                     <Accordion.Title>
-                      <div className="flex items-center">
+                      <div className="flex items-center ">
                         <img
                           className="h-8 w-8 rounded"
                           src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=400"
                           alt=""
                         />
-                        <h2 className="ml-3 text-gray-800 list-none">
+                        <h2 className="ml-3 text-gray-800  list-none text-xl ">
                           {section.type}
                         </h2>
                       </div>
@@ -527,7 +527,7 @@ function ArtandCulture() {
                             key={itemIndex}
                             className="text-gray-700  p-2 w-full"
                           >
-                            <Link to={``} className="hover:underline">
+                            <Link to={``} className="hover:underline text-lg">
                               {item}
                             </Link>
                           </li>
