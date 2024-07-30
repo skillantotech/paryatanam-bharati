@@ -9,7 +9,7 @@ import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import About from "./pages/About";
 import ArtAndCulture from "./pages/ArtAndCulture";
-import Cuisine from "./pages/CuisinePage/CuisinePage";
+import CuisinePage from "./pages/CuisinePage/CuisinePage";
 import BlogsPage from "./pages/BlogsPage/BlogsPage";
 import FAQs from "./pages/FAQsPage/FAQsPage";
 import Contact from "./pages/ContactPage/ContactPage";
@@ -37,7 +37,10 @@ const router = createBrowserRouter(
           <Route path="art-culture" element={<ArtAndCulture />} />
           <Route path="culture-details" element={<CultureDetailsPage />} />
 
-          <Route path="cuisine" element={<Cuisine />} />
+          <Route path="cuisine">
+            <Route path="" element={<CuisinePage />} />
+            <Route path="culture-details" element={<CultureDetailsPage />} />
+          </Route>
 
           <Route path="blogs" element={<BlogsPage />} />
           <Route path="blogDetails/:Title" element={<BlogDetails />} />

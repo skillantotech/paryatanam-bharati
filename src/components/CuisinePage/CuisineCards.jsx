@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
-import { VscChevronRight } from "react-icons/vsc";
+import { IoMdArrowRoundForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 const Cuisinedishess = ({ data }) => {
@@ -70,12 +70,12 @@ const Cuisinedishess = ({ data }) => {
                       </h5>
                     </div>
                     <div className="mt-4 justify-between flex items-center">
-                      <button className="flex items-center text-blue-500 group">
+                      <Link to={"culture-details"} className="flex items-center text-blue-600 font-semibold group">
                         View More
                         <div className="pl-2 group-hover:translate-x-1 transition-transform duration-300">
-                          <VscChevronRight className="size-5" />
+                          <IoMdArrowRoundForward className="mt-1" />
                         </div>
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -112,7 +112,7 @@ const Cuisinedishess = ({ data }) => {
                       <button className="flex items-center text-blue-500 group">
                         View More
                         <div className="pl-2 group-hover:translate-x-1 transition-transform duration-300">
-                          <VscChevronRight className="size-5" />
+                          <IoMdArrowRoundForward className="mt-1" />
                         </div>
                       </button>
                     </div>
