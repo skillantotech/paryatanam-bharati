@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
-import { BlogData } from "../../../Data/BlogsData/BlogData";
+import { BlogData } from "../../Data/BlogsData/BlogData";
 
-const Article = ({ data }) => {
+const LatestArticle = ({ data }) => {
   return (
     <>
-      <div className=" flex flex-col gap-4 lg:w-80 shadow-2xl p-4 lg:h-fit lg:my-6 rounded-xl">
+      <div className=" flex flex-col gap-4 lg:w-80 shadow-xl p-4 lg:h-fit lg:my-6 rounded-xl">
         <h2 className="text-2xl font-medium">Latest Article</h2>
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:flex flex-col gap-4">
           {BlogData.filter((e, i) => {
@@ -29,12 +29,12 @@ const Article = ({ data }) => {
         <div>
           <h4 className="text-2xl font-semibold">Tags</h4>
           <div className="flex flex-wrap gap-2 mt-4">
-            {data[0].BlogKeywords.map((e, i) => (
+            {data[0].BlogKeywords.map((keyword, i) => (
               <button
                 key={i}
-                className="flex bg-blue-800 text-white p-2 px-4 rounded-full gap-2"
+                className="flex bg-blue-800 text-white text-sm py-1 px-3 rounded-full gap-2"
               >
-                {e}
+                {keyword}
               </button>
             ))}
           </div>
@@ -44,8 +44,8 @@ const Article = ({ data }) => {
   );
 };
 
-Article.propTypes = {
+LatestArticle.propTypes = {
   data: PropTypes.array,
 };
 
-export default Article;
+export default LatestArticle;

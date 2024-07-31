@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Overview = () => {
   const destinations = [
@@ -55,6 +55,14 @@ const Overview = () => {
   ];
 
   const [visibleDestinations, setVisibleDestinations] = useState(3);
+  const [contentHeight, setContentHeight] = useState("auto");
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setContentHeight(contentRef.current.scrollHeight + "px");
+    }
+  }, [visibleDestinations]);
 
   const handleLoadMore = () => {
     setVisibleDestinations(destinations.length);
@@ -312,18 +320,30 @@ const Overview = () => {
         <h3 className="text-2xl font-bold mb-2">
           Top 10 Most Visited Destinations in Rajasthan
         </h3>
-        <ul className="space-y-6">
-          {destinations
-            .slice(0, visibleDestinations)
-            .map((destination, index) => (
-              <li key={index}>
-                <p>
-                  <strong>{destination.name} :</strong>{" "}
-                  {destination.description}
-                </p>
-              </li>
-            ))}
-        </ul>
+        <div
+          ref={contentRef}
+          style={{
+            transition: "height 0.5s ease-in-out",
+            height:
+              visibleDestinations < destinations.length
+                ? "auto"
+                : contentHeight,
+            overflow: "hidden",
+          }}
+        >
+          <ul className="space-y-6">
+            {destinations
+              .slice(0, visibleDestinations)
+              .map((destination, index) => (
+                <li key={index}>
+                  <p>
+                    <strong>{destination.name} :</strong>{" "}
+                    {destination.description}
+                  </p>
+                </li>
+              ))}
+          </ul>
+        </div>
         {visibleDestinations < destinations.length ? (
           <button
             onClick={handleLoadMore}

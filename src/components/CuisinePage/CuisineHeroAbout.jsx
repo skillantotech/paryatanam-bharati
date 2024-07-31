@@ -43,7 +43,7 @@ const CuisineHeroAbout = React.forwardRef(({scrollToTechniques}, ref) => (
           </h3>
           <button
             type="button"
-            className="my-2 text-xl p-2 px-4 text text-white bg-blue-600"
+            className="my-2 text-md p-2 rounded-sm px-4 text w-fit text-white bg-blue-600"
             onClick={scrollToTechniques}
           >
             Read More

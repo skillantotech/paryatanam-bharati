@@ -9,16 +9,17 @@ import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import About from "./pages/About";
 import ArtAndCulture from "./pages/ArtAndCulture";
-import Cuisine from "./pages/Cuisine";
+import CuisinePage from "./pages/CuisinePage/CuisinePage";
 import BlogsPage from "./pages/BlogsPage/BlogsPage";
-import FAQs from "./pages/FAQs";
-import Contact from "./pages/Contact";
+import FAQs from "./pages/FAQsPage/FAQsPage";
+import Contact from "./pages/ContactPage/ContactPage";
 import NotFound from "./pages/NotFound";
 import MainLayout from "./Layouts/MainLayout";
 import StatesPage from "./pages/StatesPage/StatesPage";
-import BlogsDetails from "./components/BlogsPage/BlogDetails/BlogsDetails";
+import BlogDetails from "./components/BlogDetailsPage/BlogDetails";
+import PlaceDetailsPage from "./pages/PlaceDetailsPage/PlaceDetailsPage";
 import PackagesPage from "./pages/PackagesPage/PackagesPage";
-import CultureDetails from "./components/CultureDetails/CultureDetails"
+import CultureDetailsPage from "./pages/CultureDetailsPage/CultureDetailsPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,20 +28,31 @@ const router = createBrowserRouter(
         <Route element={<MainLayout />}>
           <Route index path="" element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="discover-india" element={<StatesPage />} />
+
+          <Route path="discover-india/place" element={<StatesPage />} />
+          <Route path="place-details" element={<PlaceDetailsPage />} />
+
+          <Route path="packages" element={<PackagesPage />} />
+
           <Route path="art-culture" element={<ArtAndCulture />} />
-          <Route path="cuisine" element={<Cuisine />} />
+          <Route path="culture-details" element={<CultureDetailsPage />} />
+
+          <Route path="cuisine">
+            <Route path="" element={<CuisinePage />} />
+            <Route path="culture-details" element={<CultureDetailsPage />} />
+          </Route>
+
           <Route path="blogs" element={<BlogsPage />} />
-          <Route path="blogDetails/:Title" element={<BlogsDetails />} />
+          <Route path="blogDetails/:Title" element={<BlogDetails />} />
+
           <Route path="faqs" element={<FAQs />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="packages" element={<PackagesPage />} />
-          <Route path="culturedetails" element={<CultureDetails />} />
-
         </Route>
+
         <Route path="signin" element={<SignIn />} />
         <Route path="sign-up" element={<SignUp />} />
       </Route>
+
       <Route path="*" element={<NotFound />} />
     </>
   )

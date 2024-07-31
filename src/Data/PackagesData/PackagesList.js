@@ -35,7 +35,7 @@ export const PackagesList = [
             stateImage:
               "https://uttarakhandtourism.gov.in/sites/default/files/2020-08/Kedarnath%28new%29.jpg",
             destinationImage:
-              "https://lh3.googleusercontent.com/ci/AL18g_TDhOhot5QQ1BtN0ft3v6iYFTt8oP2nyViY4ZlIpAvklwtOm9Guar2hFQiq3CgVBzzSSvpM=s1200",
+              "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_le6b88C7mRAp5tWYdm0X7KiRs4r3Lkpk52Tbg2pVBkLmbjiTGFeLX407QZ9CpgV7a6LBBo6esLDQLSH778BLWi_AWk7xPZGamDAZPzFeUHu0mbmU-UQQQeJINoGNfndUhaM-8UJKSWAP/s1872/The+Sun+Temple+of+Konark.jpg",
             packageDestination: "Konark Sun Temple",
             headline: "Witness the beauty of Konark Sun Temple",
           },

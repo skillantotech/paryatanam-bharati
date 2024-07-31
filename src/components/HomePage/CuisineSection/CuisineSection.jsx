@@ -58,12 +58,12 @@ const CuisineSection = () => {
           >
             Sign Up
           </Link>
-          <button className="group flex items-center font-semibold">
+          <Link to={"cuisine"} className="group flex items-center font-semibold">
             Learn More
             <div className="ps-2 group-hover:translate-x-2 transition-all duration-300 ease-out">
               <VscArrowRight />
             </div>
-          </button>
+          </Link>
         </div>
       </div>
 

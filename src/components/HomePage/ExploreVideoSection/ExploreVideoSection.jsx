@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import { Modal } from "flowbite-react";
 import { IoClose } from "react-icons/io5";
 import { VscArrowRight } from "react-icons/vsc";
 import { Link } from "react-router-dom";
@@ -54,8 +53,6 @@ const ExploreVideoSection = () => {
               </button>
               <iframe
                 className="rounded-lg w-[90vw] sm:w-[560px] aspect-video"
-                // width="560"
-                // height="315"
                 src="https://www.youtube.com/embed/42OaWwyyet4?si=2b0NK7ZXX3aOJoof"
                 title="YouTube video player"
                 // frameBorder="0"
@@ -66,26 +63,6 @@ const ExploreVideoSection = () => {
             </div>
           </div>
         )}
-
-        {/* <Modal
-          show={openModal}
-          popup={true}
-          onClose={() => setOpenModal(false)}
-        >
-          <Modal.Body className="m-0">
-            <IoClose className="text-3xl text-white cursor-pointer text-end w-full mb-5" onClick={() => setOpenModal(false)} />
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/42OaWwyyet4?si=2b0NK7ZXX3aOJoof"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
-          </Modal.Body>
-        </Modal> */}
 
         <div className="flex flex-col items-start justify-center gap-4 md:py-5">
           <h1 className="text-3xl font-bold">Custom Travel Packages</h1>
@@ -101,7 +78,7 @@ const ExploreVideoSection = () => {
             <Link to={"/sign-up"} onClick={() => window.scrollTo(0, 0)} className="font-semibold px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 rounded">
               Sign Up
             </Link>
-            <Link to={'packages'} className="group flex items-center font-semibold">
+            <Link to={"packages"} className="group flex items-center font-semibold">
               Learn More
               <div className="ps-2 group-hover:translate-x-2 transition-all duration-300 ease-out">
                 <VscArrowRight />

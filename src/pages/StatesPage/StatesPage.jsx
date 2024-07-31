@@ -17,9 +17,14 @@ import ExploreCard from "../../components/StatesPage/ExploreCard/ExploreCard";
 import QuickLinks from "../../components/StatesPage/QuickLinks/QuickLinks";
 import { Link } from "react-router-dom";
 import { HiHome } from "react-icons/hi";
+import { useEffect } from "react";
 // import CardContainer from "../../components/StatesPage/CardContainer/CardContainer";
 
 const StatesPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Hero />
@@ -39,13 +44,13 @@ const StatesPage = () => {
       <Packages />
       <CardSection />
       {/* <HowToReach/> */}
-      <StateFAQs />
       <StateInfo />
-      <Travel />
+      <StateFAQs />
       <Tourist />
       {/* <Slider/> */}
       {/* <HolidayCard/> */}
       <ExploreCard />
+      <Travel />
       <QuickLinks />
       {/* <div className="bg-gray-800 min-h-screen flex items-center justify-center">
     <CardContainer/>

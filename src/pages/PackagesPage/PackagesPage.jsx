@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from "react";
-import PackagesHeader from "../../components/PackagesPageC/PackagesHeader";
-import PackagesTabs from "../../components/PackagesPageC/PackagesTabs";
-import PilgrimageReligionTabs from "../../components/PackagesPageC/PilgrimageReligionTabs";
-import PackageFeature from "../../components/PackagesPageC/PackageFeature";
-import HeroAbout from "../../components/PackagesPageC/HeroAbout";
-import OtherPackagesTabs from "../../components/PackagesPageC/OtherPackagesTabs";
+import { useEffect, useRef } from "react";
+import PackagesHeader from "../../components/PackagesPage/PackagesHeader";
+import PackagesTabs from "../../components/PackagesPage/PackagesTabs";
+import PilgrimageReligionTabs from "../../components/PackagesPage/PilgrimageReligionTabs";
+import PackageFeature from "../../components/PackagesPage/PackageFeature";
+import HeroAbout from "../../components/PackagesPage/HeroAbout";
+import OtherPackagesTabs from "../../components/PackagesPage/OtherPackagesTabs";
 
 const PackagesPage = () => {
   useEffect(() => {

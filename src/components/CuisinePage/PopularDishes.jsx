@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
 const PopularDishes = ({ data }) => {
-
   return (
     <div className=" my-5">
       {/* <h1 className="text-lg md:text-lg lg:text-2xl font-bold text-white mb-8">Bento Grid Layout with Images</h1> */}
       <div className="text-3xl my-5">Popular Dishes all over India</div>
-      <div
-        className="grid grid-cols-2 md:grid-cols-4 gap-4"
-      >
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className="md:col-span-2 md:row-span-2 relative overflow-hidden rounded shadow-lg group ">
           <img
             src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxuYXR1cmV8ZW58MHwwfHx8MTcyMTA0MjYwMXww&ixlib=rb-4.0.3&q=80&w=1080"
@@ -36,8 +34,10 @@ const PopularDishes = ({ data }) => {
             alt="Food"
             className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-1000"
           />
-          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 ease-linear bg-opacity-60 
-           opacity-100 transition-all duration-300">
+          <div
+            className="absolute inset-0 bg-black/30 group-hover:bg-black/60 ease-linear bg-opacity-60 
+           opacity-100 transition-all duration-300"
+          >
             <div className="absolute -bottom-1 left-0 right-0 p-2 lg:p-4">
               <h4 className="text-lg md:text-lg lg:text-2xl font-bold text-white">
                 {data.dishItems[1].dishName}
@@ -51,8 +51,10 @@ const PopularDishes = ({ data }) => {
             alt="Technology"
             className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-1000"
           />
-          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 ease-linear bg-opacity-60 
-           opacity-100 transition-all duration-300">
+          <div
+            className="absolute inset-0 bg-black/30 group-hover:bg-black/60 ease-linear bg-opacity-60 
+           opacity-100 transition-all duration-300"
+          >
             <div className="absolute -bottom-1 left-0 right-0 p-2 lg:p-4">
               <h4 className="text-lg md:text-lg lg:text-2xl font-bold text-white">
                 {data.dishItems[2].dishName}
@@ -67,8 +69,10 @@ const PopularDishes = ({ data }) => {
             alt="Travel"
             className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-1000"
           />
-          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 ease-linear bg-opacity-60 
-           opacity-100 transition-all duration-300">
+          <div
+            className="absolute inset-0 bg-black/30 group-hover:bg-black/60 ease-linear bg-opacity-60 
+           opacity-100 transition-all duration-300"
+          >
             <div className="absolute -bottom-1 left-0 right-0 p-2 lg:p-4">
               <h4 className="text-lg md:text-lg lg:text-2xl font-bold text-white">
                 {data.dishItems[3].dishName}
@@ -82,8 +86,10 @@ const PopularDishes = ({ data }) => {
             alt="Art"
             className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-1000"
           />
-          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 ease-linear bg-opacity-60 
-           opacity-100 transition-all duration-300">
+          <div
+            className="absolute inset-0 bg-black/30 group-hover:bg-black/60 ease-linear bg-opacity-60 
+           opacity-100 transition-all duration-300"
+          >
             <div className="absolute -bottom-1 left-0 right-0 p-2 lg:p-4">
               <h4 className="text-lg md:text-lg lg:text-2xl font-bold text-white">
                 {data.dishItems[4].dishName}
@@ -98,8 +104,10 @@ const PopularDishes = ({ data }) => {
             alt="Food"
             className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-1000"
           />
-          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 ease-linear bg-opacity-60 
-           opacity-100 transition-all duration-300">
+          <div
+            className="absolute inset-0 bg-black/30 group-hover:bg-black/60 ease-linear bg-opacity-60 
+           opacity-100 transition-all duration-300"
+          >
             <div className="absolute -bottom-1 left-0 right-0 p-2 lg:p-4">
               <h4 className="text-lg md:text-lg lg:text-2xl font-bold text-white">
                 {data.dishItems[5].dishName}
@@ -113,8 +121,10 @@ const PopularDishes = ({ data }) => {
             alt="Sport"
             className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-1000"
           />
-          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 ease-linear bg-opacity-60 
-           opacity-100 transition-all duration-300">
+          <div
+            className="absolute inset-0 bg-black/30 group-hover:bg-black/60 ease-linear bg-opacity-60 
+           opacity-100 transition-all duration-300"
+          >
             <div className="absolute -bottom-1 left-0 right-0 p-2 lg:p-4">
               <h4 className="text-lg md:text-lg lg:text-2xl font-bold text-white">
                 {data.dishItems[0].dishName}
@@ -141,8 +151,10 @@ const PopularDishes = ({ data }) => {
             alt="Sport"
             className="w-full h-full object-cover group-hover:scale-110 ease-in-out duration-1000"
           />
-          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 ease-linear bg-opacity-60 
-           opacity-100 transition-all duration-300">
+          <div
+            className="absolute inset-0 bg-black/30 group-hover:bg-black/60 ease-linear bg-opacity-60 
+           opacity-100 transition-all duration-300"
+          >
             <div className="absolute -bottom-1 left-0 right-0 p-2 lg:p-4">
               <h4 className="text-lg md:text-lg lg:text-2xl font-bold text-white">
                 {data.dishItems[1].dishName}
@@ -157,6 +169,10 @@ const PopularDishes = ({ data }) => {
       </div>
     </div>
   );
+};
+
+PopularDishes.propTypes = {
+  data: PropTypes.object.isRequired,
 };
 
 export default PopularDishes;

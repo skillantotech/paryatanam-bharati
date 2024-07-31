@@ -51,6 +51,7 @@ const BlogsHeader = () => {
             <div className="item text-gray-900">Blogs</div>
           </div>
           {/* Breadcrumb Ends */}
+          <div className="uppercase">Blogs</div>
           <h2 className="text-3xl sm:text-5xl font-semibold sm:font-bold">Read Exciting Articles</h2>
           <p className="lg:w-2/3 mx-auto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
@@ -112,7 +113,7 @@ const BlogsHeader = () => {
                         return (
                           <div
                             key={`${e.BlogAuthor}-tag-${index}`}
-                            className="text-sm text-white bg-blue-600 sm:bg-transparent sm:border-white border p-1 px-3 rounded-full"
+                            className="text-sm text-white bg-blue-600 sm:bg-transparent sm:border-white border py-1 px-3 rounded-full"
                           >
                             {tags}
                           </div>

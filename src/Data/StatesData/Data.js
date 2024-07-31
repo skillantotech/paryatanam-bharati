@@ -11,7 +11,6 @@ export const Data = [
     name: "Jaipur",
     desc: "A UNESCO World Heritage Sire,Jaipur is dotted with numerous heritage sites that are unmissable",
     button: " Fort",
-    learn: "View more",
     about: "Heritage"
   },
   {
@@ -19,7 +18,6 @@ export const Data = [
     name: "Udaipur",
     desc: "The City of Lakes, Udaipur is about the royal palaces, man-made lakes ,and the Aravalli Hills",
     button: " Lakes",
-    learn: "View more",
     about: "Heritage"
   },
   {
@@ -27,7 +25,6 @@ export const Data = [
     name: "Jodhpur",
     desc: "Home to the impressive Mehrangarh Fort,Jodhpur,the second-largest city in Rajasthan is a history lover's paradise",
     button: " Festival",
-    learn: "View more",
     about: "Fort"
   },
   {
@@ -35,7 +32,6 @@ export const Data = [
     name: "Jaisalmer",
     desc: "The Golden city,Jaisalmer reflects the rich history of Rajasthan and offers experience you cannot forget",
     button: " Safari",
-    learn: "View more",
     about: "Fort"
   },
   {
@@ -43,7 +39,6 @@ export const Data = [
     name: "Ramthambone National Park",
     desc: "Popula for its high possibility of tigers, Ranthambore National Park is Rajasthan's best wildlife destination",
     button: " Nature",
-    learn: "View more",
     about: "Wildlife"
   },
   {
@@ -51,7 +46,6 @@ export const Data = [
     name: "Pushkar",
     desc: "A religious destination with 52 ghats and one-of-its-kind Brahma Temple ,Pushkar attracts many from around the world",
     button: " Pilgrimage",
-    learn: "View more",
     about: "Temple"
   },
 ];

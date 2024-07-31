@@ -4,6 +4,7 @@ import { FaCheck, FaApple } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { MdAlternateEmail } from "react-icons/md";
 import { FiLock } from "react-icons/fi";
+import { useEffect } from "react";
 
 const services = [
   "All-Inclusive Packages",
@@ -13,6 +14,9 @@ const services = [
 ];
 
 const SignIn = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -35,13 +39,13 @@ const SignIn = () => {
                 Join 25k+ travelers & <br className="hidden xl:block" />
                 explore the world's best destinations with us!
               </h3>
-              <ul className="grid grid-cols-1 mt-10 xl:grid-cols-2 gap-x-8 lg:gap-x-20 gap-y-4">
+              <ul className="grid grid-cols-1 mt-10 sm:grid-cols-2 gap-x-8 gap-y-4">
                 {services.map((service, index) => (
-                  <li key={index} className="flex items-center space-x-3 ">
+                  <li key={index} className="flex items-center space-x-3">
                     <div className="inline-flex items-center justify-center flex-shrink-0 w-5 h-5 bg-green-500 rounded-full">
                       <FaCheck className="w-3 h-3 text-white" />
                     </div>
-                    <span className="text-lg font-medium text-white lg:whitespace-nowrap ">
+                    <span className="text-lg font-medium text-white lg:whitespace-nowrap">
                       {service}
                     </span>
                   </li>
@@ -125,9 +129,9 @@ const SignIn = () => {
 
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center w-full px-4 py-2.5 text-base font-semibold text-white transition-all duration-200 border border-transparent rounded-md bg-gradient-to-b from-blue-600 to-blue-500 focus:outline-none hover:opacity-80 focus:opacity-80"
+                  className="inline-flex items-center justify-center w-full px-4 py-2.5 text-base font-semibold text-white transition-all duration-200 border border-transparent rounded-md bg-gradient-to-r from-fuchsia-600 to-blue-600 focus:outline-none hover:opacity-80 focus:opacity-80"
                 >
-                  Sign in
+                  Login
                 </button>
               </div>
             </form>
@@ -158,7 +162,7 @@ const SignIn = () => {
               Don't have an account?{" "}
               <Link
                 to={"/sign-up"}
-                title=""
+                onClick={() => window.scrollTo(0, 0)}
                 className="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"
               >
                 Create an account

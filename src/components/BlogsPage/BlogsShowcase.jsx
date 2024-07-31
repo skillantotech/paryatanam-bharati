@@ -1,9 +1,9 @@
-import { Tabs } from "flowbite-react";
-import { useRef, useState } from "react";
 import AllBlogsShowcase from "./BlogsShowcaseTabs/AllBlogsShowcase";
 import TourismShowcase from "./BlogsShowcaseTabs/TourismShowcase";
 import ArtAndCultureShowcase from "./BlogsShowcaseTabs/ArtAndCultureShowcase";
 import CuisineShowcase from "./BlogsShowcaseTabs/CuisineShowcase";
+import CustomTab from "../CustomTab/CustomTab";
+import CustomTabItem from "../CustomTab/CustomTabItem";
 
 const tabTheme = {
   base: "flex flex-col gap-2",
@@ -22,8 +22,8 @@ const tabTheme = {
         default: {
           base: "rounded-t-lg",
           active: {
-            on: "bg-gray-100 text-cyan-600  ",
-            off: "text-gray-500 hover:bg-gray-50 hover:text-gray-600 ",
+            on: "bg-gray-100 text-cyan-600",
+            off: "text-gray-500 hover:bg-gray-50 hover:text-gray-600",
           },
         },
         underline: {
@@ -64,36 +64,23 @@ const tabTheme = {
 };
 
 function BlogsShowcase() {
-  const tabsRef = useRef(null);
-  const [activeTab, setActiveTab] = useState(0); //incase tab state is needed in future
-  // const [pageCount, setPageCount] = useState(0);
-
   return (
     <div className="max-w-7xl mx-auto">
-      <div className="flex flex-col mx-4 ">
-        <Tabs
-          aria-label="Default tabs"
-          variant="default"
-          ref={tabsRef}
-          theme={tabTheme}
-          onActiveTabChange={(tab) => setActiveTab(tab)}
-        >
-          <Tabs.Item theme={tabTheme} active title={"All"}>
+      <div className="flex flex-col mx-4 mb-5 ">
+        <CustomTab>
+          <CustomTabItem label="All">
             <AllBlogsShowcase />
-          </Tabs.Item>
-          <Tabs.Item active title={"Tourism"}>
+          </CustomTabItem>
+          <CustomTabItem label="Tourism">
             <TourismShowcase />
-          </Tabs.Item>
-          <Tabs.Item active title={"Art & Culture"}>
+          </CustomTabItem>
+          <CustomTabItem label="Art & Culture">
             <ArtAndCultureShowcase />
-          </Tabs.Item>
-          <Tabs.Item active title={"Cuisine"}>
+          </CustomTabItem>
+          <CustomTabItem label="Cuisine">
             <CuisineShowcase />
-          </Tabs.Item>
-        </Tabs>
-        {/* <div className="text-sm text-gray-500 dark:text-gray-400">
-          Active tab: {activeTab}
-        </div> */}
+          </CustomTabItem>
+        </CustomTab>
       </div>
     </div>
   );

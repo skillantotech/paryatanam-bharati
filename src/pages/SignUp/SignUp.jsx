@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaRegUser } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
 import { FiLock } from "react-icons/fi";
+import { useEffect } from "react";
 
 const services = [
   "All-Inclusive Packages",
@@ -14,6 +15,9 @@ const services = [
 ];
 
 const SignUp = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section>
@@ -37,7 +41,7 @@ const SignUp = () => {
                   Join 25k+ travelers & <br className="hidden xl:block" />
                   explore the world's best destinations with us!
                 </h3>
-                <ul className="grid grid-cols-1 mt-10 xl:grid-cols-2 gap-x-8 lg:gap-x-20 gap-y-4">
+                <ul className="grid grid-cols-1 mt-10 sm:grid-cols-2 gap-x-8 gap-y-4">
                   {services.map((service, index) => (
                     <li key={index} className="flex items-center space-x-3">
                       <div className="inline-flex items-center justify-center flex-shrink-0 w-5 h-5 bg-green-500 rounded-full">
@@ -179,7 +183,7 @@ const SignUp = () => {
 
                   <button
                     type="submit"
-                    className="inline-flex items-center justify-center w-full px-4 py-2.5 text-base font-semibold text-white transition-all duration-200 border border-transparent rounded-md bg-gradient-to-b from-blue-600 to-blue-500 focus:outline-none hover:opacity-80 focus:opacity-80"
+                    className="inline-flex items-center justify-center w-full px-4 py-2.5 text-base font-semibold text-white transition-all duration-200 border border-transparent rounded-md bg-gradient-to-r from-fuchsia-600 to-blue-600 focus:outline-none hover:opacity-80 focus:opacity-80"
                   >
                     Sign Up
                   </button>
@@ -212,7 +216,7 @@ const SignUp = () => {
                 Already have an account?{" "}
                 <Link
                   to={"/signin"}
-                  title=""
+                  onClick={() => window.scrollTo(0, 0)}
                   className="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"
                 >
                   Login
@@ -220,11 +224,9 @@ const SignUp = () => {
               </p>
 
               <p className="mt-3 text-sm text-gray-600 text-justify">
-                {/* By clicking "Sign Up" above, you acknowledge that you will
+                By clicking "Sign Up" above, you acknowledge that you will
                 receive updates from the Paryatanam Bharati team and that you
-                have read, understood, and agreed to our */}
-                By clicking "Sign Up" you agree to receive updates from
-                Paryatanam Bharati and accept our 
+                have read, understood, and agreed to our
                 <a
                   href="#"
                   title=""
