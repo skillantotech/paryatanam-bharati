@@ -17,6 +17,7 @@ import NotFound from "./pages/NotFound";
 import MainLayout from "./Layouts/MainLayout";
 import StatesPage from "./pages/StatesPage/StatesPage";
 import BlogsDetails from "./components/BlogsPage/BlogsDetails";
+import PlaceDetailsPage from "./pages/PlaceDetailsPage/PlaceDetailsPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,17 +26,14 @@ const router = createBrowserRouter(
         <Route element={<MainLayout />}>
           <Route index path="" element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="discover-india" element={<StatesPage />} />
+          <Route path="discover-india" element={<StatesPage />} />  
           <Route path="art-culture" element={<ArtAndCulture />} />
-          {/* <Route path="art-culture">
-            <Route path="/" element={<ArtandCulture />} />
-            <Route path="/details/:section/:item" element={<DetailPage />} />
-          </Route> */}
           <Route path="cuisine" element={<Cuisine />} />
           <Route path="blogs" element={<BlogsPage />} />
           <Route path="blogDetails/:Title" element={<BlogsDetails />} />
           <Route path="faqs" element={<FAQs />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="place-details" element={<PlaceDetailsPage />} />
         </Route>
         <Route path="signin" element={<SignIn />} />
         <Route path="sign-up" element={<SignUp />} />

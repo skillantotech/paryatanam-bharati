@@ -15,7 +15,7 @@ const Packagesrajastancard = () => {
 
   return (
     <>
-      <div className="max-w-7xl p-4 mx-auto">
+      <div className="max-w-7xl mx-4 xl:mx-auto">
         <div>
           <h2 className="font-bold text-3xl text-center">
             Other Travel Packages Rajasthan

@@ -32,9 +32,9 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto py-10">
-      <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-bold mb-6 ">
+    <div className="max-w-7xl mx-4 xl:mx-auto mt-6">
+      <div className="container mx-auto lg:mx-auto ">
+        <h1 className="text-3xl font-bold p-2 ">
           Mehrangarh Fort<span className="text-blue-600"> Jodhpur</span>
         </h1>
         <div className="flex flex-wrap">
@@ -56,11 +56,11 @@ const HeroSection = () => {
             {/* Slider controls */}
             <button
               type="button"
-              className="absolute top-1/2 left-0 z-30 flex items-center justify-center h-10 w-10 transform -translate-y-1/2 cursor-pointer group focus:outline-none"
+              className="absolute top-1/2 left-0 z-30 flex items-center justify-center h-10 w-10 transform -translate-y-1/2  cursor-pointer group focus:outline-none"
               onClick={prevSlide}
               data-carousel-prev
             >
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30     dark:group-focus:ring-gray-800/70 ">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30  group-focus:outline-none">
                 <svg
                   className="w-4 h-4 text-white dark:text-gray-800 hover:text-blue-600 rtl:rotate-180"
                   aria-hidden="true"
@@ -85,7 +85,7 @@ const HeroSection = () => {
               onClick={nextSlide}
               data-carousel-next
             >
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30     group-focus:outline-none">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30  group-focus:outline-none">
                 <svg
                   className="w-4 h-4 text-white dark:text-gray-800 hover:text-blue-600 rtl:rotate-180"
                   aria-hidden="true"

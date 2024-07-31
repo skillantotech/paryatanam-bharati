@@ -62,14 +62,14 @@ const Toptouristcard = () => {
   const groupedCards = chunkArray(Toptouristcarddata, cardsPerGroup);
 
   return (
-    <div className=" max-w-7xl mx-auto p-6">
+    <div className=" max-w-7xl mx-4 xl:mx-auto mt-4">
       <div>
         <h2 className="font-bold text-3xl text-left">
           Top Tourist Destinations in Rajasthan
         </h2>
       </div>
 
-      <div className="mt-4">
+      <div className="">
         <Carousel theme={customTheme} slideInterval={2000} pauseOnHover>
           {groupedCards.map((group, index) => (
             <div key={index} className="flex justify-center gap-5 h-auto">

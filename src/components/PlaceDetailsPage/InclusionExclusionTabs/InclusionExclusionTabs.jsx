@@ -4,7 +4,7 @@ const InclusionExclusionTabs = () => {
     const [activeTab, setActiveTab] = useState('Inclusions');
 
     return (
-        <div className="max-w-7xl mx-auto p-4 mb-10">
+        <div className="max-w-7xl mx-4 xl:mx-auto mb-10">
             <div>
                 <ul className="flex border-b-4">
                     <li
