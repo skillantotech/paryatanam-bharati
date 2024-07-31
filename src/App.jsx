@@ -34,7 +34,10 @@ const router = createBrowserRouter(
             <Route path="place-details" element={<PlaceDetailsPage />} />
           </Route>
 
-          <Route path="packages" element={<PackagesPage />} />
+          <Route path="packages" >
+            <Route path="" element={<PackagesPage />} />
+            <Route path="package-details" element={<PlaceDetailsPage />} />
+          </Route>
 
           <Route path="art-culture">
             <Route path="" element={<ArtAndCulturePage />} />
@@ -43,7 +46,7 @@ const router = createBrowserRouter(
 
           <Route path="cuisine">
             <Route path="" element={<CuisinePage />} />
-            <Route path="culture-details" element={<CultureDetailsPage />} />
+            <Route path="cuisine-details" element={<CultureDetailsPage />} />
           </Route>
 
           <Route path="blogs">

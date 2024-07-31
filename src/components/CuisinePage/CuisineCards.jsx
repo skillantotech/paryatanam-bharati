@@ -71,7 +71,7 @@ const Cuisinedishess = ({ data }) => {
                     </div>
                     <div className="mt-4 justify-between flex items-center">
                       <Link
-                        to={"culture-details"}
+                        to={"cuisine-details"}
                         className="flex items-center text-blue-600 font-semibold group"
                       >
                         View More

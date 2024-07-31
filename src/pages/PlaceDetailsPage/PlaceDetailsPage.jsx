@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Breadcrumbs from "../../components/PlaceDetailsPage/Breadcrumbs/Breadcrumbs";
 import HeroSection from "../../components/PlaceDetailsPage/HeroSection/HeroSection";
 import Itinerary from "../../components/PlaceDetailsPage/Itinerary/Itenerary";
@@ -11,6 +12,10 @@ import Rajastantravelcard from "../../components/PlaceDetailsPage/Rajasthantrave
 import BlogSection from "../../components/PlaceDetailsPage/BlogSection/BlogSection";
 
 const PlaceDetailsPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Breadcrumbs />

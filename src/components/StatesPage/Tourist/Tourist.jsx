@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { TouristData } from "../../../Data/StatesData/TouristData";
+import { Link } from "react-router-dom";
 // import { VscArrowRight } from "react-icons/vsc";
 
 function Tourist() {
@@ -25,7 +26,8 @@ function Tourist() {
       <div className="max-w-7xl mx-4 xl:mx-auto mt-5 transition-all duration-500 ease-in-out">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 place-items-center">
           {TouristData.slice(0, visibleItems).map((tour, index) => (
-            <div
+            <Link
+              to={"place-details"}
               key={index}
               className="h-[400px] w-auto max-w-md mx-auto overflow-hidden transition-transform duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
             >
@@ -46,7 +48,7 @@ function Tourist() {
                   <VscArrowRight className="ml-2" />
                 </button> */}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="flex justify-center mt-4">
