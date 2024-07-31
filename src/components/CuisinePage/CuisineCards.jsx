@@ -52,13 +52,13 @@ const Cuisinedishess = ({ data }) => {
                       src="https://c.ndtvimg.com/2022-04/fq5cs53_biryani-doubletree-by-hilton_625x300_12_April_22.jpg"
                       alt={dishes.dishName}
                     />
-                    <Link
-                      className={`font-semibold absolute top-0 left-0 ml-2 mt-2 text-white rounded-full flex  px-2 text-sm hover:bg-blue-700 transition-colors duration-300 ${
+                    <div
+                      className={`font-semibold absolute top-0 left-0 ml-2 mt-2 text-white rounded-full flex items-center px-2 text-sm ${
                         dishes.type == "Veg" ? "bg-green-600" : "bg-red-500"
                       } `}
                     >
                       {dishes.type}
-                    </Link>
+                    </div>
                   </div>
                   <div className="text-start mt-4">
                     <h2 className="text-xl font-bold">{dishes.dishName}</h2>
@@ -70,10 +70,13 @@ const Cuisinedishess = ({ data }) => {
                       </h5>
                     </div>
                     <div className="mt-4 justify-between flex items-center">
-                      <Link to={"culture-details"} className="flex items-center text-blue-600 font-semibold group">
+                      <Link
+                        to={"culture-details"}
+                        className="flex items-center text-blue-600 font-semibold group"
+                      >
                         View More
                         <div className="pl-2 group-hover:translate-x-1 transition-transform duration-300">
-                          <IoMdArrowRoundForward className="mt-1" />
+                          <IoMdArrowRoundForward />
                         </div>
                       </Link>
                     </div>
@@ -91,13 +94,13 @@ const Cuisinedishess = ({ data }) => {
                       src="https://c.ndtvimg.com/2022-04/fq5cs53_biryani-doubletree-by-hilton_625x300_12_April_22.jpg"
                       alt={dishes.packageDestination}
                     />
-                    <Link
-                      className={`font-semibold absolute top-0 left-0 ml-2 mt-2 text-white rounded-full flex  px-2 text-sm hover:bg-blue-700 transition-colors duration-300 ${
+                    <div
+                      className={`font-semibold absolute top-0 left-0 ml-2 mt-2 text-white rounded-full flex items-center px-2 text-sm ${
                         dishes.type == "Veg" ? "bg-green-600" : "bg-red-500"
                       } `}
                     >
                       {dishes.type}
-                    </Link>
+                    </div>
                   </div>
                   <div className="text-start mt-4">
                     <h2 className="text-xl font-bold">{dishes.dishName}</h2>
@@ -109,12 +112,15 @@ const Cuisinedishess = ({ data }) => {
                       </h5>
                     </div>
                     <div className="mt-8 justify-between flex items-center">
-                      <button className="flex items-center text-blue-500 group">
+                      <Link
+                        to={"culture-details"}
+                        className="flex items-center text-blue-500 group"
+                      >
                         View More
                         <div className="pl-2 group-hover:translate-x-1 transition-transform duration-300">
-                          <IoMdArrowRoundForward className="mt-1" />
+                          <IoMdArrowRoundForward />
                         </div>
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>

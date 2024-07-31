@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import React from "react";
 
 const CustomTab = ({ children, customTheme }) => {
   const [activeTab, setActiveTab] = useState(children[0].props.label);
@@ -9,7 +10,7 @@ const CustomTab = ({ children, customTheme }) => {
   };
 
   return (
-    <div className="tabs max-w-7xl mx-auto flex flex-col ">
+    <div className="tabs max-w-7xl xl:mx-auto flex flex-col">
       <ul
         className={`tab-list flex gap-2 cursor-pointer border-gray-300 overflow-x-scroll no-scrollbar py-1 ${
           customTheme ? "sm:justify-center" : ""
@@ -32,10 +33,12 @@ const CustomTab = ({ children, customTheme }) => {
           );
         })}
       </ul>
-      <div className={`tab-content overflow-hidden`}>
+      <div className="tab-content">
         {children.map((child) => {
-          if (child.props.label !== activeTab) return undefined;
-          return child.props.children;
+          return React.cloneElement(child, {
+            key: child.props.label, // Use child.props.label as the key
+            isActive: child.props.label === activeTab,
+          });
         })}
       </div>
     </div>
@@ -43,7 +46,7 @@ const CustomTab = ({ children, customTheme }) => {
 };
 
 CustomTab.propTypes = {
-  children: PropTypes.array.isRequired,
+  children: PropTypes.node,
   customTheme: PropTypes.bool,
 };
 

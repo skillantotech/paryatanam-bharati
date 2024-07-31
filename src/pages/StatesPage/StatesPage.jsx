@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 // import Breadcrumbs from "../../components/StatesPage/Breadcrumbs/Breadcrumbs";
 import Hero from "../../components/StatesPage/HeroSection/Hero";
 import HillStationSlider from "../../components/StatesPage/HillStationSlider/HillStationSlider";
@@ -20,6 +21,10 @@ import { HiHome } from "react-icons/hi";
 // import CardContainer from "../../components/StatesPage/CardContainer/CardContainer";
 
 const StatesPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Hero />

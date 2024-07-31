@@ -1,10 +1,10 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const Cuisinehero = ({scrollToAbout}) => {
   return (
     <>
       <section className="bg-no-repeat bg-cover bg-[url('https://static.vecteezy.com/system/resources/previews/036/804/355/non_2x/ai-generated-assorted-indian-food-on-dark-wooden-background-free-photo.jpg')]">
-        <div className="py-10 px-4 sm:h-[77vh]  flex items-center bg-black/40">
+        <div className="py-10 px-4 sm:h-[78vh]  flex items-center bg-black/40">
           <div className="max-w-7xl mx-auto  ">
             <div className="  flex flex-col gap-4 text-white">
               <span className="text-3xl md:text-4xl lg:text-5xl text-white text-center mx-4  leading-tight font-bold">
@@ -18,7 +18,7 @@ const Cuisinehero = ({scrollToAbout}) => {
                 and Timeless Traditions.
               </h3>
               <div className="text-center">
-                <button onClick={scrollToAbout} className=" mt-1 p-2 text-xl rounded font-semibold text-md bg-blue-600 text-white border-2 border-blue-600">
+                <button onClick={scrollToAbout} className=" mt-1 p-2 px-4 text-xl rounded font-semibold text-md bg-blue-600 text-white border-2 border-blue-600">
                   Explore
                 </button>
               </div>
@@ -28,6 +28,10 @@ const Cuisinehero = ({scrollToAbout}) => {
       </section>
     </>
   );
+};
+
+Cuisinehero.propTypes = {
+  scrollToAbout: PropTypes.func.isRequired,
 };
 
 export default Cuisinehero;

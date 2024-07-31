@@ -29,8 +29,10 @@ const router = createBrowserRouter(
           <Route index path="" element={<HomePage />} />
           <Route path="about" element={<About />} />
 
-          <Route path="discover-india/place" element={<StatesPage />} />
-          <Route path="place-details" element={<PlaceDetailsPage />} />
+          <Route path="discover-india/place">
+            <Route path="" element={<StatesPage />} />
+            <Route path="place-details" element={<PlaceDetailsPage />} />
+          </Route>
 
           <Route path="packages" element={<PackagesPage />} />
 
@@ -44,8 +46,10 @@ const router = createBrowserRouter(
             <Route path="culture-details" element={<CultureDetailsPage />} />
           </Route>
 
-          <Route path="blogs" element={<BlogsPage />} />
-          <Route path="blogDetails/:Title" element={<BlogDetails />} />
+          <Route path="blogs">
+            <Route path="" element={<BlogsPage />} />
+            <Route path=":Title" element={<BlogDetails />} />
+          </Route>
 
           <Route path="faqs" element={<FAQsPage />} />
           <Route path="contact" element={<ContactPage />} />

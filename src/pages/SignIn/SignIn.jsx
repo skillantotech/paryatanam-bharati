@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import BrandLogo from "../../../public/assets/logo/Paryatanmbharati logo_PNG.png";
 import { FaCheck, FaApple } from "react-icons/fa6";
@@ -13,6 +14,10 @@ const services = [
 ];
 
 const SignIn = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -158,7 +163,6 @@ const SignIn = () => {
               Don't have an account?{" "}
               <Link
                 to={"/sign-up"}
-                onClick={() => window.scrollTo(0, 0)}
                 className="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"
               >
                 Create an account
