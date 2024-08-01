@@ -22,33 +22,35 @@ const Packagesrajastancard = () => {
           </h2>
         </div>
 
-        <div className="mt-10 flex flex-wrap justify-center transition-all duration-500">
-          {Packagesrajastancarddata.slice(0, visibleCards).map((card, index) => (
-            <div
-              key={index}
-              className="rounded-md mx-6 my-4 w-80 transition-transform duration-500 transform hover:scale-105"
-            >
-              <div className="card-container h-auto shadow-md">
-                <div className="img-container relative group h-80 w-auto">
-                  <img
-                    src={card.thumbnail}
-                    alt=""
-                    className="h-full w-full m-auto  transition-transform duration-300"
-                  />
-                  <div className="absolute z-50 top-10 left-5 text-2xl text-white font-bold">
-                    {card.headingname}
+        <div className="mt-4 flex flex-wrap justify-center transition-all duration-500">
+          {Packagesrajastancarddata.slice(0, visibleCards).map(
+            (card, index) => (
+              <div
+                key={index}
+                className="rounded-md mx-6 my-4 w-80 transition-transform duration-500 transform hover:scale-105"
+              >
+                <div className="card-container h-auto shadow-md">
+                  <div className="img-container relative group h-80 w-auto">
+                    <img
+                      src={card.thumbnail}
+                      alt=""
+                      className="h-full w-full m-auto  transition-transform duration-300"
+                    />
+                    <div className="absolute z-50 top-10 left-5 text-2xl text-white font-bold">
+                      {card.headingname}
+                    </div>
+                    <div className="absolute z-50 top-20 left-5 text-sm text-white font-bold">
+                      {card.activities}
+                    </div>
+                    <div className="absolute z-50 bottom-5 rounded-full right-5 text-lg text-white font-bold border p-2 hover:bg-blue-500">
+                      <FaAngleRight />
+                    </div>
+                    <div className="absolute inset-0 bg-black opacity-30"></div>
                   </div>
-                  <div className="absolute z-50 top-20 left-5 text-sm text-white font-bold">
-                    {card.activities}
-                  </div>
-                  <div className="absolute z-50 bottom-5 rounded-full right-5 text-lg text-white font-bold border p-2 hover:bg-blue-500">
-                    <FaAngleRight />
-                  </div>
-                  <div className="absolute inset-0 bg-black opacity-30"></div>
                 </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
 
         <div className="mt-10 flex justify-center">
@@ -74,5 +76,3 @@ const Packagesrajastancard = () => {
 };
 
 export default Packagesrajastancard;
-
-

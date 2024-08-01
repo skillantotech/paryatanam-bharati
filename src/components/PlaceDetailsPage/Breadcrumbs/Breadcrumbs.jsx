@@ -21,7 +21,7 @@ const Breadcrumbs = () => {
   return (
     <Breadcrumb
       theme={customTheme}
-      className="max-w-7xl mx-8 xl:mx-auto mt-10"
+      className="max-w-7xl mx-4 xl:mx-auto mt-10"
       aria-label="Breadcrumb"
     >
       <Breadcrumb.Item href="#" icon={HiHome}>

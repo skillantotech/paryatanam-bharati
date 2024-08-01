@@ -219,7 +219,7 @@ const Itinerary = () => {
                   <div className="h-full w-0.5 bg-gray-300"></div>
                 )}
               </div>
-              <div className="flex-1 ">
+              <div className="flex-1 mt-2">
                 <div
                   className="cursor-pointer p-4 border border-gray-300 rounded-md shadow-md"
                   onClick={() => toggleAccordion(index)}
