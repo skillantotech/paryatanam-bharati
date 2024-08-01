@@ -1,14 +1,14 @@
 const HeroSection = () => {
   return (
     <div
-      className="relative bg-cover bg-center h-[75vh]"
+      className="relative bg-cover bg-center h-[calc(100vh-120px)] md:h-[calc(100vh-96px)]"
       style={{
         backgroundImage:
           "url('https://images.pexels.com/photos/318238/pexels-photo-318238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
       }}
     >
       <div className="absolute inset-0 bg-black opacity-30"></div>
-      <div className="relative z-0 flex flex-col items-center justify-center h-full text-center text-white px-4">
+      <div className="relative z-[1] flex flex-col items-center justify-center h-full text-center text-white px-4">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
           Explore the Art & Culture of India
         </h1>

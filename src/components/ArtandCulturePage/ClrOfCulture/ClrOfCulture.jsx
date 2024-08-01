@@ -1,5 +1,4 @@
-///new code//
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { Accordion } from "flowbite-react";
 import { Link } from "react-router-dom";
@@ -277,7 +276,7 @@ const data = {
   ],
 };
 
-function ArtandCulture() {
+function ClrOfCulture() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [currentSection, setCurrentSection] = useState("");
   const [openIndex, setOpenIndex] = useState(0); // Show the first section by default
@@ -299,6 +298,7 @@ function ArtandCulture() {
   const handleAccordionToggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+  
   return (
     <>
       <div className="max-w-7xl mx-4 xl:mx-auto p-4">
@@ -540,4 +540,4 @@ function ArtandCulture() {
   );
 }
 
-export default ArtandCulture;
+export default ClrOfCulture;

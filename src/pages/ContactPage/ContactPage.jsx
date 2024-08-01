@@ -26,9 +26,9 @@ const ContactPage = () => {
             Contact us
           </h2>
           <p className=" mt-4 text-base leading-relaxed text-gray-500">
-            Reach out to us! Whether you have questions,
-            need assistance, or want to provide feedback, our dedicated team is
-            here to help you with all your travel needs.
+            Reach out to us! Whether you have questions, need assistance, or
+            want to provide feedback, our dedicated team is here to help you
+            with all your travel needs.
           </p>
         </div>
 
@@ -123,7 +123,7 @@ const ContactPage = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
                   <div>
                     <label
-                      for=""
+                      htmlFor=""
                       className="text-base font-medium text-gray-900"
                     >
                       {" "}
@@ -142,7 +142,7 @@ const ContactPage = () => {
 
                   <div>
                     <label
-                      for=""
+                      htmlFor=""
                       className="text-base font-medium text-gray-900"
                     >
                       {" "}
@@ -161,7 +161,7 @@ const ContactPage = () => {
 
                   <div>
                     <label
-                      for=""
+                      htmlFor=""
                       className="text-base font-medium text-gray-900"
                     >
                       {" "}
@@ -180,7 +180,7 @@ const ContactPage = () => {
 
                   <div>
                     <label
-                      for=""
+                      htmlFor=""
                       className="text-base font-medium text-gray-900"
                     >
                       {" "}
@@ -199,7 +199,7 @@ const ContactPage = () => {
 
                   <div className="sm:col-span-2">
                     <label
-                      for=""
+                      htmlFor=""
                       className="text-base font-medium text-gray-900"
                     >
                       {" "}
