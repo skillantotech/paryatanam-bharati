@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-import { Jodhpurholidaycarddata } from "../../../Data/PlaceDetailsData/Jodhpurholidaycarddata";
+import React, { useState } from 'react';
+import { Jodhpurholidaycarddata } from "../../../Data/StateDetailsData/Jodhpurholidaycarddata";
 
 const Jodhpurholidaycard = () => {
   const [viewMore, setViewMore] = useState(false);
 
-  const displayedCards = viewMore
-    ? Jodhpurholidaycarddata
-    : Jodhpurholidaycarddata.slice(0, 3);
+  const displayedCards = viewMore ? Jodhpurholidaycarddata : Jodhpurholidaycarddata.slice(0, 3);
 
   const handleViewMoreToggle = () => {
     setViewMore(!viewMore);
@@ -14,11 +12,9 @@ const Jodhpurholidaycard = () => {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto p-4 mt-10">
+      <div className="max-w-7xl mx-auto lg:mx-auto mt-10">
         <div>
-          <h2 className="font-bold text-2xl ml-10 text-center ">
-            Jodhpur Holiday Packages
-          </h2>
+          <h2 className="font-bold text-2xl ml-10 text-center ">Jodhpur Holiday Packages</h2>
         </div>
 
         <div className="mt-5 flex flex-wrap justify-center">
@@ -56,7 +52,7 @@ const Jodhpurholidaycard = () => {
             className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300"
             onClick={handleViewMoreToggle}
           >
-            {viewMore ? "View Less" : "View More"}
+            {viewMore ? 'View Less' : 'View More'}
           </button>
         </div>
       </div>
@@ -65,3 +61,5 @@ const Jodhpurholidaycard = () => {
 };
 
 export default Jodhpurholidaycard;
+
+

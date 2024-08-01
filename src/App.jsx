@@ -34,7 +34,7 @@ const router = createBrowserRouter(
             <Route path="place-details" element={<PlaceDetailsPage />} />
           </Route>
 
-          <Route path="packages" >
+          <Route path="packages">
             <Route path="" element={<PackagesPage />} />
             <Route path="package-details" element={<PlaceDetailsPage />} />
           </Route>
