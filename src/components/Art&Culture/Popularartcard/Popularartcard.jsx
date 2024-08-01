@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { VscChevronRight } from "react-icons/vsc";
 import { Popularartcarddata } from "../../../Data/Art&CultureData/Popularartcarddata";
 
 const Popularartcard = () => {
@@ -28,6 +29,12 @@ const Popularartcard = () => {
               <p className="mt-2 text-base font-normal border-l-4 border-blue-500 p-2">
                 {card.about}
               </p>
+              <button className="flex items-center font-semibold text-blue-500 group mt-2">
+                  Explore
+                  <div className="pl-2 group-hover:translate-x-1 transition-transform duration-300">
+                    <VscChevronRight className="size-5" />
+                  </div>
+                </button>
             </div>
           </div>
         ))}

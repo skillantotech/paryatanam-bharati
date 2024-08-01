@@ -1,6 +1,8 @@
-import { useState,useRef, useEffect } from "react";
+import { useState } from "react";
 
 const Overview = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   const destinations = [
     {
       name: "Jaipur",
@@ -54,28 +56,11 @@ const Overview = () => {
     },
   ];
 
-  const [visibleDestinations, setVisibleDestinations] = useState(3);
-  const [contentHeight, setContentHeight] = useState("auto");
-  const contentRef = useRef(null);
-
-  useEffect(() => {
-    if (contentRef.current) {
-      setContentHeight(contentRef.current.scrollHeight + "px");
-    }
-  }, [visibleDestinations]);
-
-  const handleLoadMore = () => {
-    setVisibleDestinations(destinations.length);
-  };
-
-  const handleLoadLess = () => {
-    setVisibleDestinations(3);
-  };
   return (
     <div className="max-w-7xl mx-4 xl:mx-auto mt-8 mb-12">
       <div className="prose lg:prose-xl">
-        <h2 className="text-3xl font-bold mb-4">About Rajasthan Tourism</h2>
-        <p className="mb-6">
+        <h2 className="text-3xl font-bold mb-1">About Rajasthan Tourism</h2>
+        <p className="mb-2">
           Rajasthan is a state of vibrant folk dance and music, gigantic forts
           and palaces, spicy food, colourful and large turbans, extensive golden
           sand desert, camels and rich handicraft. It is therefore, an
@@ -85,11 +70,11 @@ const Overview = () => {
           enthusiasts, family vacations, honeymoon, and more.
         </p>
 
-        <h3 className="text-2xl font-bold mb-2">
+        <h3 className="text-2xl font-bold mb-1">
           Architectural Splendour: Forts, Palaces & Havelis!
         </h3>
 
-        <p className="mb-6">
+        <p className="mb-2">
           The major tourist attractions of Rajasthan are its havelis, palaces
           and forts that add to the experience of exploring one of the
           historically wealthy states in India. Some of the most famous and most
@@ -104,11 +89,11 @@ const Overview = () => {
           Jain Temples and Eklingji Temple.
         </p>
 
-        <h3 className="text-2xl font-bold mb-2">
+        <h3 className="text-2xl font-bold mb-1">
           A Rich Melange of Dances, Songs, Rides & Colors!
         </h3>
 
-        <p className="mb-6">
+        <p className="mb-2">
           For culture aficionados, there are a number of fairs and festivals in
           Rajasthan to witness. The flamboyant manner in which even the cattle
           fairs take place in Pushkar and Nagaur is truly something to behold.
@@ -119,11 +104,11 @@ const Overview = () => {
           and Teej.
         </p>
 
-        <h3 className="text-2xl font-bold mb-2">
+        <h3 className="text-2xl font-bold mb-1">
           Rajasthan Also Boasts a Rich Wildlife!
         </h3>
 
-        <p className="mb-6">
+        <p className="mb-2">
           Rajasthan, even though the hot and arid place, is rich in wildlife
           tourism. It offers several opportunities for tiger sighting and
           birdwatching. Some of the famous wildlife sanctuaries and national
@@ -134,7 +119,7 @@ const Overview = () => {
           Park are the most famous wildlife destinations in Rajasthan.
         </p>
 
-        <p className="mb-6">
+        <p className="mb-2">
           Those who love birdwatching should visit Keoladeo National Park
           (Bharatpur Bird Sanctuary), a UNESCO World Heritage Site, as it is
           home to at least 230 species of birds. Home to indigenous water birds
@@ -146,11 +131,11 @@ const Overview = () => {
           eagle, and marsh crocodiles.
         </p>
 
-        <h3 className="text-2xl font-bold mb-2">
+        <h3 className="text-2xl font-bold mb-1">
           Go Shopping : From Jewellery to Paintings!
         </h3>
 
-        <p className="mb-6">
+        <p className="mb-2">
           An indispensable part of the culture of Rajasthan is the handicraft
           skills, shopping for which is an experience to have. The state is
           famous for its jewellery pieces, and is one of the largest centers for
@@ -160,30 +145,11 @@ const Overview = () => {
           Rajasthan.
         </p>
 
-        <p className="mb-6">
-          Another shopping worthy article in Rajasthan are its miniature
-          paintings that have a Mughal influence to it. These paintings have
-          intricate detailing and come in different styles like Mewar, Bundi,
-          Kota, Marwar, Bikaner, Jaipur and Kishangarh. An ancient art of scroll
-          painting called Phad also makes for one of the best things to take
-          back home from Rajasthan. Pichwais are another form of paintings, a
-          little different from Phad; but equally attractive.
-        </p>
-
-        <p className="mb-6">
-          Apart from home decor in the form of paintings, Rajasthan offers an
-          opportunity to buy some authentic and exquisite leather items, amongst
-          which Mojari/Jutti/Shoes are the most popular things to buy. One can
-          get the best Mojari from Jaipur, Jodhpur, Barmer and Jaisalmer along
-          with musical instruments made out of leather. From Bikaner one can
-          purchase lamp shades, shields, vases made out of camel hide.
-        </p>
-
-        <h3 className="text-2xl font-bold mb-2">
+        <h3 className="text-2xl font-bold mb-1">
           Daal Baati Churma to Laal Maas : Savour the Rich Cuisine of Rajasthan!
         </h3>
 
-        <p className="mb-6">
+        <p className="mb-2">
           Influenced with the parched region of Rajasthan, extreme climatic
           conditions and limited availability of water and vegetation, the
           Rajasthani Cuisine has evolved out of the unique cooking style and
@@ -194,26 +160,11 @@ const Overview = () => {
           which the tourists travel even thousand miles.
         </p>
 
-        <p className="mb-6">
-          Starting from different kinds of breads like Batis, Missi roti, and
-          Jowar, Bajra and Makke ki roti, to go with exceptionally tasty curries
-          like Gatte ki Sabzi, Papad ki Sabzi and Kadhi Pakora. The pungent
-          tidbits and accompaniments like Moong Dal and Pyaaz ki Kachori,
-          Bikaneri Bhujia, Bajre ka khichda, Kher Sangri, and Lehsun ki Chutney,
-          and the wind-up digestive Butter Milk elaborates the menu even more.
-          And not to forget the sweet wonders like Churma, Lapsi, Malpua,
-          Ghewar, Alwar ka Mawa and the long-lasting Gond ke Laddoo. Though the
-          region is predominantly vegetarian, the influence of Rajputs
-          non-vegetarian food habit can be seen in the cuisine with the presence
-          of delicacies such as Laal Maas, Jungle Maas, Khad Khargosh and Safed
-          Maas, that in a way completes the menu.
-        </p>
-
-        <h3 className="text-2xl font-bold mb-2">
+        <h3 className="text-2xl font-bold mb-1">
           Luxury Holidays and Royal Hospitality!
         </h3>
 
-        <p className="mb-6">
+        <p className="mb-2">
           For luxury holidays, Rajasthan tourism has a decent number of heritage
           hotels that along with offering incredible hospitality to all its
           guests also cater to the fantasies of honeymoon couples. There are
@@ -226,27 +177,12 @@ const Overview = () => {
           pretty view of the desert rolling by.
         </p>
 
-        <p className="mb-6">
-          You can also stay at the heritage hotels, which were once palaces of
-          the princes and maharajas but were later converted into heritage
-          hotels. The major percentage of hotels are adorned with exotic murals;
-          original artifacts; king-sized beds, manicured gardens; mirrored bar;
-          sunlit corridors and most modern style with the convenience that were
-          once the properties of the reigning monarchs. Some of the most famous
-          heritage hotels in Rajasthan are Leela Palace, Taj Lake Palace, Umaid
-          Bhawan and Jal Mahal Palace. The fabulous exteriors, spectacular
-          interiors and hospitality normally reserved for royalty are some of
-          the experiences in store for you at these heritage hotels. A stay in
-          any of these hotels would transfer one to the world where everything
-          is lavish, luxurious and larger than life.
-        </p>
-
-        <h3 className="text-2xl font-bold mb-2">
+        <h3 className="text-2xl font-bold mb-1">
           From Zip Lining to Zorbing, there are Several Options for Adventure
           Tourism Sports!
         </h3>
 
-        <p className="mb-6">
+        <p className="mb-2">
           Rajasthan also offers numerous opportunities for enjoying several
           adventure tourism sports activities. Some of the adventure hotspots in
           the state are Jaipur, Pushkar, Bharatpur and Jaisalmer. In Bharatpur,
@@ -254,7 +190,7 @@ const Overview = () => {
           quake walk and rope course.
         </p>
 
-        <p className="mb-6">
+        <p className="mb-2">
           Jaipur attracts adventure enthusiasts with a number of adventure
           activities like zorbing, cycling and ATV bike ride. In Pushkar, you
           can enjoy hot air balloon rides, quad biking and camel safari. And of
@@ -263,93 +199,60 @@ const Overview = () => {
           bashing and biking. You can also enjoy parasailing and enjoy the views
           of the forts and desert from above.
         </p>
-
-        <h3 className="text-2xl font-bold mb-2">
-          Spirituality Abounds in the State of Rajasthan!
-        </h3>
-
-        <p className="mb-6">
-          Rajasthan is also immersed in spirituality, with its numerous places
-          of worship belonging to Hindus, Muslims and Jains. Some of the temples
-          are famous throughout the country, like the Karni Mata Temple, where
-          rats are treated like deities and offered food. Some of the most
-          visited Hindu temples in the state are Brahma Temple, Deo Somnath
-          Temple, Jagdish Temple, Kunj Bihari Temple and Kaila Devi Temple.
-        </p>
-
-        <p className="mb-6">
-          There are several Muslim places of worship, and some of them are
-          visited by both Hindus and Muslims alike. One of them is the Dargah
-          Sharif or Ajmer Sharif. It is dedicated to Khwaja Moinuddin Chishti,
-          who came to Ajmer from Persia in 1192. Hazrat Khwaja Moinuddin Hasan
-          Chishti occupies a prominent place amongst the spiritual healers of
-          the world. Constructed with white marble, it has 11 arches and a
-          Persian inscription running through the full length of the building.
-          The other one is Abdullah Pir Dargah Banswara.
-        </p>
-
-        <p className="mb-6">
-          Rajasthan is also home to the most beautiful Jain temples in the
-          world. Two of the most visited ones are Ranakpur Jain Temples and
-          Dilwara Temple. The Jain temple of Ranakpur is situated in the heart
-          of the Aravalli hills. The temple is a fine specimen of art and
-          culture that makes it a treasured site of Rajasthan that is to be
-          cherished. The construction of this temple was started in the year of
-          1446 and was completed in the year 1496. It took fifty years for the
-          completion of the temple.
-        </p>
-
-        <p className="mb-6">
-          Dilwara Temple is one of the finest and architecturally renowned Jain
-          temples in India. A large number of visitors and pilgrims visit this
-          temple every day. Its extraordinary architecture is its major
-          attraction. Intricate carvings on the marble stone and high-quality
-          craftsmanship of the workers are clearly visible in every aspect of
-          this temple, making it truly unique and distinct. Its opulent
-          entranceway is truly stunning and spectacular. Other famous Jain
-          Temples are Shri Mahavirji Jain Temple and Tijara Jain Temple.
-        </p>
-
-        <p className="mb-6">
-          We at Tour My India want to help you explore this incredible land, and
-          thus bring to you the best Rajasthan holiday packages at the best
-          prices. With our travel deals you have the opportunity to discover
-          Rajasthan the way you want.
-        </p>
-        <h3 className="text-2xl font-bold mb-2">Top 10 Most Visited Destinations in Rajasthan</h3>
         <div
-          ref={contentRef}
-          style={{
-            transition: "height 0.5s ease-in-out",
-            height: visibleDestinations < destinations.length ? "auto" : contentHeight,
-            overflow: "hidden",
-          }}
+          className={`transition-all duration-1000 ease-in-out overflow-hidden  ${
+            isExpanded ? "max-h-screen" : "max-h-0"
+          }`}
         >
-          <ul className="space-y-6">
-            {destinations.slice(0, visibleDestinations).map((destination, index) => (
+          <h3 className="text-2xl font-bold mb-1">
+            Spirituality Abounds in the State of Rajasthan!
+          </h3>
+
+          <p className="mb-2">
+            Rajasthan is also immersed in spirituality, with its numerous places
+            of worship belonging to Hindus, Muslims and Jains. Some of the
+            temples are famous throughout the country, like the Karni Mata
+            Temple, where rats are treated like deities and offered food. Some
+            of the most visited Hindu temples in the state are Brahma Temple,
+            Deo Somnath Temple, Jagdish Temple, Kunj Bihari Temple and Kaila
+            Devi Temple.
+          </p>
+
+          <p className="mb-2">
+            There are several Muslim places of worship, and some of them are
+            visited by both Hindus and Muslims alike. One of them is the Dargah
+            Sharif or Ajmer Sharif. It is dedicated to Khwaja Moinuddin Chishti,
+            who came to Ajmer from Persia in 1192. Hazrat Khwaja Moinuddin Hasan
+            Chishti occupies a prominent place amongst the spiritual healers of
+            the world. Constructed with white marble, it has 11 arches and a
+            Persian inscription running through the full length of the building.
+            The other one is Abdullah Pir Dargah Banswara.
+          </p>
+
+          <h3 className="text-2xl font-bold mb-2">
+            Top 10 Most Visited Destinations in Rajasthan
+          </h3>
+          <ul className="">
+            {destinations.map((destination, index) => (
               <li key={index}>
                 <p>
-                  <strong>{destination.name} :</strong> {destination.description}
+                  <strong>{destination.name} :</strong>{" "}
+                  {destination.description}
                 </p>
               </li>
             ))}
           </ul>
         </div>
-        {visibleDestinations < destinations.length ? (
+
+        <div className="flex justify-center mt-2">
           <button
-            onClick={handleLoadMore}
-            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded transition duration-300 ease-in-out"
+            onClick={() => setIsExpanded((prev) => !prev)}
+            className="font-bold text-lg cursor-pointer group relative transition-all duration-500 ease-in-out"
           >
-            Load More
+            {isExpanded ? "View Less" : "View More"}
+            <div className="absolute left-0 bottom-0 h-[3px] bg-[#3B82F6] w-0 group-hover:w-full transition-all duration-300"></div>
           </button>
-        ) : (
-          <button
-            onClick={handleLoadLess}
-            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded transition duration-300 ease-in-out"
-          >
-            Load Less
-          </button>
-        )}
+        </div>
       </div>
     </div>
   );
