@@ -45,19 +45,16 @@ const StatesPage = () => {
       <CardSection />
       {/* <HowToReach/> */}
       <StateInfo />
-<<<<<<< HEAD
-=======
+
       <StateFAQs />
->>>>>>> 992e36f58f9175a16cc5112e26e6cecb0bb61f0b
+
       <Tourist />
       {/* <Slider/> */}
       {/* <HolidayCard/> */}
       <ExploreCard />
       <Travel />
-<<<<<<< HEAD
 
-=======
->>>>>>> 992e36f58f9175a16cc5112e26e6cecb0bb61f0b
+
       <QuickLinks />
       {/* <div className="bg-gray-800 min-h-screen flex items-center justify-center">
     <CardContainer/>

@@ -1,95 +1,12 @@
 import { Datepicker } from "flowbite-react";
 import { useState, useEffect } from "react";
 // import { CustomFlowbiteTheme } from "flowbite-react";
-<<<<<<< HEAD
+
 // import DatePicker from "react-datepicker";
 // import "react-datepicker/dist/react-datepicker.css";
-=======
 
-const DatePickerTheme = {
-  "root": {
-    "base": "relative",
-    "inner":"dark:bg-blue-100" 
-  },
-  "popup": {
-    "root": {
-      "base": "absolute top-10 z-50 block pt-2 ",
-      "inline": "relative top-0 z-auto",
-      "inner": "inline-block rounded-lg bg-white p-4 shadow-lg"
-    },
-    "header": {
-      "base": "",
-      "title": "px-2 py-3 text-center font-semibold text-gray-900 dark:text-black",
-      "selectors": {
-        "base": "mb-2 flex justify-between",
-        "button": {
-          "base": "rounded-lg dark:bg-white px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:bg-white dark:text-black dark:hover:bg-blue-600",
-          "prev": "",
-          "next": "",
-          "view": ""
-        }
-      }
-    },
-    "view": {
-      "base": "p-1"
-    },
-    "footer": {
-      "base": "mt-2 flex space-x-2",
-      "button": {
-        "base": "w-full rounded-lg px-5 py-2 text-center text-sm font-medium focus:ring-4 focus:ring-cyan-300",
-        "today": "bg-blue-700 text-white hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700",
-        "clear": "border border-gray-300 bg-white text-gray-900 hover:bg-gray-100 dark:border-gray-600 dark:bg-white dark:text-black dark:hover:bg-gray-200"
-      }
-    }
-  },
-  "views": {
-    "days": {
-      "header": {
-        "base": "mb-1 grid grid-cols-7",
-        "title": "h-6 text-center text-sm font-medium leading-6 text-gray-500 dark:text-gray-400"
-      },
-      "items": {
-        "base": "grid w-64 grid-cols-7",
-        "item": {
-          "base": "block flex-1 cursor-pointer rounded-lg border-0 text-center text-sm font-semibold leading-9 text-gray-900 hover:bg-gray-100 dark:text-black dark:hover:bg-gray-600",
-          "selected": "bg-blue-600 text-white hover:bg-blue-600",
-          "disabled": "text-gray-500"
-        }
-      }
-    },
-    "months": {
-      "items": {
-        "base": "grid w-64 grid-cols-4 ",
-        "item": {
-          "base": "block flex-1 cursor-pointer rounded-lg border-0 text-center text-sm font-semibold leading-9 text-gray-900 hover:bg-gray-100 dark:text-black dark:hover:bg-gray-600",
-          "selected": "bg-blue-600 text-white hover:bg-blue-600",
-          "disabled": "text-gray-500"
-        }
-      }
-    },
-    "years": {
-      "items": {
-        "base": "grid w-64 grid-cols-4",
-        "item": {
-          "base": "block flex-1 cursor-pointer rounded-lg border-0 text-center text-sm font-semibold leading-9 text-gray-900 hover:bg-gray-100 dark:text-black dark:hover:bg-gray-600",
-          "selected": "bg-blue-700 text-white hover:bg-blue-600",
-          "disabled": "text-gray-500"
-        }
-      }
-    },
-    "decades": {
-      "items": {
-        "base": "grid w-64 grid-cols-4 ",
-        "item": {
-          "base": "block flex-1 cursor-pointer rounded-lg border-0 text-center text-sm font-semibold leading-9 text-gray-900 hover:bg-blue-100 dark:text-black dark:hover:bg-blue-600",
-          "selected": "bg-blue-700 text-black hover:bg-blue-600",
-          "disabled": "text-gray-500"
-        }
-      }
-    }
-  }
-}
->>>>>>> 992e36f58f9175a16cc5112e26e6cecb0bb61f0b
+
+
 
 const DatePickerTheme = {
   "root": {
@@ -179,21 +96,9 @@ const StateInfo = () => {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-<<<<<<< HEAD
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section.section");
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 50; // Adjusted for sticky header
-        const sectionHeight = section.clientHeight;
-        if (
-          window.pageYOffset >= sectionTop &&
-          window.pageYOffset <= sectionTop + sectionHeight
-        ) {
-          setActiveSection(section.id);
-        }
-      });
-    };
-=======
+
+   
+
   const handleScroll = () => {
     const sections = document.querySelectorAll("section.section");
 
@@ -210,7 +115,7 @@ const StateInfo = () => {
       }
     }
   };
->>>>>>> 992e36f58f9175a16cc5112e26e6cecb0bb61f0b
+
 
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -219,15 +124,13 @@ const StateInfo = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <section  className="overview max-w-7xl mx-4 xl:mx-auto">
-      {/* Sticky Header Section */}
-      <div  className="sticky top-[103px] bg-white z-[1]">
-=======
+
+    
+
     <section className="overview max-w-7xl mx-4 xl:mx-auto">
       {/* Sticky Header Section */}
       <div className="sticky md:top-[103px] top-[123px] bg-white z-[1]">
->>>>>>> 992e36f58f9175a16cc5112e26e6cecb0bb61f0b
+
         <div className="container mx-auto py-4">
           <h2 className="text-2xl font-bold mb-4">
             Rajasthan Essential Information
@@ -311,7 +214,7 @@ const StateInfo = () => {
               </h2>
               <ul className="list-disc pl-4">
                 <li className="mb-2">
-                  Plan your itinerary according to Rajasthan's vast size.
+                  Plan your itinerary according to Rajasthans vast size.
                 </li>
                 <li className="mb-2">
                   Pack light cotton clothes and sunscreen for summers.
@@ -372,13 +275,11 @@ const StateInfo = () => {
                 <Datepicker
                   id="datepicker"
                   name="date"
-<<<<<<< HEAD
+
                   className="border p-2 w-full"
                   theme={DatePickerTheme}
-=======
-                theme={DatePickerTheme}
-                className="[&_input]:rounded-none [&_input]:border-gray-200 [&_input]:bg-white"
->>>>>>> 992e36f58f9175a16cc5112e26e6cecb0bb61f0b
+              // className="[&_input]:rounded-none [&_input]:border-gray-200 [&_input]:bg-white"
+
                 />
               </div>
               <div className="form-half mb-4">

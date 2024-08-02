@@ -131,7 +131,3 @@ export default HeroSection;
 
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 992e36f58f9175a16cc5112e26e6cecb0bb61f0b
