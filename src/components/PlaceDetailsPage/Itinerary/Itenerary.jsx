@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Datepicker } from "flowbite-react";
 
 const DatePickerTheme = {
@@ -90,7 +90,7 @@ const DatePickerTheme = {
 };
 
 const Itinerary = () => {
-  const [activeItem, setActiveItem] = useState(-1);
+  const [activeItem, setActiveItem] = useState(0);
 
   const toggleAccordion = (index) => {
     setActiveItem(index === activeItem ? -1 : index);
@@ -219,7 +219,7 @@ const Itinerary = () => {
                   <div className="h-full w-0.5 bg-gray-300"></div>
                 )}
               </div>
-              <div className="flex-1 mt-2">
+              <div className="flex-1 mb-4 ">
                 <div
                   className="cursor-pointer p-4 border border-gray-300 rounded-md shadow-md"
                   onClick={() => toggleAccordion(index)}
@@ -255,7 +255,6 @@ const Itinerary = () => {
                       activeItem === index ? "max-h-screen" : "max-h-0"
                     }`}
                   >
-                  <div className="">
                     <div className="mt-4 flex flex-wrap gap-2">
                       {item.tags.map((tag, tagIndex) => (
                         <span
@@ -267,7 +266,6 @@ const Itinerary = () => {
                       ))}
                       <p className="m-1">{item.description}</p>
                     </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -277,7 +275,9 @@ const Itinerary = () => {
       </div>
       {/* Form */}
       <div className="w-full lg:w-1/4 lg:ml-8 mt-8 lg:mt-0 sticky top-20 border shadow-lg p-6 rounded-lg bg-white text-left">
-        <h2 className="text-2xl font-bold mb-5 text-gray-800 text-center">Book Now</h2>
+        <h2 className="text-2xl font-bold mb-5 text-gray-800 text-center">
+          Book Now
+        </h2>
         <form name="contactus" method="post" action="">
           <div className="mb-5">
             <label className="block mb-1 text-gray-700">Your Full Name</label>
@@ -356,4 +356,3 @@ const Itinerary = () => {
 };
 
 export default Itinerary;
-

@@ -4,6 +4,7 @@ import BlogShowcaseCards from "../BlogsShowcaseCards";
 import BlogPagination from "../BlogsPagination";
 
 function AllBlogsShowcase() {
+  const blogTheme = true;
   const [currentPage, setCurrentPage] = useState(1);
   const [pageData, setPageData] = useState([]);
   const [pageCount, setPageCount] = useState(0);
@@ -30,12 +31,17 @@ function AllBlogsShowcase() {
 
   return (
     <>
-      <BlogShowcaseCards filteredPageData={pageData} />
-      <BlogPagination
-        pagecounting={pageCount}
-        presentPage={currentPage}
-        pageChangeFunction={onPageChange}
-      />
+        {pageData.length <= 0 ? (
+          <div>Loading...</div>
+        ) : (
+          <BlogShowcaseCards filteredPageData={pageData} blogTheme={blogTheme}/>
+        )}
+
+        <BlogPagination
+          pagecounting={pageCount}
+          presentPage={currentPage}
+          pageChangeFunction={onPageChange}
+        />
     </>
   );
 }

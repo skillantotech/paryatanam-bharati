@@ -1,5 +1,6 @@
 import { VscArrowRight } from "react-icons/vsc";
 import { LatestBlogs } from "../../../Data/LatestBlogs";
+import { Link } from "react-router-dom";
 
 const BlogSection = () => {
   return (
@@ -20,7 +21,7 @@ const BlogSection = () => {
             key={index}
             className="blogItem flex flex-col sm:flex-row items-center gap-4"
           >
-            <div className="h-60 aspect-[3/4] bg-slate-300">
+            <div className="h-60 aspect-[3/4] bg-slate-300 rounded">
               <img
                 className="h-full w-full object-cover rounded"
                 src={blog.thumbnail}
@@ -29,9 +30,7 @@ const BlogSection = () => {
             </div>
             <div className="text-center sm:text-left flex flex-col gap-2 sm:gap-4">
               <h5 className="text-base">{blog.blogType}</h5>
-              <h2 className="text-xl sm:text-3xl font-bold">
-                {blog.headline}
-              </h2>
+              <h2 className="text-xl sm:text-3xl font-bold">{blog.headline}</h2>
               <h5>{blog.desc}</h5>
               <div className="flex justify-center sm:justify-start">
                 <img
@@ -51,14 +50,18 @@ const BlogSection = () => {
         ))}
       </div>
 
-        <div className="flex justify-center items-center mt-8">
-        <button className="group flex items-center font-semibold">
-            View More
-            <div className="ps-2 group-hover:translate-x-2 transition-all duration-300 ease-out">
-              <VscArrowRight />
-            </div>
-          </button>
-        </div>
+      <div className="flex justify-center items-center mt-8">
+        <Link
+          to="/blogs"
+          onClick={() => window.scrollTo(0, 0)}
+          className="group flex items-center font-semibold"
+        >
+          View More
+          <div className="ps-2 group-hover:translate-x-2 transition-all duration-300 ease-out">
+            <VscArrowRight />
+          </div>
+        </Link>
+      </div>
     </div>
   );
 };

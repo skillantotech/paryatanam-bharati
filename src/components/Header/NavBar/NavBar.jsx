@@ -6,9 +6,11 @@ import {
   NavbarMenu,
   DiscoverSubMenu,
   TourismSubMenu,
+  AccommodationSubMenu,
   PackagesSubmenu,
   ServicesSubmenu,
   ExploreSubmenu,
+  TransportationSubMenu,
 } from "../../../Data/NavData";
 
 const NavBar = ({ isSticky }) => {
@@ -46,12 +48,12 @@ const NavBar = ({ isSticky }) => {
 
                 {/* Discover Submenu */}
                 {menu.id == 1 && (
-                  <div className="Sb absolute hidden group-hover:flex h-[350px] top-10 left-0 w-full z-50 ">
+                  <div className="Sb absolute hidden group-hover:flex h-[350px] top-10 left-0 w-full z-50 px-4">
                     {
-                      <div className="SubMenu p-5 flex w-full justify-between border-t-4 border-blue-500 rounded-b-xl bg-white shadow-lg">
+                      <div className="SubMenu p-5 flex w-full justify-between border-t-4 border-blue-500 rounded-b-lg bg-white shadow-lg">
                         {DiscoverSubMenu.map((submenu, index) => (
                           <div key={index} className="flex flex-col gap-2 ">
-                            <div className="flex text-l font-semibold text-blue-800">
+                            <div className="flex font-semibold text-blue-800">
                               {submenu.submenu_name}
                             </div>
                             <div className="">
@@ -59,7 +61,7 @@ const NavBar = ({ isSticky }) => {
                                 {DiscoverSubMenu[index].submenu_items.map(
                                   (submenu_item, i) => (
                                     <Link
-                                      to="discover-india"
+                                      to="discover-india/place"
                                       key={i}
                                       className=" text-base font-normal hover:translate-x-1 hover:text-blue-800 ease-linear duration-200"
                                     >
@@ -76,19 +78,20 @@ const NavBar = ({ isSticky }) => {
                   </div>
                 )}
 
-                {/* Packages SubMenu */}
+                {/* Tourism SubMenu */}
                 {menu.id == 2 && (
                   <div className="relative">
-                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-70px] w-full z-50">
+                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-87px] w-full z-50">
                       {
-                        <div className="SubMenu flex flex-col justify-between border-t-4 border-blue-500 bg-white shadow-lg">
-                          {PackagesSubmenu.map((submenu, index) => (
-                            <div
+                        <div className="SubMenu flex flex-col justify-between border-t-4 border-blue-500 rounded-b-md bg-white shadow-lg">
+                          {TourismSubMenu.map((submenu, index) => (
+                            <Link
+                              to={"packages"}
                               key={`PackagesSubmenu${index} `}
-                              className="flex text-l w-[230px] font-semibold p-2 px-3 text-blue-800 hover:bg-gray-100 ease-linear duration-300"
+                              className="flex w-[230px] font-semibold p-2 px-3 text-blue-800 hover:bg-gray-100 ease-linear duration-300"
                             >
                               {submenu.submenu_name}
-                            </div>
+                            </Link>
                           ))}
                         </div>
                       }
@@ -96,19 +99,19 @@ const NavBar = ({ isSticky }) => {
                   </div>
                 )}
 
-                {/* Services SubMenu */}
+                {/* Accommodation SubMenu */}
                 {menu.id == 3 && (
                   <div className="relative">
-                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-115px] w-full z-50">
+                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-147px] w-full z-50">
                       {
-                        <div className="SubMenu flex flex-col flex-wrap justify-between border-t-4 border-blue-500 bg-white shadow-lg">
-                          {ServicesSubmenu.map((submenu, index) => {
+                        <div className="SubMenu flex flex-col flex-wrap justify-between border-t-4 border-blue-500 rounded-b-md bg-white shadow-lg">
+                          {AccommodationSubMenu.map((submenu, index) => {
                             {
                               return (
                                 <Link
                                   path={submenu.link}
                                   key={`ArtAndCultureSubmenu${index} `}
-                                  className="flex text-l px-3 p-2 font-semibold w-[230px] text-blue-800 hover:bg-gray-100 ease-linear duration-300"
+                                  className="flex px-3 p-2 font-semibold w-[180px] text-blue-800 hover:bg-gray-100 ease-linear duration-300"
                                 >
                                   {submenu.submenu_name}
                                 </Link>
@@ -121,17 +124,17 @@ const NavBar = ({ isSticky }) => {
                   </div>
                 )}
 
-                {/* Tourism Submenu */}
+                {/* Transportation Submenu */}
                 {menu.id == 4 && (
                   <div className="relative">
-                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-60px] w-full z-50">
+                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-134px] w-full z-50">
                       {
-                        <div className="SubMenu flex flex-col justify-between border-t-4 border-blue-500 bg-white shadow-lg ">
-                          {TourismSubMenu.map((submenu, index) => (
+                        <div className="SubMenu flex flex-col justify-between border-t-4 border-blue-500 rounded-b-md bg-white shadow-lg">
+                          {TransportationSubMenu.map((submenu, index) => (
                             <Link
                               path={submenu.link}
                               key={`TourismSubMenu${index} `}
-                              className="flex text-l p-2 px-3 w-[230px] relative items-center font-semibold text-blue-800 hover:bg-gray-100 ease-linear duration-300"
+                              className="flex p-2 px-3 w-[180px] relative items-center font-semibold text-blue-800 hover:bg-gray-100 ease-linear duration-300"
                             >
                               {submenu.submenu_name}
                             </Link>
@@ -145,16 +148,16 @@ const NavBar = ({ isSticky }) => {
                 {/* Explore */}
                 {menu.id == 5 && (
                   <div className="relative">
-                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-115px] w-full z-50">
+                    <div className="Sb absolute hidden group-hover:flex top-5 left-[-80px] w-full z-50">
                       {
-                        <div className="SubMenu flex flex-col flex-wrap justify-between border-t-4 border-blue-500 bg-white shadow-lg">
+                        <div className="SubMenu flex flex-col flex-wrap justify-between border-t-4 border-blue-500 rounded-b-md bg-white shadow-lg">
                           {ExploreSubmenu.map((submenu, index) => {
                             {
                               return (
                                 <Link
                                   to={submenu.link}
                                   key={`ArtAndCultureSubmenu${index} `}
-                                  className="flex text-l px-3 p-2 font-semibold w-[230px] text-blue-800 hover:bg-gray-100 ease-linear duration-300"
+                                  className="flex px-3 p-2 font-semibold w-[180px] text-blue-800 hover:bg-gray-100 ease-linear duration-300"
                                 >
                                   {submenu.submenu_name}
                                 </Link>
@@ -177,7 +180,7 @@ const NavBar = ({ isSticky }) => {
                             key={`'CuisineSubMenu'${index} `}
                             className="flex flex-col gap-2 "
                           >
-                            <div className="flex text-l font-semibold text-blue-800">
+                            <div className="flex font-semibold text-blue-800">
                               {submenu.submenu_name}
                             </div>
                             <div className="">

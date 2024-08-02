@@ -3,7 +3,7 @@ import { Hoteljodhpurcarddata } from "../../../Data/StateDetailsData/Hoteljodhpu
 const Hoteljodhpurcard = () => {
   return (
     <div className="max-w-7xl mx-4 xl:mx-auto">
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between items-center mb-8">
         <h2 className="font-bold text-2xl sm:text-3xl text-left">Hotels in Jodhpur</h2>
         <button className="text-blue-600 font-bold text-md sm:text-lg cursor-pointer relative group transition-all duration-300 ease-in-out hover:text-blue-800">
           View More
@@ -37,9 +37,3 @@ const Hoteljodhpurcard = () => {
 };
 
 export default Hoteljodhpurcard;
-
-
-
-
-
-

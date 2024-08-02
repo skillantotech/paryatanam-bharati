@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import BrandLogo from "../../../public/assets/logo/Paryatanmbharati logo_PNG.png";
 import { FaCheck, FaApple } from "react-icons/fa6";
@@ -14,6 +15,10 @@ const services = [
 ];
 
 const SignUp = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <section>
@@ -212,7 +217,6 @@ const SignUp = () => {
                 Already have an account?{" "}
                 <Link
                   to={"/signin"}
-                  title=""
                   className="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"
                 >
                   Login

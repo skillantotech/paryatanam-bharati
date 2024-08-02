@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Overview = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -55,6 +55,24 @@ const Overview = () => {
         "Boasting one of the longest walls in the world, Kumbhalgarh is the second-largest fort in India. This impressive fort is not to be missed witnessing in Rajasthan.",
     },
   ];
+
+  const [visibleDestinations, setVisibleDestinations] = useState(3);
+  const [contentHeight, setContentHeight] = useState("auto");
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setContentHeight(contentRef.current.scrollHeight + "px");
+    }
+  }, [visibleDestinations]);
+
+  const handleLoadMore = () => {
+    setVisibleDestinations(destinations.length);
+  };
+
+  const handleLoadLess = () => {
+    setVisibleDestinations(3);
+  };
 
   return (
     <div className="max-w-7xl mx-4 xl:mx-auto mt-8 mb-12">
@@ -229,22 +247,74 @@ const Overview = () => {
             The other one is Abdullah Pir Dargah Banswara.
           </p>
 
-          <h3 className="text-2xl font-bold mb-2">
-            Top 10 Most Visited Destinations in Rajasthan
-          </h3>
-          <ul className="">
-            {destinations.map((destination, index) => (
-              <li key={index}>
-                <p>
-                  <strong>{destination.name} :</strong>{" "}
-                  {destination.description}
-                </p>
-              </li>
-            ))}
+        <p className="mb-6">
+          There are several Muslim places of worship, and some of them are
+          visited by both Hindus and Muslims alike. One of them is the Dargah
+          Sharif or Ajmer Sharif. It is dedicated to Khwaja Moinuddin Chishti,
+          who came to Ajmer from Persia in 1192. Hazrat Khwaja Moinuddin Hasan
+          Chishti occupies a prominent place amongst the spiritual healers of
+          the world. Constructed with white marble, it has 11 arches and a
+          Persian inscription running through the full length of the building.
+          The other one is Abdullah Pir Dargah Banswara.
+        </p>
+
+        <p className="mb-6">
+          Rajasthan is also home to the most beautiful Jain temples in the
+          world. Two of the most visited ones are Ranakpur Jain Temples and
+          Dilwara Temple. The Jain temple of Ranakpur is situated in the heart
+          of the Aravalli hills. The temple is a fine specimen of art and
+          culture that makes it a treasured site of Rajasthan that is to be
+          cherished. The construction of this temple was started in the year of
+          1446 and was completed in the year 1496. It took fifty years for the
+          completion of the temple.
+        </p>
+
+        <p className="mb-6">
+          Dilwara Temple is one of the finest and architecturally renowned Jain
+          temples in India. A large number of visitors and pilgrims visit this
+          temple every day. Its extraordinary architecture is its major
+          attraction. Intricate carvings on the marble stone and high-quality
+          craftsmanship of the workers are clearly visible in every aspect of
+          this temple, making it truly unique and distinct. Its opulent
+          entranceway is truly stunning and spectacular. Other famous Jain
+          Temples are Shri Mahavirji Jain Temple and Tijara Jain Temple.
+        </p>
+
+        <p className="mb-6">
+          We at Tour My India want to help you explore this incredible land, and
+          thus bring to you the best Rajasthan holiday packages at the best
+          prices. With our travel deals you have the opportunity to discover
+          Rajasthan the way you want.
+        </p>
+        <h3 className="text-2xl font-bold mb-2">
+          Top 10 Most Visited Destinations in Rajasthan
+        </h3>
+        <div
+          ref={contentRef}
+          style={{
+            transition: "height 0.5s ease-in-out",
+            height:
+              visibleDestinations < destinations.length
+                ? "auto"
+                : contentHeight,
+            overflow: "hidden",
+          }}
+        >
+          <ul className="space-y-6">
+            {destinations
+              .slice(0, visibleDestinations)
+              .map((destination, index) => (
+                <li key={index}>
+                  <p>
+                    <strong>{destination.name} :</strong>{" "}
+                    {destination.description}
+                  </p>
+                </li>
+              ))}
           </ul>
         </div>
-
-        <div className="flex justify-center mt-2">
+  
+        {visibleDestinations < destinations.length ? (
           <button
             onClick={() => setIsExpanded((prev) => !prev)}
             className="font-bold text-lg cursor-pointer group relative transition-all duration-500 ease-in-out"
@@ -252,7 +322,8 @@ const Overview = () => {
             {isExpanded ? "View Less" : "View More"}
             <div className="absolute left-0 bottom-0 h-[3px] bg-[#3B82F6] w-0 group-hover:w-full transition-all duration-300"></div>
           </button>
-        </div>
+          
+      </div>
       </div>
     </div>
   );

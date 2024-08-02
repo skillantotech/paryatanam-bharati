@@ -1,9 +1,9 @@
 export const NavbarMenu = [
   { id: 0, name: "Home", link: "/", submenu: false },
   { id: 1, name: "Discover India", submenu: true },
-  { id: 2, name: "Packages", submenu: true },
-  { id: 3, name: "Booking Services", submenu: true },
-  { id: 4, name: "Tourism", submenu: true },
+  { id: 2, name: "Tourism", submenu: true },
+  { id: 3, name: "Accommodation", submenu: true },
+  { id: 4, name: "Transportation", submenu: true },
   { id: 5, name: "Explore", submenu: true },
   { id: 6, name: "Blogs", link: "/blogs", submenu: false },
   { id: 7, name: "FAQs", link: "/faqs", submenu: false },
@@ -24,9 +24,6 @@ export const DiscoverSubMenu = [
         name: "Haryana",
       },
       {
-        name: "Delhi",
-      },
-      {
         name: "Himanchal Pradesh",
       },
       {
@@ -34,15 +31,6 @@ export const DiscoverSubMenu = [
       },
       {
         name: "Uttarakhand",
-      },
-      {
-        name: "Jammu & Kashmir",
-      },
-      {
-        name: "Ladakh",
-      },
-      {
-        name: "Chandigarh",
       },
     ],
   },
@@ -148,6 +136,9 @@ export const DiscoverSubMenu = [
         name: "Delhi",
       },
       {
+        name: "Ladakh",
+      },
+      {
         name: "Jammu & Kashmir",
       },
     ],
@@ -168,12 +159,70 @@ export const TourismSubMenu = [
     link: "medical-tourism",
   },
   {
-    submenu_name: "Indian Wildlife Tourism",
+    submenu_name: "Study Tourism",
+    link: "study-tourism",
+  },
+  {
+    submenu_name: "Wildlife Tourism",
     link: "wildlife-tourism",
   },
   {
     submenu_name: "Adventure Tourism",
     link: "cultural-tourism",
+  },
+  {
+    submenu_name: "Heritage Tourism",
+    link: "heritage-tourism",
+  },
+  {
+    submenu_name: "Yoga & Ayurveda",
+    link: "yoga-&-ayurveda",
+  },
+  {
+    submenu_name: "Destination Wedding",
+    link: "destination-weddings",
+  },
+  {
+    submenu_name: "Honeymoon",
+    link: "Honeymoon",
+  },
+];
+
+export const AccommodationSubMenu = [
+  {
+    submenu_name: "Self Staying",
+    link: "self-staying",
+  },
+  {
+    submenu_name: "Guest House",
+    link: "guest-house",
+  },
+  {
+    submenu_name: "Oyo Rooms",
+    link: "oyo-rooms",
+  },
+  {
+    submenu_name: "Camping",
+    link: "camping",
+  },
+];
+
+export const TransportationSubMenu = [
+  {
+    submenu_name: "Air",
+    link: "air",
+  },
+  {
+    submenu_name: "Rail",
+    link: "rail",
+  },
+  {
+    submenu_name: "Road",
+    link: "road",
+  },
+  {
+    submenu_name: "Car",
+    link: "car",
   },
 ];
 

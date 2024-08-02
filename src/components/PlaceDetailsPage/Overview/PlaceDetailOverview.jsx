@@ -97,7 +97,7 @@ const PlaceDetailOverview = () => {
   };
 
   return (
-    <div className="container max-w-7xl mx-4 xl:mx-auto">
+    <div className="container max-w-7xl mx-auto p-6">
       <div className="flex flex-col lg:flex-row">
         {/* <div className="lg:w-2/3 p-4">
         <div  className="bg-white p-6 shadow-lg rounded-lg mb-6">

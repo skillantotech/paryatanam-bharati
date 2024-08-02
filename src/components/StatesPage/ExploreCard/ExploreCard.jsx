@@ -63,9 +63,9 @@ const ExploreCard = () => {
   }, []);
 
   return (
-    <section className="relative mt-12 max-w-7xl mx-4 xl:mx-auto">
+    <section className="relative mt-12 max-w-7xl mx-4 xl:mx-auto mb-20">
       <header className="flex flex-col gap-2 mb-10">
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-white ">
+        <h1 className="text-2xl font-bold text-gray-900">
           Rajasthan Tour Packages by Interest
         </h1>
       </header>
@@ -94,7 +94,7 @@ const ExploreCard = () => {
                 </div>
               ))
             : windowWidth <= 1024
-            ? exploreReview3.map((group, index) => (
+              ? exploreReview3.map((group, index) => (
                 <div key={index} className="flex gap-5 h-full">
                   {group.map((item) => (
                     <div

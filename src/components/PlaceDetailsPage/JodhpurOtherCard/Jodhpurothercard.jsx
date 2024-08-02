@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Jodhpurothercarddata } from "../../../Data/StateDetailsData/Jodhpurothercarddata";
 import { Carousel } from "flowbite-react";
 
@@ -32,7 +32,7 @@ const customTheme = {
   },
 };
 
-const Jodhpurothercard = () => {
+const JodhpurOtherCard = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const updateWindowWidth = () => {
@@ -99,5 +99,5 @@ const Jodhpurothercard = () => {
   );
 };
 
-export default Jodhpurothercard;
+export default JodhpurOtherCard;
 
