@@ -63,7 +63,7 @@ const StateFAQs = () => {
   const [openAccordionId, setOpenAccordionId] = useState(null);
 
   return (
-    <div className="container max-w-7xl mx-auto p-4 mt-12">
+    <div className="container max-w-7xl mx-4 xl:mx-auto  mt-12">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-800">
           Frequently Asked Questions

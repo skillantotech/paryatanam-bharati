@@ -22,7 +22,7 @@ const Packagesrajastancard = () => {
           </h2>
         </div>
 
-        <div className="mt-10 flex flex-wrap justify-center transition-all duration-500">
+        <div className="mt-6 flex flex-wrap justify-center transition-all duration-500">
           {Packagesrajastancarddata.slice(0, visibleCards).map((card, index) => (
             <div
               key={index}

@@ -18,7 +18,7 @@ function Tourist() {
 
  return (
    <>
-     <div className="max-w-7xl m-auto mt-7">
+     <div className="max-w-7xl mx-4 xl:mx-auto mt-7">
        <h2 className="font-bold text-2xl text-left mx-4 xl:mx-auto">
          Popular Tourist Attractions in Rajasthan
        </h2>
