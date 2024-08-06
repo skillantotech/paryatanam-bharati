@@ -13,7 +13,7 @@ const PackagesHeader = ({ scrollToAbout }) => {
           <HiHome />
           Home /
         </Link>
-        <Link to={"/packages"}> Packages /</Link> <span>Pilgrimage</span>
+        Packages / <span>Pilgrimage</span>
       </div>
       <div className="flex overflow-hidden">
         <div className="flex flex-col  gap-6 lg:flex-row items-center ">
@@ -32,7 +32,7 @@ const PackagesHeader = ({ scrollToAbout }) => {
             <div className=" flex flex-col sm:flex-row justify-center md:justify-start">
               <button
                 onClick={scrollToAbout}
-                className="w-full mt-8 sm:w-40 px-4 py-3 rounded font-semibold text-md bg-blue-500 text-white border-2 border-blue-500"
+                className="w-full mt-8 sm:w-40 px-2 py-2 rounded font-semibold text-md bg-blue-500 text-white border-2 border-blue-500"
               >
                 Know More
               </button>
@@ -42,7 +42,7 @@ const PackagesHeader = ({ scrollToAbout }) => {
             <img
               src="https://wallpapercave.com/wp/wp13384765.jpg"
               alt=""
-              className=" object-cover "
+              className="w-full h-full object-cover rounded-sm"
             />
           </div>
         </div>

@@ -1,12 +1,8 @@
 import { Link } from "react-router-dom";
 import DisconnectImg from "../assets/images/NotFoundPage/disconnect.png";
 import FourZeroFour from "../assets/images/NotFoundPage/404.png";
-import { useEffect } from "react";
 
 const NotFound = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <div className="h-screen w-screen bg-orange-200">
       <div className="lg:px-24 lg:py-24 md:py-20 md:px-44 px-4 py-24 items-center flex justify-center flex-col-reverse lg:flex-row md:gap-28 gap-16">

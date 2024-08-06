@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import BrandLogo from "../../../public/assets/logo/Paryatanmbharati logo_PNG.png";
 import { FaCheck, FaApple } from "react-icons/fa6";
@@ -5,7 +6,6 @@ import { FcGoogle } from "react-icons/fc";
 import { FaRegUser } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
 import { FiLock } from "react-icons/fi";
-import { useEffect } from "react";
 
 const services = [
   "All-Inclusive Packages",
@@ -18,6 +18,7 @@ const SignUp = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
       <section>
@@ -216,7 +217,6 @@ const SignUp = () => {
                 Already have an account?{" "}
                 <Link
                   to={"/signin"}
-                  onClick={() => window.scrollTo(0, 0)}
                   className="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"
                 >
                   Login

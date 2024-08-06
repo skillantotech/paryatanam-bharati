@@ -4,15 +4,15 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import Home from "./pages/HomePage/HomePage";
+import HomePage from "./pages/HomePage/HomePage";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import About from "./pages/About";
-import ArtAndCulture from "./pages/ArtAndCulture";
+import ArtAndCulturePage from "./pages/ArtAndCulturePage/ArtAndCulturePage";
 import CuisinePage from "./pages/CuisinePage/CuisinePage";
 import BlogsPage from "./pages/BlogsPage/BlogsPage";
-import FAQs from "./pages/FAQsPage/FAQsPage";
-import Contact from "./pages/ContactPage/ContactPage";
+import FAQsPage from "./pages/FAQsPage/FAQsPage";
+import ContactPage from "./pages/ContactPage/ContactPage";
 import NotFound from "./pages/NotFound";
 import MainLayout from "./Layouts/MainLayout";
 import StatesPage from "./pages/StatesPage/StatesPage";
@@ -20,33 +20,45 @@ import BlogDetails from "./components/BlogDetailsPage/BlogDetails";
 import PlaceDetailsPage from "./pages/PlaceDetailsPage/PlaceDetailsPage";
 import PackagesPage from "./pages/PackagesPage/PackagesPage";
 import CultureDetailsPage from "./pages/CultureDetailsPage/CultureDetailsPage";
+import Railways from "./pages/TransportationPage/Railways";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/">
         <Route element={<MainLayout />}>
-          <Route index path="" element={<Home />} />
+          <Route index path="" element={<HomePage />} />
           <Route path="about" element={<About />} />
 
-          <Route path="discover-india/place" element={<StatesPage />} />
-          <Route path="place-details" element={<PlaceDetailsPage />} />
+          <Route path="discover-india/place">
+            <Route path="" element={<StatesPage />} />
+            <Route path="place-details" element={<PlaceDetailsPage />} />
+          </Route>
 
-          <Route path="packages" element={<PackagesPage />} />
+          <Route path='rail' element={<Railways />} />
 
-          <Route path="art-culture" element={<ArtAndCulture />} />
-          <Route path="culture-details" element={<CultureDetailsPage />} />
+          <Route path="packages">
+            <Route path="" element={<PackagesPage />} />
+            <Route path="package-details" element={<PlaceDetailsPage />} />
+          </Route>
 
-          <Route path="cuisine">
-            <Route path="" element={<CuisinePage />} />
+          <Route path="art-culture">
+            <Route path="" element={<ArtAndCulturePage />} />
             <Route path="culture-details" element={<CultureDetailsPage />} />
           </Route>
 
-          <Route path="blogs" element={<BlogsPage />} />
-          <Route path="blogDetails/:Title" element={<BlogDetails />} />
+          <Route path="cuisine">
+            <Route path="" element={<CuisinePage />} />
+            <Route path="cuisine-details" element={<CultureDetailsPage />} />
+          </Route>
 
-          <Route path="faqs" element={<FAQs />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="blogs">
+            <Route path="" element={<BlogsPage />} />
+            <Route path=":Title" element={<BlogDetails />} />
+          </Route>
+
+          <Route path="faqs" element={<FAQsPage />} />
+          <Route path="contact" element={<ContactPage />} />
         </Route>
 
         <Route path="signin" element={<SignIn />} />

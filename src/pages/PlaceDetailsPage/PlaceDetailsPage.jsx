@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Breadcrumbs from "../../components/PlaceDetailsPage/Breadcrumbs/Breadcrumbs";
 import HeroSection from "../../components/PlaceDetailsPage/HeroSection/HeroSection";
 import Itinerary from "../../components/PlaceDetailsPage/Itinerary/Itenerary";
@@ -9,12 +10,12 @@ import Jodhpurothercard from "../../components/PlaceDetailsPage/JodhpurOtherCard
 import Hoteljodhpurcard from "../../components/PlaceDetailsPage/Hoteljodhpurcard/Hoteljodhpurcard";
 import Rajastantravelcard from "../../components/PlaceDetailsPage/Rajasthantravelcard/Rajastantravelcard";
 import BlogSection from "../../components/PlaceDetailsPage/BlogSection/BlogSection";
-import { useEffect } from "react";
 
 const PlaceDetailsPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div>
       <Breadcrumbs />

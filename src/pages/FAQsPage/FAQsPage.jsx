@@ -5,7 +5,7 @@ import CustomTab from "../../components/CustomTab/CustomTab";
 import CustomTabItem from "../../components/CustomTab/CustomTabItem";
 import { Link } from "react-router-dom";
 import { HiHome } from "react-icons/hi";
-import { IoMdArrowRoundForward } from "react-icons/io";
+// import { IoMdArrowRoundForward } from "react-icons/io";
 
 const customTheme = true;
 
@@ -73,7 +73,7 @@ const FAQsPage = () => {
               <span className="text-sm font-semibold uppercase ">
                 More Querries
               </span>
-              <p className="text-black font-extrabold mt-2 text-3xl tracking-tight">
+              <p className="text-black font-extrabold mt-2 text-2xl sm:text-3xl tracking-tight">
                 Can't find what you're looking for?
                 <span className="block text-lg font-normal">Reach out.</span>
               </p>
@@ -81,7 +81,7 @@ const FAQsPage = () => {
             <div className="flex items-center">
               <Link
                 to={"/contact"}
-                className="w-full items-center gap-4 flex duration-200 focus:outline-none font-medium justify-center px-6 py-3 rounded-sm text-center focus-visible:outline-black lg:w-auto bg-blue-600 focus-visible:ring-black hover:bg-blue-100 hover:text-blue-600 text-white group"
+                className="text-white w-full duration-300 focus:outline-none font-medium justify-center px-6 py-3 rounded-sm text-center focus-visible:outline-black lg:w-auto bg-blue-600 focus-visible:ring-black hover:bg-blue-700 group"
                 href="/signup"
               >
                 Contact Us

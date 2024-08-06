@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 // import Breadcrumbs from "../../components/StatesPage/Breadcrumbs/Breadcrumbs";
 import Hero from "../../components/StatesPage/HeroSection/Hero";
 import HillStationSlider from "../../components/StatesPage/HillStationSlider/HillStationSlider";
@@ -17,7 +18,6 @@ import ExploreCard from "../../components/StatesPage/ExploreCard/ExploreCard";
 import QuickLinks from "../../components/StatesPage/QuickLinks/QuickLinks";
 import { Link } from "react-router-dom";
 import { HiHome } from "react-icons/hi";
-import { useEffect } from "react";
 // import CardContainer from "../../components/StatesPage/CardContainer/CardContainer";
 
 const StatesPage = () => {

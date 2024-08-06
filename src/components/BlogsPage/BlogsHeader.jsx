@@ -44,15 +44,20 @@ const BlogsHeader = () => {
         <div className="flex flex-col text-center px-4 lg:px-0 justify-center gap-4 py-5">
           {/* Breadcrumbs */}
           <div className="flex flex-row items-center justify-start gap-2 text-base font-semibold text-blue-500">
-            <Link to={"/"} className="item flex items-center gap-2 text-gray-500 hover:text-gray-700 duration-150">
+            <Link
+              to={"/"}
+              className="item flex items-center gap-2 text-gray-500 hover:text-gray-700 duration-150"
+            >
               <HiHome />
               Home
-            </Link>/
-            <div className="item text-gray-900">Blogs</div>
+            </Link>
+            /<div className="item text-gray-900">Blogs</div>
           </div>
           {/* Breadcrumb Ends */}
           <div className="uppercase">Blogs</div>
-          <h2 className="text-3xl sm:text-5xl font-semibold sm:font-bold">Read Exciting Articles</h2>
+          <h2 className="text-3xl sm:text-5xl font-semibold sm:font-bold">
+            Read Exciting Articles
+          </h2>
           <p className="lg:w-2/3 mx-auto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
             iusto ad dolor quisquam voluptatem voluptate aut possimus fuga atque
@@ -68,7 +73,8 @@ const BlogsHeader = () => {
           >
             {BlogData.map((e, i) => (
               <Link
-                to={`/blogDetails/${e.BlogTitle}`}
+                // to={`/blogDetails/${e.BlogTitle}`}
+                to={e.BlogTitle}
                 key={`Blog - ${i}`}
                 className="flex flex-col sm:flex-row h-full w-full pb-1 border-black sm:text-white md:flex-row relative md:justify-center items-center"
               >

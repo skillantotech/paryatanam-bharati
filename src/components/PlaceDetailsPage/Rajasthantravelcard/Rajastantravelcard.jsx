@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Rajastantravelcarddata } from "../../../Data/PlaceDetailsData/Rajastantravelcarddata";
+import React, { useState, useEffect } from 'react';
+import { Rajastantravelcarddata } from "../../../Data/StateDetailsData/Rajastantravelcarddata";
 import { Carousel } from "flowbite-react";
 
 // This customTheme is for Flowbite
@@ -63,7 +63,7 @@ const Rajastantravelcard = () => {
   const groupedCards = chunkArray(Rajastantravelcarddata, cardsPerGroup);
 
   return (
-    <div className="max-w-7xl mx-auto p-6">
+    <div className="max-w-7xl mx-4 xl:mx-auto">
       <div>
         <h2 className="font-bold text-3xl text-center">Travel in Jodhpur</h2>
       </div>
@@ -73,10 +73,7 @@ const Rajastantravelcard = () => {
           {groupedCards.map((group, index) => (
             <div key={index} className="flex gap-5 h-full ">
               {group.map((card, cardIndex) => (
-                <div
-                  key={cardIndex}
-                  className="relative w-full md:w-1/3 lg:w-1/5 group overflow-hidden "
-                >
+                <div key={cardIndex} className="relative w-full md:w-1/3 lg:w-1/5 group overflow-hidden ">
                   <img
                     src={card.thumbnail}
                     alt={card.headingname}
@@ -85,7 +82,7 @@ const Rajastantravelcard = () => {
                   <h3 className="absolute z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl text-white font-bold">
                     {card.headingname}
                   </h3>
-                  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                  <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                 </div>
               ))}
             </div>
@@ -97,3 +94,8 @@ const Rajastantravelcard = () => {
 };
 
 export default Rajastantravelcard;
+
+
+
+
+

@@ -199,10 +199,10 @@ const Itinerary = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto p-4 flex flex-col lg:flex-row">
-      <div className="itinerary-cont lg:w-2/3">
+    <div className="max-w-7xl mx-4 xl:mx-auto  flex flex-col lg:flex-row">
+      <div className="w-full lg:w-2/3">
         <h3 className="text-3xl font-bold mb-4">Itinerary</h3>
-        <div className="space-y-4">
+        <div className="">
           {itineraryData.map((item, index) => (
             <div key={index} className="flex">
               <div className="flex flex-col items-center mr-4">
@@ -216,10 +216,10 @@ const Itinerary = () => {
                   {index + 1}
                 </div>
                 {index < itineraryData.length - 1 && (
-                  <div className="h-full w-px bg-gray-300"></div>
+                  <div className="h-full w-0.5 bg-gray-300"></div>
                 )}
               </div>
-              <div className="flex-1">
+              <div className="flex-1 mb-4 ">
                 <div
                   className="cursor-pointer p-4 border border-gray-300 rounded-md shadow-md"
                   onClick={() => toggleAccordion(index)}
@@ -251,11 +251,11 @@ const Itinerary = () => {
                   </span>
 
                   <div
-                    className={`overflow-hidden transition-all duration-500 ${
+                    className={`overflow-hidden transition-all duration-500  ${
                       activeItem === index ? "max-h-screen" : "max-h-0"
                     }`}
                   >
-                    <div className="mt-2 flex flex-wrap gap-2">
+                    <div className="mt-4 flex flex-wrap gap-2">
                       {item.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
@@ -264,9 +264,7 @@ const Itinerary = () => {
                           {tag}
                         </span>
                       ))}
-                    </div>
-                    <div className="mt-4 p-4 ">
-                      <p>{item.description}</p>
+                      <p className="m-1">{item.description}</p>
                     </div>
                   </div>
                 </div>

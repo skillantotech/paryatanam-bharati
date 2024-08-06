@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import React from "react";
 
-const CuisineHeroAbout = React.forwardRef(({scrollToTechniques}, ref) => (
+const CuisineHeroAbout = React.forwardRef(({ scrollToTechniques }, ref) => (
   <div className="max-w-7xl xl:mx-auto place-items-center my-10">
     <div className=" flex flex-col gap-10 lg:flex-row">
       <div className="w-full lg:w-1/2 flex items-center justify-center">
@@ -11,9 +12,9 @@ const CuisineHeroAbout = React.forwardRef(({scrollToTechniques}, ref) => (
           className="object-cover w-full h-full aspect-[1/1] sm:aspect-[5/4]"
         />
       </div>
-      <div className="flex lg:w-1/2 ">
-        <div className="flex flex-col gap-2 ">
-          <h2 className="text-3xl lg:text-4xl  text-blue-600 font-semibold ">
+      <div className="flex lg:w-1/2">
+        <div className="flex flex-col gap-2">
+          <h2 className="text-3xl lg:text-4xl  text-blue-600 font-semibold">
             Spice Up Your Life with Authentic Indian Cuisine
           </h2>
           <h3 className="text-justify leading-6 ">
@@ -53,5 +54,11 @@ const CuisineHeroAbout = React.forwardRef(({scrollToTechniques}, ref) => (
     </div>
   </div>
 ));
+
+CuisineHeroAbout.displayName = "CuisineHeroAbout";
+
+CuisineHeroAbout.propTypes = {
+  scrollToTechniques: PropTypes.func.isRequired,
+};
 
 export default CuisineHeroAbout;

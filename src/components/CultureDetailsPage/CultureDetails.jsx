@@ -1,5 +1,4 @@
-// import React from 'react'
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import bharatanatyam from "../../assets/images/CulturalDetails/Traditional Dance/Bharatanatyam.webp";
 import kathak from "../../assets/images/CulturalDetails/Traditional Dance/Kathak.webp";
 import kathakali from "../../assets/images/CulturalDetails/Traditional Dance/Kathakali.webp";
@@ -8,29 +7,28 @@ import manipuri from "../../assets/images/CulturalDetails/Traditional Dance/Mani
 import mohiniyattam from "../../assets/images/CulturalDetails/Traditional Dance/Mohiniyattam.webp";
 import odissi from "../../assets/images/CulturalDetails/Traditional Dance/Odissi.webp";
 import sattriya from "../../assets/images/CulturalDetails/Traditional Dance/Sattriya.webp";
-import { HiHome } from "react-icons/hi";
 
 const CultureDetails = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section>
-      <div className="max-w-7xl mx-4 xl:mx-auto flex flex-row items-center justify-start gap-2 text-base font-semibold my-5 text-blue-500">
-        <Link
-          to={"/"}
-          className="item flex items-center gap-2 text-gray-500 hover:text-gray-700 duration-150"
-        >
-          <HiHome />
-          Home
-        </Link>
-        /<div className="item text-gray-900">Cuisine</div>
-      </div>
-      <div className="max-w-7xl lg:mx-auto flex mx-4 md:px-4 lg:flex-row xl:px-0 flex-col gap-10 my-10 overflow-hidden">
+      <div className="max-w-7xl mx-4 lg:mx-auto flex md:px-4 lg:flex-row xl:px-0 flex-col gap-10 my-6 overflow-hidden">
         <div className="max-w-full">
-          <div className="bg-red-500 text-white py-0.5 px-0.5 rounded-lg text-center max-w-12 text-xs uppercase">
-            Dance
+          <div className="flex flex-col justify-start items-start gap-2">
+            <h2 className="text-3xl sm:text-4xl font-bold">Odissi</h2>
+            <span className="text-xs capitalize bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 mt-1 rounded-full cursor-default">
+              Dance
+            </span>
           </div>
-          <h2 className="font-bold text-4xl sm:text-7xl">Odissi</h2>
-          <div className="my-5 sm:my-10 bg-slate-400 w-full flex justify-center rounded-lg overflow-hidden ">
-            <img className="aspect-[19/10] w-full object-cover" src={odissi} />
+          <div className="bg-slate-400 w-full flex justify-center rounded-lg overflow-hidden my-5">
+            <img
+              className="aspect-[19/10] w-full object-cover"
+              src={odissi}
+              alt="title"
+            />
           </div>
           <p className="text-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit amet,
@@ -57,7 +55,7 @@ const CultureDetails = () => {
               <img className="w-full h-full object-cover" src={odissi} />
             </div>
           </div>
-          <h3 className="font-medium text-3xl my-10">Significance</h3>
+          <h3 className="font-medium text-3xl my-5">Significance</h3>
           <p className="text-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit amet,
             nesciunt vitae libero, eveniet numquam perspiciatis ipsam impedit

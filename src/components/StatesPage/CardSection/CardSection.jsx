@@ -24,10 +24,10 @@ const CardSection = () => {
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 gap-y-7 gap-x-10 place-items-center mt-5 sm:px-8 md:px-10 lg:px-10">
         {Data.slice(0, visibleItems).map((card, index) => (
-          <div key={index} className="h-96 w-80">
+          <div key={index} className="h-96 w-80 group">
             <div className="h-56 overflow-hidden">
               <img
-                className="h-full w-full object-cover hover:scale-110 duration-300"
+                className="h-full w-full object-cover group-hover:scale-105 duration-300"
                 src={card.thumbnail}
                 alt={card.name}
               />
@@ -35,7 +35,7 @@ const CardSection = () => {
             <div className="text-start mt-4">
               <h2 className="text-xl font-bold">{card.name}</h2>
               <div className="flex mt-4">
-                <div className="h-auto border-l-4 border-[#3B82F6]"></div>
+                <div className="h-auto border-l-4 border-blue-500"></div>
                 <h5 className="text-sm pl-4 line-clamp-2">{card.desc}</h5>
               </div>
               <div className="mt-8 flex justify-between items-center">

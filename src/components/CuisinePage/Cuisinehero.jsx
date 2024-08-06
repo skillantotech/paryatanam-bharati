@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const Cuisinehero = ({scrollToAbout}) => {
   return (
@@ -28,6 +28,10 @@ const Cuisinehero = ({scrollToAbout}) => {
       </section>
     </>
   );
+};
+
+Cuisinehero.propTypes = {
+  scrollToAbout: PropTypes.func.isRequired,
 };
 
 export default Cuisinehero;

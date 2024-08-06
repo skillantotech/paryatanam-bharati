@@ -9,7 +9,7 @@ export default {
     // "./node_modules/flowbite/**/*.js",
     flowbite.content(),
   ],
-  darkMode: 'false',
+  darkMode: "false",
   theme: {
     extend: {
       // backgroundImage: {

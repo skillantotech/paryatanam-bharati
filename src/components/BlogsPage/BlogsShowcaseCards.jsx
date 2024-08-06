@@ -9,7 +9,8 @@ function BlogsShowcaseCards({ filteredPageData }) {
       ) : (
         filteredPageData.map((blog, index) => (
           <Link
-            to={`/blogDetails/${blog.BlogTitle}`}
+            to={blog.BlogTitle}
+            // to={`/blogDetails/${blog.BlogTitle}`}
             // to={`/blogDetails/${blog.BlogTitle.replace(/\s+/g, "-").replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()}`}
             key={`Blog-no-${index}`}
             className="max-w-sm shadow-xl  rounded-xl"
@@ -23,7 +24,9 @@ function BlogsShowcaseCards({ filteredPageData }) {
             </div>
 
             <div className="">
-              <h1 className="font-bold p-4 pb-2 sm:whitespace-normal">{blog.BlogTitle}</h1>
+              <h1 className="font-bold p-4 pb-2 sm:whitespace-normal">
+                {blog.BlogTitle}
+              </h1>
               <p className=" pl-4 line-clamp-3 leading-6 pr-4 ">
                 {blog.BlogDescription}
               </p>

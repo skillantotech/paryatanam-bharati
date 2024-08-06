@@ -33,7 +33,7 @@ const CustomTab = ({ children, customTheme }) => {
           );
         })}
       </ul>
-      <div className="tab-content ">
+      <div className="tab-content">
         {children.map((child) => {
           return React.cloneElement(child, {
             key: child.props.label, // Use child.props.label as the key

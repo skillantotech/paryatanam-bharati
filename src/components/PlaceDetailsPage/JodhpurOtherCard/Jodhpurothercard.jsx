@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Jodhpurothercarddata } from "../../../Data/PlaceDetailsData/Jodhpurothercarddata";
+import { useState, useEffect } from 'react';
+import { Jodhpurothercarddata } from "../../../Data/StateDetailsData/Jodhpurothercarddata";
 import { Carousel } from "flowbite-react";
 
 const customTheme = {
@@ -32,7 +32,7 @@ const customTheme = {
   },
 };
 
-const Jodhpurothercard = () => {
+const JodhpurOtherCard = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const updateWindowWidth = () => {
@@ -62,22 +62,20 @@ const Jodhpurothercard = () => {
   const groupedCards = chunkArray(Jodhpurothercarddata, cardsPerGroup);
 
   return (
-    <div className="max-w-7xl mx-auto p-6 mt-6">
+    <div className="max-w-7xl mx-4 xl:mx-auto mt-6">
       <div>
         <h2 className="font-bold text-3xl text-left">
           Other Attractions in Jodhpur
         </h2>
       </div>
 
-      <div className="mt-4">
+      <div className="">
         <Carousel theme={customTheme} slideInterval={2000} pauseOnHover>
           {groupedCards.map((group, index) => (
             <div key={index} className="flex justify-center gap-5 h-auto">
               {group.map((card, cardIndex) => (
                 <div key={cardIndex} className="rounded-md w-80">
-                  <div className="card-container h-72 w-full">
-                    {" "}
-                    {/* Adjusted height */}
+                  <div className="card-container h-72 w-full"> {/* Adjusted height */}
                     <div className="img-container">
                       <div className="relative group h-52 w-full">
                         <img
@@ -101,4 +99,5 @@ const Jodhpurothercard = () => {
   );
 };
 
-export default Jodhpurothercard;
+export default JodhpurOtherCard;
+

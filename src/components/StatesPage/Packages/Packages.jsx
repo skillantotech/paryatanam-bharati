@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { PackagesData } from "../../../Data/StatesData/PackagesData";
+import { Link } from "react-router-dom";
 
 function Packages() {
   const [visibleItems, setVisibleItems] = useState(4); // Show 4 items initially
@@ -24,10 +25,10 @@ function Packages() {
         </div>
         <div className="grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 place-items-center transition-all duration-500">
           {PackagesData.slice(0, visibleItems).map((sell, index) => (
-            <div key={index} className="h-48 w-60 mt-6">
-              <div className="h-32 w-60">
+            <Link to={"place-details"} key={index} className="h-48 w-60 mt-6 group">
+              <div className="h-32 w-60 overflow-hidden">
                 <img
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover group-hover:scale-105 duration-300 ease-in-out"
                   src={sell.thumbnail}
                   alt={sell.days}
                 />
@@ -37,7 +38,7 @@ function Packages() {
                 <div className="border-l-4 border-blue-500"></div>
                 <p className="pt-2 ml-4">{sell.desc}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="flex justify-center mt-16">

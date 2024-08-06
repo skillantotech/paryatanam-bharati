@@ -1,26 +1,34 @@
+import { Breadcrumb } from "flowbite-react";
 import { HiHome } from "react-icons/hi";
-import { Link } from "react-router-dom";
+
+const customTheme = {
+  root: {
+    base: "",
+    list: "flex items-center",
+  },
+  item: {
+    base: "group flex items-center",
+    chevron: "mx-1 h-4 w-4 text-gray-400 group-first:hidden md:mx-2",
+    href: {
+      off: "flex items-center text-base font-medium text-gray-500 dark:text-gray-500",
+      on: "flex items-center text-base font-medium text-gray-700 hover:text-gray-900 dark:text-gray-700 dark:hover:text-gray-900",
+    },
+    icon: "mr-2 h-4 w-4",
+  },
+};
 
 const Breadcrumbs = () => {
   return (
-    <div className="max-w-7xl mx-4 xl:mx-auto flex flex-row items-center justify-start gap-2 text-base font-semibold text-blue-500 mt-4">
-      <Link
-        to={"/"}
-        className="item flex items-center gap-2 text-gray-500 hover:text-gray-700 duration-150"
-      >
-        <HiHome />
+    <Breadcrumb
+      theme={customTheme}
+      className="max-w-7xl mx-8 xl:mx-auto mt-10"
+      aria-label="Breadcrumb"
+    >
+      <Breadcrumb.Item href="#" icon={HiHome}>
         Home
-      </Link>
-      /
-      <Link
-        to={"/discover-india/place"}
-        className="item flex items-center gap-2 text-gray-500 hover:text-gray-700 duration-150"
-      >
-        StatesPage
-      </Link>
-      /
-      <div className="item text-gray-900">PlaceDetails</div>
-    </div>
+      </Breadcrumb.Item>
+      <Breadcrumb.Item>State</Breadcrumb.Item>
+    </Breadcrumb>  
   );
 };
 
