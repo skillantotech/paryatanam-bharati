@@ -6,7 +6,8 @@ import Toptouristcard from "../../components/PlaceDetailsPage/Toptouristcard/Top
 import Packagesrajastancard from "../../components/PlaceDetailsPage/Packagerajasthancard/Packagesrajastancard";
 import InclusionExclusionTabs from "../../components/PlaceDetailsPage/InclusionExclusionTabs/InclusionExclusionTabs";
 import Jodhpurholidaycard from "../../components/PlaceDetailsPage/Jodhpurholidaycard/Jodhpurholidaycard";
-import JodhpurOtherCard from "../../components/PlaceDetailsPage/JodhpurOtherCard/JodhpurOtherCard";
+// import JodhpurOtherCard from "../../components/PlaceDetailsPage/JodhpurOtherCard/JodhpurOtherCard";
+import OtherTravelPackages from "../../components/PlaceDetailsPage/OtherTravelPackages/OtherTravelPackages";
 import Hoteljodhpurcard from "../../components/PlaceDetailsPage/Hoteljodhpurcard/Hoteljodhpurcard";
 import Rajastantravelcard from "../../components/PlaceDetailsPage/Rajasthantravelcard/Rajastantravelcard";
 import BlogSection from "../../components/PlaceDetailsPage/BlogSection/BlogSection";
@@ -21,11 +22,12 @@ const PlaceDetailsPage = () => {
       <Breadcrumbs />
       <HeroSection />
       <Itinerary />
+      <InclusionExclusionTabs />
       <Toptouristcard />
       <Packagesrajastancard />
-      <InclusionExclusionTabs />
       <Jodhpurholidaycard />
-      <JodhpurOtherCard />
+      {/* <JodhpurOtherCard /> */}
+      <OtherTravelPackages/>
       <Hoteljodhpurcard />
       <Rajastantravelcard />
       <BlogSection />
