@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Rajastantravelcarddata } from "../../../Data/StateDetailsData/Rajastantravelcarddata";
 import { Carousel } from "flowbite-react";
 
@@ -82,7 +82,7 @@ const Rajastantravelcard = () => {
                   <h3 className="absolute z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl text-white font-bold">
                     {card.headingname}
                   </h3>
-                  <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                 </div>
               ))}
             </div>
