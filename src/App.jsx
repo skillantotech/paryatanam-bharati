@@ -20,6 +20,8 @@ import BlogDetails from "./components/BlogDetailsPage/BlogDetails";
 import PlaceDetailsPage from "./pages/PlaceDetailsPage/PlaceDetailsPage";
 import PackagesPage from "./pages/PackagesPage/PackagesPage";
 import CultureDetailsPage from "./pages/CultureDetailsPage/CultureDetailsPage";
+import Railways from "./pages/TransportationPage/Railways";
+import TransportAir from "./pages/TransportationPage/TransportAir";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -33,6 +35,10 @@ const router = createBrowserRouter(
             <Route path="" element={<StatesPage />} />
             <Route path="place-details" element={<PlaceDetailsPage />} />
           </Route>
+
+          <Route path='rail' element={<Railways />} />
+          <Route path='air' element={<TransportAir/>} />
+
 
           <Route path="packages">
             <Route path="" element={<PackagesPage />} />

@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 // import Breadcrumbs from "../../components/StatesPage/Breadcrumbs/Breadcrumbs";
 import Hero from "../../components/StatesPage/HeroSection/Hero";
+import HillStationSlider from "../../components/StatesPage/HillStationSlider/HillStationSlider";
 import Overview from "../../components/StatesPage/Overview/Overview";
+// import HeadlineCards from "../../components/StatesPage/HeadlineCards/HeadlineCards";
 // import BestTimeToVisit from "../../components/StatesPage/BestTimeToVisit/BestTimeToVisit";
 import Packages from "../../components/StatesPage/Packages/Packages";
 import CardSection from "../../components/StatesPage/CardSection/CardSection";
@@ -16,7 +18,6 @@ import ExploreCard from "../../components/StatesPage/ExploreCard/ExploreCard";
 import QuickLinks from "../../components/StatesPage/QuickLinks/QuickLinks";
 import { Link } from "react-router-dom";
 import { HiHome } from "react-icons/hi";
-import Headlinecards from "../../components/StatesPage/Headlinecards/Headlinecards";
 // import CardContainer from "../../components/StatesPage/CardContainer/CardContainer";
 
 const StatesPage = () => {
@@ -27,7 +28,7 @@ const StatesPage = () => {
   return (
     <div>
       <Hero />
-      <Headlinecards/>
+      <HillStationSlider />
       {/* Breadcrumbs */}
       <div className="max-w-7xl mx-4 xl:mx-auto flex flex-row items-center justify-start gap-2 text-base font-semibold text-blue-500">
             <Link to={"/"} className="item flex items-center gap-2 text-gray-500 hover:text-gray-700 duration-150">
@@ -38,21 +39,18 @@ const StatesPage = () => {
           </div>
           {/* Breadcrumb Ends */}
       <Overview />
+      {/* <HeadlineCards/> */}
       {/* <BestTimeToVisit/> */}
       <Packages />
       <CardSection />
       {/* <HowToReach/> */}
       <StateInfo />
-
       <StateFAQs />
-
       <Tourist />
       {/* <Slider/> */}
       {/* <HolidayCard/> */}
       <ExploreCard />
       <Travel />
-
-
       <QuickLinks />
       {/* <div className="bg-gray-800 min-h-screen flex items-center justify-center">
     <CardContainer/>
