@@ -32,7 +32,7 @@ const customTheme = {
   },
 };
 
-const JodhpurOtherCard = () => {
+const OtherTravelPackages = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const updateWindowWidth = () => {
@@ -99,5 +99,5 @@ const JodhpurOtherCard = () => {
   );
 };
 
-export default JodhpurOtherCard;
+export default OtherTravelPackages;
 
