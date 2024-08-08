@@ -17,12 +17,13 @@ const cities = [
   { id: 12, city: "Bhopal", state: "Madhya Pradesh", country: "India" },
 ];
 
-const Cabs = () => {
+const TransportAir = () => {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [fromSuggestions, setFromSuggestions] = useState([]);
   const [toSuggestions, setToSuggestions] = useState([]);
   //   const [cityID, setCityID] = useState(1);
+  //   const [specialFare, setSpecialFare] = useState("");
 
   const fromRef = useRef(null);
   const toRef = useRef(null);
@@ -60,6 +61,7 @@ const Cabs = () => {
   const selectFromSuggestion = (city) => {
     setFrom(city.city);
     setFromSuggestions([]);
+    // setCityID(city.id);
   };
 
   const selectToSuggestion = (city) => {
@@ -97,15 +99,15 @@ const Cabs = () => {
   return (
     <div>
       <section
-        className=" py-20 bg-cover bg-left-top flex items-center justify-center md:h-[85vh]"
+        className="py-20 bg-cover bg-center md:bg-top flex items-center justify-center md:h-[85vh]"
         style={{
           backgroundImage:
-            "url(https://img.freepik.com/free-photo/street-night-with-traffic_73683-2253.jpg?t=st=1723022636~exp=1723026236~hmac=41d37896ea4aed7fcae42d079fc1d7bab1c2033c597873e9b00d2d3681554b2e&w=1060)",
+            "url(https://img.freepik.com/premium-photo/plane-with-word-s-tail_910054-3196.jpg)",
         }}
       >
-        <div className="max-w-7xl mx-4 xl:mx-auto flex flex-col  gap-10 py-10 px-6 md:p-20 rounded-lg bg-black/50 bg-opacity-5 shadow-lg backdrop-blur-sm border border-white border-opacity-20 ">
+        <div className="max-w-7xl mx-4 xl:mx-auto flex flex-col gap-10 py-10 px-6 md:p-20 rounded-lg bg-black bg-opacity-5 shadow-lg backdrop-blur-sm border border-white border-opacity-20">
           <h2 className="flex flex-col gap-2 text-3xl md:text-5xl font-bold text-center text-white">
-            Book a Cab!
+            Book Your Flight!
             <span className="text-xl md:text-xl font-normal text-center text-gray-100">
               Travel anywhere with discounts & offers from Paryatanam Bharati
             </span>
@@ -113,7 +115,7 @@ const Cabs = () => {
           <form className="space-y-4 flex flex-col gap-5 items-center">
             <div className="flex flex-col gap-4 md:gap-10 md:flex-row justify-center w-full items-center md:px-4">
               <div
-                className="relative w-full border border-gray-400 rounded-lg text-white bg-gray-400/20 "
+                className="relative w-full border border-gray-400 rounded-lg text-white bg-gray-400/20"
                 ref={fromRef}
               >
                 <label
@@ -129,26 +131,21 @@ const Cabs = () => {
                   value={from}
                   autoComplete="off"
                   onChange={handleFromChange}
-                  className="relative block w-full p-4 text-4xl bg-transparent text-white rounded-md shadow-sm focus:outline-none  "
+                  className="relative block w-full p-4 text-4xl bg-transparent text-white rounded-md shadow-sm focus:outline-none"
                 />
                 {fromSuggestions.length > 0 && (
                   <ul className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                     {fromSuggestions.map((city) => (
                       <li
                         key={city.city}
-                        onClick={() => {
-                          selectFromSuggestion(city);
-                          // setCityID(city.id);
-                        }}
-                        className="cursor-pointer select-none py-2 px-4 text-gray-900 hover:bg-indigo-600 hover:text-white"
+                        onClick={() => selectFromSuggestion(city)}
+                        className="cursor-pointer select-none py-2 px-4 text-gray-900 hover:bg-blue-600 hover:text-white"
                       >
                         {city.city}, {city.state}, {city.country}
                       </li>
                     ))}
                   </ul>
                 )}
-
-                {/* <span className="absolute bottom-2 left-4 ">{cities[cityID-1].state}, {cities[cityID-1].country} </span>  */}
               </div>
 
               <div
@@ -173,17 +170,16 @@ const Cabs = () => {
                   id="to"
                   name="to"
                   value={to}
-                  autoComplete="off"
                   onChange={handleToChange}
-                  className=" block w-full p-4 text-4xl bg-transparent rounded-md shadow-sm focus:outline-none  "
+                  className="block w-full p-4 text-4xl bg-transparent rounded-md shadow-sm focus:outline-none"
                 />
                 {toSuggestions.length > 0 && (
                   <ul className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                     {toSuggestions.map((city) => (
                       <li
-                        key={city.city}
+                        key={city.id}
                         onClick={() => selectToSuggestion(city)}
-                        className="cursor-pointer select-none py-2 px-4 text-gray-900 hover:bg-indigo-600 hover:text-white"
+                        className="cursor-pointer select-none py-2 px-4 text-gray-900 hover:bg-blue-600 hover:text-white"
                       >
                         {city.city}, {city.state}, {city.country}
                       </li>
@@ -194,43 +190,57 @@ const Cabs = () => {
             </div>
 
             <div className="flex flex-col w-full md:items-center md:justify-center md:flex-row gap-4">
-              <div>
+              <div className="">
                 <label
                   htmlFor="date"
                   className="block text-md font-medium text-white"
                 >
-                  Date
+                  Departure
                 </label>
-                <select
+                <input
+                  type="date"
                   id="date"
                   name="date"
-                  className="mt-1 block w-full md:min-w-60 p-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none  sm:text-sm"
-                >
-                  <option>Select Date</option>
-                  <option>2024-08-01</option>
-                  <option>2024-08-02</option>
-                  <option>2024-08-03</option>
-                  {/* Add more options as needed */}
-                </select>
+                  className="mt-1 block w-full p-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none sm:text-sm"
+                />
               </div>
 
-              <div>
+              <div className="">
                 <label
-                  htmlFor="type"
+                  htmlFor="return"
                   className="block text-md font-medium text-white"
                 >
-                  Type
+                  Return
+                </label>
+                <input
+                  type="date"
+                  id="return"
+                  name="return"
+                  className="mt-1 block w-full p-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none sm:text-sm"
+                />
+              </div>
+
+              <div className="">
+                <label
+                  htmlFor="travellers"
+                  className="block text-md font-medium text-white"
+                >
+                  Travellers & Class
                 </label>
                 <select
-                  id="type"
-                  name="type"
-                  className="mt-1 block w-full md:min-w-60 p-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none  sm:text-sm"
+                  id="travellers"
+                  name="travellers"
+                  className="mt-1 block w-full p-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none sm:text-sm"
                 >
-                  <option>Select Type</option>
-                  <option>AC</option>
-                  <option>Non-AC</option>
-                  <option>Sleeper</option>
-                  {/* Add more options as needed */}
+                  <option>1 Traveller, Economy</option>
+                  <option>2 Travellers, Economy</option>
+                  <option>3 Travellers, Economy</option>
+                  <option>1 Traveller, Business</option>
+                  <option>2 Travellers, Business</option>
+                  <option>3 Travellers, Business</option>
+                  <option>1 Traveller, First Class</option>
+                  <option>2 Travellers, First Class</option>
+                  <option>3 Travellers, First Class</option>
                 </select>
               </div>
             </div>
@@ -250,4 +260,4 @@ const Cabs = () => {
   );
 };
 
-export default Cabs;
+export default TransportAir;

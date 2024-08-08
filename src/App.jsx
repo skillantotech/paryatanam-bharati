@@ -15,7 +15,7 @@ import ContactPage from "./pages/ContactPage/ContactPage";
 import NotFound from "./pages/NotFound";
 import MainLayout from "./Layouts/MainLayout";
 import StatesPage from "./pages/StatesPage/StatesPage";
-// import Air from "./pages/TransportationPage/Air";
+import Air from "./pages/TransportationPage/Air";
 import Rail from "./pages/TransportationPage/Rail";
 import Bus from "./pages/TransportationPage/Bus";
 import Cabs from "./pages/TransportationPage/Cabs";
@@ -43,7 +43,7 @@ const router = createBrowserRouter(
           </Route> */}
 
           <Route path="transportation">
-          {/* <Route path="air" element={<Air />} /> */}
+          <Route path="air" element={<Air />} />
           <Route path="rail" element={<Rail />} />
           <Route path="bus" element={<Bus />} />
           <Route path="cabs" element={<Cabs />} />
