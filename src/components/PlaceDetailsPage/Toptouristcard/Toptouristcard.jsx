@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Toptouristcarddata } from "../../../Data/StateDetailsData/Toptouristcarddata";
 import { Carousel } from "flowbite-react";
 
@@ -62,7 +62,7 @@ const Toptouristcard = () => {
   const groupedCards = chunkArray(Toptouristcarddata, cardsPerGroup);
 
   return (
-    <div className=" max-w-7xl mx-4 xl:mx-auto mt-4">
+    <div className="max-w-7xl mx-4 xl:mx-auto mt-4 mb-6">
       <div>
         <h2 className="font-bold text-3xl text-left">
           Top Tourist Destinations in Rajasthan

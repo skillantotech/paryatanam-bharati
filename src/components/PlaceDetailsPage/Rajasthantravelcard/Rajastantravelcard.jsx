@@ -68,7 +68,7 @@ const Rajastantravelcard = () => {
         <h2 className="font-bold text-3xl text-center">Travel in Jodhpur</h2>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-8">
         <Carousel theme={customTheme} slideInterval={2000} pauseOnHover>
           {groupedCards.map((group, index) => (
             <div key={index} className="flex gap-5 h-full ">
@@ -77,7 +77,7 @@ const Rajastantravelcard = () => {
                   <img
                     src={card.thumbnail}
                     alt={card.headingname}
-                    className="w-full h-[350px] rounded-lg object-cover transition-transform duration-500 group-hover:blur-[2px]"
+                    className="w-full h-[350px] rounded-lg object-cover transition-transform duration-500 group-hover:blur-[2px] group-hover:scale-105"
                   />
                   <h3 className="absolute z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl text-white font-bold">
                     {card.headingname}

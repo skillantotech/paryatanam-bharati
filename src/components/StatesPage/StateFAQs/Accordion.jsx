@@ -6,7 +6,7 @@ const Accordion = ({ id, question, answer, isOpen, setOpenAccordionId }) => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto mb-4" onClick={toggleAccordion}>
+    <div className="max-w-7xl mx-4 xl:mx-auto mb-4" onClick={toggleAccordion}>
       <div className="w-full h-1 bg-gray-300">
         <div
           className={`h-1 bg-blue-500 ${isOpen ? "w-full" : "w-0"}`}

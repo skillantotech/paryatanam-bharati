@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const BlogSection = () => {
   const blogs = [
     {
@@ -27,23 +29,23 @@ const BlogSection = () => {
         <h2 className="text-2xl font-bold">
           Our Latest Informative Travel Blogs
         </h2>
-        <button className="text-black hover:text-blue-600 font-bold text-lg cursor-pointer relative group transition-all duration-500 ease-in-out">
+        <Link to="/blogs" className="text-black font-bold text-lg cursor-pointer relative group transition-all duration-500 ease-in-out">
           View All Blog
-          <div className="absolute left-0 right-0 bottom-0 h-[3px] bg-blue-500 w-0 group-hover:w-full transition-all duration-300"></div>
-        </button>
+          <div className="absolute left-0 right-0 -bottom-1 h-[3px] bg-blue-500 w-0 group-hover:w-full transition-all duration-300"></div>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {blogs.map((blog, index) => (
           <div
             key={index}
-            className=" bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105"
+            className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 duration-300 group"
           >
-            <div>
+            <div className="h-48 overflow-hidden">
               <img
                 src={blog.imgSrc}
                 alt={blog.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
               />
             </div>
             <div className="p-4">
