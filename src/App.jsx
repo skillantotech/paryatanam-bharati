@@ -23,6 +23,7 @@ import CultureDetailsPage from "./pages/CultureDetailsPage/CultureDetailsPage";
 import Railways from "./pages/TransportationPage/Railways";
 import Bus from "./pages/TransportationPage/Bus";
 import Car from "./pages/TransportationPage/Car";
+import Hotels from "./pages/AccomodationPage/Hotels";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -40,6 +41,8 @@ const router = createBrowserRouter(
           <Route path="rail" element={<Railways />} />
           <Route path="road" element={<Bus />} />
           <Route path="car" element={<Car />} />
+
+          <Route path="hotels" element={<Hotels/>} />
 
           <Route path="packages">
             <Route path="" element={<PackagesPage />} />

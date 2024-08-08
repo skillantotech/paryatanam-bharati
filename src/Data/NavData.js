@@ -198,8 +198,8 @@ export const AccommodationSubMenu = [
     link: "guest-house",
   },
   {
-    submenu_name: "Oyo Rooms",
-    link: "oyo-rooms",
+    submenu_name: "Hotels",
+    link: "hotels",
   },
   {
     submenu_name: "Camping",
