@@ -194,12 +194,12 @@ export const AccommodationSubMenu = [
     link: "self-staying",
   },
   {
-    submenu_name: "Guest House",
-    link: "guest-house",
+    submenu_name: "Hotels",
+    link: "hotels",
   },
   {
-    submenu_name: "Oyo Rooms",
-    link: "oyo-rooms",
+    submenu_name: "Guest House",
+    link: "guest-house",
   },
   {
     submenu_name: "Camping",
@@ -217,12 +217,12 @@ export const TransportationSubMenu = [
     link: "rail",
   },
   {
-    submenu_name: "Road",
-    link: "road",
+    submenu_name: "Bus",
+    link: "bus",
   },
   {
-    submenu_name: "Car",
-    link: "car",
+    submenu_name: "Cabs",
+    link: "cabs",
   },
 ];
 

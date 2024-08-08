@@ -10,12 +10,16 @@ import SignUp from "./pages/SignUp/SignUp";
 import About from "./pages/About";
 import ArtAndCulturePage from "./pages/ArtAndCulturePage/ArtAndCulturePage";
 import CuisinePage from "./pages/CuisinePage/CuisinePage";
-import BlogsPage from "./pages/BlogsPage/BlogsPage";
 import FAQsPage from "./pages/FAQsPage/FAQsPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import NotFound from "./pages/NotFound";
 import MainLayout from "./Layouts/MainLayout";
 import StatesPage from "./pages/StatesPage/StatesPage";
+// import Air from "./pages/TransportationPage/Air";
+import Rail from "./pages/TransportationPage/Rail";
+import Bus from "./pages/TransportationPage/Bus";
+import Cabs from "./pages/TransportationPage/Cabs";
+import BlogsPage from "./pages/BlogsPage/BlogsPage";
 import BlogDetails from "./components/BlogDetailsPage/BlogDetails";
 import PlaceDetailsPage from "./pages/PlaceDetailsPage/PlaceDetailsPage";
 import PackagesPage from "./pages/PackagesPage/PackagesPage";
@@ -32,6 +36,17 @@ const router = createBrowserRouter(
           <Route path="discover-india/place">
             <Route path="" element={<StatesPage />} />
             <Route path="place-details" element={<PlaceDetailsPage />} />
+          </Route>
+
+          {/* <Route path="accomodation">
+            <Route path="" element={<Hotels />} />
+          </Route> */}
+
+          <Route path="transportation">
+          {/* <Route path="air" element={<Air />} /> */}
+          <Route path="rail" element={<Rail />} />
+          <Route path="bus" element={<Bus />} />
+          <Route path="cabs" element={<Cabs />} />
           </Route>
 
           <Route path="packages">

@@ -7,8 +7,6 @@ import {
   DiscoverSubMenu,
   TourismSubMenu,
   AccommodationSubMenu,
-  PackagesSubmenu,
-  ServicesSubmenu,
   ExploreSubmenu,
   TransportationSubMenu,
 } from "../../../Data/NavData";
@@ -109,7 +107,7 @@ const NavBar = ({ isSticky }) => {
                             {
                               return (
                                 <Link
-                                  path={submenu.link}
+                                  to={submenu.link}
                                   key={`ArtAndCultureSubmenu${index} `}
                                   className="flex px-3 p-2 font-semibold w-[180px] text-blue-800 hover:bg-gray-100 ease-linear duration-300"
                                 >
@@ -132,7 +130,7 @@ const NavBar = ({ isSticky }) => {
                         <div className="SubMenu flex flex-col justify-between border-t-4 border-blue-500 rounded-b-md bg-white shadow-lg">
                           {TransportationSubMenu.map((submenu, index) => (
                             <Link
-                              path={submenu.link}
+                              to={`transportation/${submenu.link}`}
                               key={`TourismSubMenu${index} `}
                               className="flex p-2 px-3 w-[180px] relative items-center font-semibold text-blue-800 hover:bg-gray-100 ease-linear duration-300"
                             >
