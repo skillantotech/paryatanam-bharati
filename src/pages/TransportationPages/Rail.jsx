@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { CgArrowsExchange } from "react-icons/cg";
-import HandpickedColletion from "../../components/Transportation/HandpickedCollection/HandpickedCollection";
+import HandpickedColletion from "../../components/TransportationPages/HandpickedCollection/HandpickedCollection";
 
 const cities = [
   { id: 1, city: "Mumbai", state: "Maharashtra", country: "India" },
@@ -17,13 +17,12 @@ const cities = [
   { id: 12, city: "Bhopal", state: "Madhya Pradesh", country: "India" },
 ];
 
-const TransportAir = () => {
+const Rail = () => {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [fromSuggestions, setFromSuggestions] = useState([]);
   const [toSuggestions, setToSuggestions] = useState([]);
-  //   const [cityID, setCityID] = useState(1);
-  //   const [specialFare, setSpecialFare] = useState("");
+  // const [cityID, setCityID] = useState(1);
 
   const fromRef = useRef(null);
   const toRef = useRef(null);
@@ -61,7 +60,6 @@ const TransportAir = () => {
   const selectFromSuggestion = (city) => {
     setFrom(city.city);
     setFromSuggestions([]);
-    // setCityID(city.id);
   };
 
   const selectToSuggestion = (city) => {
@@ -99,23 +97,23 @@ const TransportAir = () => {
   return (
     <div>
       <section
-        className="py-20 bg-cover bg-center md:bg-top flex items-center justify-center md:h-[85vh]"
+        className="py-20 bg-cover flex items-center justify-center md:h-[85vh]"
         style={{
           backgroundImage:
-            "url(https://img.freepik.com/premium-photo/plane-with-word-s-tail_910054-3196.jpg)",
+            "url(https://www.pixel4k.com/wp-content/uploads/2022/08/train-railways-dark-evening-photography-4k_1660850522-2048x1365.jpg.webp)",
         }}
       >
         <div className="max-w-7xl mx-4 xl:mx-auto flex flex-col gap-10 py-10 px-6 md:p-20 rounded-lg bg-black bg-opacity-5 shadow-lg backdrop-blur-sm border border-white border-opacity-20">
           <h2 className="flex flex-col gap-2 text-3xl md:text-5xl font-bold text-center text-white">
-            Book Your Flight!
+            Book Your Train!
             <span className="text-xl md:text-xl font-normal text-center text-gray-100">
               Travel anywhere with discounts & offers from Paryatanam Bharati
             </span>
           </h2>
-          <form className="space-y-4 flex flex-col gap-5 items-center">
+          <form className="space-y-4 flex flex-col gap-5 items-center" required>
             <div className="flex flex-col gap-4 md:gap-10 md:flex-row justify-center w-full items-center md:px-4">
               <div
-                className="relative w-full border border-gray-400 rounded-lg text-white bg-gray-400/20"
+                className="relative w-full border border-gray-400 rounded-lg text-white bg-gray-400/20 "
                 ref={fromRef}
               >
                 <label
@@ -138,7 +136,10 @@ const TransportAir = () => {
                     {fromSuggestions.map((city) => (
                       <li
                         key={city.city}
-                        onClick={() => selectFromSuggestion(city)}
+                        onClick={() => {
+                          selectFromSuggestion(city);
+                          // setCityID(city.id);
+                        }}
                         className="cursor-pointer select-none py-2 px-4 text-gray-900 hover:bg-blue-600 hover:text-white"
                       >
                         {city.city}, {city.state}, {city.country}
@@ -146,6 +147,8 @@ const TransportAir = () => {
                     ))}
                   </ul>
                 )}
+
+                {/* <span className="absolute bottom-2 left-4 ">{cities[cityID-1].state}, {cities[cityID-1].country} </span>  */}
               </div>
 
               <div
@@ -170,6 +173,7 @@ const TransportAir = () => {
                   id="to"
                   name="to"
                   value={to}
+                  autoComplete="off"
                   onChange={handleToChange}
                   className="block w-full p-4 text-4xl bg-transparent rounded-md shadow-sm focus:outline-none"
                 />
@@ -177,7 +181,7 @@ const TransportAir = () => {
                   <ul className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                     {toSuggestions.map((city) => (
                       <li
-                        key={city.id}
+                        key={city.city}
                         onClick={() => selectToSuggestion(city)}
                         className="cursor-pointer select-none py-2 px-4 text-gray-900 hover:bg-blue-600 hover:text-white"
                       >
@@ -190,57 +194,63 @@ const TransportAir = () => {
             </div>
 
             <div className="flex flex-col w-full md:items-center md:justify-center md:flex-row gap-4">
-              <div className="">
+              <div>
                 <label
                   htmlFor="date"
                   className="block text-md font-medium text-white"
                 >
-                  Departure
-                </label>
-                <input
-                  type="date"
-                  id="date"
-                  name="date"
-                  className="mt-1 block w-full p-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none sm:text-sm"
-                />
-              </div>
-
-              <div className="">
-                <label
-                  htmlFor="return"
-                  className="block text-md font-medium text-white"
-                >
-                  Return
-                </label>
-                <input
-                  type="date"
-                  id="return"
-                  name="return"
-                  className="mt-1 block w-full p-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none sm:text-sm"
-                />
-              </div>
-
-              <div className="">
-                <label
-                  htmlFor="travellers"
-                  className="block text-md font-medium text-white"
-                >
-                  Travellers & Class
+                  Date
                 </label>
                 <select
-                  id="travellers"
-                  name="travellers"
-                  className="mt-1 block w-full p-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none sm:text-sm"
+                  id="date"
+                  name="date"
+                  className="mt-1 block w-full p-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none  sm:text-sm"
                 >
-                  <option>1 Traveller, Economy</option>
-                  <option>2 Travellers, Economy</option>
-                  <option>3 Travellers, Economy</option>
-                  <option>1 Traveller, Business</option>
-                  <option>2 Travellers, Business</option>
-                  <option>3 Travellers, Business</option>
-                  <option>1 Traveller, First Class</option>
-                  <option>2 Travellers, First Class</option>
-                  <option>3 Travellers, First Class</option>
+                  <option>Select Date</option>
+                  <option>2024-08-01</option>
+                  <option>2024-08-02</option>
+                  <option>2024-08-03</option>
+                  {/* Add more options as needed */}
+                </select>
+              </div>
+
+              <div>
+                <label
+                  htmlFor="class"
+                  className="block text-md font-medium text-white"
+                >
+                  Class
+                </label>
+                <select
+                  id="class"
+                  name="class"
+                  className="mt-1 block w-full p-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none  sm:text-sm"
+                >
+                  <option>Select Class</option>
+                  <option>First Class</option>
+                  <option>Second Class</option>
+                  <option>Third Class</option>
+                  {/* Add more options as needed */}
+                </select>
+              </div>
+
+              <div>
+                <label
+                  htmlFor="type"
+                  className="block text-md font-medium text-white"
+                >
+                  Type
+                </label>
+                <select
+                  id="type"
+                  name="type"
+                  className="mt-1 block w-full p-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none  sm:text-sm"
+                >
+                  <option>Select Type</option>
+                  <option>AC</option>
+                  <option>Non-AC</option>
+                  <option>Sleeper</option>
+                  {/* Add more options as needed */}
                 </select>
               </div>
             </div>
@@ -260,4 +270,4 @@ const TransportAir = () => {
   );
 };
 
-export default TransportAir;
+export default Rail;

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { CgArrowsExchange } from "react-icons/cg";
-import HandpickedColletion from "../../components/Transportation/HandpickedCollection/HandpickedCollection";
+import HandpickedColletion from "../../components/TransportationPages/HandpickedCollection/HandpickedCollection";
 
 const cities = [
   { id: 1, city: "Mumbai", state: "Maharashtra", country: "India" },
@@ -17,12 +17,12 @@ const cities = [
   { id: 12, city: "Bhopal", state: "Madhya Pradesh", country: "India" },
 ];
 
-const Rail = () => {
+const Cabs = () => {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [fromSuggestions, setFromSuggestions] = useState([]);
   const [toSuggestions, setToSuggestions] = useState([]);
-  // const [cityID, setCityID] = useState(1);
+  //   const [cityID, setCityID] = useState(1);
 
   const fromRef = useRef(null);
   const toRef = useRef(null);
@@ -97,20 +97,20 @@ const Rail = () => {
   return (
     <div>
       <section
-        className="py-20 bg-cover flex items-center justify-center md:h-[85vh]"
+        className=" py-20 bg-cover bg-left-top flex items-center justify-center md:h-[85vh]"
         style={{
           backgroundImage:
-            "url(https://www.pixel4k.com/wp-content/uploads/2022/08/train-railways-dark-evening-photography-4k_1660850522-2048x1365.jpg.webp)",
+            "url(https://img.freepik.com/free-photo/street-night-with-traffic_73683-2253.jpg?t=st=1723022636~exp=1723026236~hmac=41d37896ea4aed7fcae42d079fc1d7bab1c2033c597873e9b00d2d3681554b2e&w=1060)",
         }}
       >
-        <div className="max-w-7xl mx-4 xl:mx-auto flex flex-col gap-10 py-10 px-6 md:p-20 rounded-lg bg-black bg-opacity-5 shadow-lg backdrop-blur-sm border border-white border-opacity-20">
+        <div className="max-w-7xl mx-4 xl:mx-auto flex flex-col  gap-10 py-10 px-6 md:p-20 rounded-lg bg-black/50 bg-opacity-5 shadow-lg backdrop-blur-sm border border-white border-opacity-20 ">
           <h2 className="flex flex-col gap-2 text-3xl md:text-5xl font-bold text-center text-white">
-            Book Your Train!
+            Book a Cab!
             <span className="text-xl md:text-xl font-normal text-center text-gray-100">
               Travel anywhere with discounts & offers from Paryatanam Bharati
             </span>
           </h2>
-          <form className="space-y-4 flex flex-col gap-5 items-center" required>
+          <form className="space-y-4 flex flex-col gap-5 items-center">
             <div className="flex flex-col gap-4 md:gap-10 md:flex-row justify-center w-full items-center md:px-4">
               <div
                 className="relative w-full border border-gray-400 rounded-lg text-white bg-gray-400/20 "
@@ -129,7 +129,7 @@ const Rail = () => {
                   value={from}
                   autoComplete="off"
                   onChange={handleFromChange}
-                  className="relative block w-full p-4 text-4xl bg-transparent text-white rounded-md shadow-sm focus:outline-none"
+                  className="relative block w-full p-4 text-4xl bg-transparent text-white rounded-md shadow-sm focus:outline-none  "
                 />
                 {fromSuggestions.length > 0 && (
                   <ul className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
@@ -140,7 +140,7 @@ const Rail = () => {
                           selectFromSuggestion(city);
                           // setCityID(city.id);
                         }}
-                        className="cursor-pointer select-none py-2 px-4 text-gray-900 hover:bg-blue-600 hover:text-white"
+                        className="cursor-pointer select-none py-2 px-4 text-gray-900 hover:bg-indigo-600 hover:text-white"
                       >
                         {city.city}, {city.state}, {city.country}
                       </li>
@@ -175,7 +175,7 @@ const Rail = () => {
                   value={to}
                   autoComplete="off"
                   onChange={handleToChange}
-                  className="block w-full p-4 text-4xl bg-transparent rounded-md shadow-sm focus:outline-none"
+                  className=" block w-full p-4 text-4xl bg-transparent rounded-md shadow-sm focus:outline-none  "
                 />
                 {toSuggestions.length > 0 && (
                   <ul className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
@@ -183,7 +183,7 @@ const Rail = () => {
                       <li
                         key={city.city}
                         onClick={() => selectToSuggestion(city)}
-                        className="cursor-pointer select-none py-2 px-4 text-gray-900 hover:bg-blue-600 hover:text-white"
+                        className="cursor-pointer select-none py-2 px-4 text-gray-900 hover:bg-indigo-600 hover:text-white"
                       >
                         {city.city}, {city.state}, {city.country}
                       </li>
@@ -204,32 +204,12 @@ const Rail = () => {
                 <select
                   id="date"
                   name="date"
-                  className="mt-1 block w-full p-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none  sm:text-sm"
+                  className="mt-1 block w-full md:min-w-60 p-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none  sm:text-sm"
                 >
                   <option>Select Date</option>
                   <option>2024-08-01</option>
                   <option>2024-08-02</option>
                   <option>2024-08-03</option>
-                  {/* Add more options as needed */}
-                </select>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="class"
-                  className="block text-md font-medium text-white"
-                >
-                  Class
-                </label>
-                <select
-                  id="class"
-                  name="class"
-                  className="mt-1 block w-full p-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none  sm:text-sm"
-                >
-                  <option>Select Class</option>
-                  <option>First Class</option>
-                  <option>Second Class</option>
-                  <option>Third Class</option>
                   {/* Add more options as needed */}
                 </select>
               </div>
@@ -244,7 +224,7 @@ const Rail = () => {
                 <select
                   id="type"
                   name="type"
-                  className="mt-1 block w-full p-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none  sm:text-sm"
+                  className="mt-1 block w-full md:min-w-60 p-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none  sm:text-sm"
                 >
                   <option>Select Type</option>
                   <option>AC</option>
@@ -270,4 +250,4 @@ const Rail = () => {
   );
 };
 
-export default Rail;
+export default Cabs;

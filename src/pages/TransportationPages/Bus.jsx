@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { CgArrowsExchange } from "react-icons/cg";
-import HandpickedColletion from "../../components/Transportation/HandpickedCollection/HandpickedCollection";
+import HandpickedColletion from "../../components/TransportationPages/HandpickedCollection/HandpickedCollection";
 
 const cities = [
   { id: 1, city: "Mumbai", state: "Maharashtra", country: "India" },
@@ -17,7 +17,7 @@ const cities = [
   { id: 12, city: "Bhopal", state: "Madhya Pradesh", country: "India" },
 ];
 
-const Cabs = () => {
+const Bus = () => {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [fromSuggestions, setFromSuggestions] = useState([]);
@@ -97,15 +97,15 @@ const Cabs = () => {
   return (
     <div>
       <section
-        className=" py-20 bg-cover bg-left-top flex items-center justify-center md:h-[85vh]"
+        className=" py-20 bg-cover bg-center flex items-center justify-center md:h-[85vh]"
         style={{
           backgroundImage:
-            "url(https://img.freepik.com/free-photo/street-night-with-traffic_73683-2253.jpg?t=st=1723022636~exp=1723026236~hmac=41d37896ea4aed7fcae42d079fc1d7bab1c2033c597873e9b00d2d3681554b2e&w=1060)",
+            "url(https://images.pexels.com/photos/6307071/pexels-photo-6307071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
         }}
       >
         <div className="max-w-7xl mx-4 xl:mx-auto flex flex-col  gap-10 py-10 px-6 md:p-20 rounded-lg bg-black/50 bg-opacity-5 shadow-lg backdrop-blur-sm border border-white border-opacity-20 ">
           <h2 className="flex flex-col gap-2 text-3xl md:text-5xl font-bold text-center text-white">
-            Book a Cab!
+            Book Your Bus!
             <span className="text-xl md:text-xl font-normal text-center text-gray-100">
               Travel anywhere with discounts & offers from Paryatanam Bharati
             </span>
@@ -250,4 +250,4 @@ const Cabs = () => {
   );
 };
 
-export default Cabs;
+export default Bus;
