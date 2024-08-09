@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { placeList1, placeList2 } from "../../../Data/HeroBestPlaces";
+import { Link } from "react-router-dom";
 
 const MarqueeSection = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -17,8 +18,8 @@ const MarqueeSection = () => {
           className="scrollbar flex items-center justify-center md:justify-end [&_a]:mx-6 animate-scrollX"
         >
           {placeList1.map((place, index) => (
-            <a
-              href="#"
+            <Link
+              to={"place-details"}
               key={index}
               className="scrollbar-image-container group relative h-24 lg:h-28 w-32 lg:w-36 transition-all duration-300 hover:scale-105 shadow-md shadow-slate-500 border-2 rounded-sm overflow-hidden"
             >
@@ -30,7 +31,7 @@ const MarqueeSection = () => {
               <div className="visible group-hover:absolute inset-0 group-hover:bg-black/50 h-full text-white flex items-center justify-center">
                 <div className={place.placeName.length > 20 ? "text-sm px-1" : "text-base"}>{place.placeName}</div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
         {/* Duplicate Scrollbar */}
@@ -41,8 +42,8 @@ const MarqueeSection = () => {
           className="scrollbar flex items-center justify-center md:justify-end [&_a]:mx-6 animate-scrollX"
         >
           {placeList1.map((place, index) => (
-            <a
-              href="#"
+            <Link
+              to={"place-details"}
               key={index}
               className="scrollbar-image-container group relative h-24 lg:h-28 w-32 lg:w-36 transition-all duration-300 hover:scale-105 shadow-md shadow-slate-500 border-2 rounded-sm overflow-hidden"
             >
@@ -54,7 +55,7 @@ const MarqueeSection = () => {
               <div className="visible group-hover:absolute inset-0 group-hover:bg-black/50 h-full text-white flex items-center justify-center">
                 <div className={place.placeName.length > 20 ? "text-sm px-1" : "text-base"}>{place.placeName}</div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
@@ -69,8 +70,8 @@ const MarqueeSection = () => {
           className="scrollbar flex items-center justify-center md:justify-start [&_a]:mx-6 animate-reverseScrollX"
         >
           {placeList2.map((place, index) => (
-            <a
-              href="#"
+            <Link
+              to={"place-details"}
               key={index}
               className="scrollbar-image-container group relative h-24 lg:h-28 w-32 lg:w-36 transition-all duration-300 hover:scale-105 shadow-md shadow-slate-500 border-2 rounded-sm overflow-hidden"
             >
@@ -82,7 +83,7 @@ const MarqueeSection = () => {
               <div className="visible group-hover:absolute inset-0 group-hover:bg-black/50 h-full text-white flex items-center justify-center">
                 <div className={place.placeName.length > 20 ? "text-sm px-1" : "text-base"}>{place.placeName}</div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
         {/* Duplicate Scrollbar */}
@@ -93,8 +94,8 @@ const MarqueeSection = () => {
           className="scrollbar flex items-center justify-center md:justify-start [&_a]:mx-6 animate-reverseScrollX"
         >
           {placeList2.map((place, index) => (
-            <a
-              href="#"
+            <Link
+              to={"place-details"}
               key={index}
               className="scrollbar-image-container group relative h-24 lg:h-28 w-32 lg:w-36 transition-all duration-300 hover:scale-105 shadow-md shadow-slate-500 border-2 rounded-sm overflow-hidden"
             >
@@ -106,7 +107,7 @@ const MarqueeSection = () => {
               <div className="visible group-hover:absolute inset-0 group-hover:bg-black/50 h-full text-white flex items-center justify-center">
                 <div className={place.placeName.length > 20 ? "text-sm px-1" : "text-base"}>{place.placeName}</div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

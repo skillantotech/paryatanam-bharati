@@ -31,7 +31,7 @@ const router = createBrowserRouter(
       <Route path="/">
         <Route element={<MainLayout />}>
           <Route index path="" element={<HomePage />} />
-          <Route path="about" element={<About />} />
+          <Route path="place-details" element={<PlaceDetailsPage />} />
 
           <Route path="discover-india/place">
             <Route path="" element={<StatesPage />} />

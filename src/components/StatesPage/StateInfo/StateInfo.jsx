@@ -222,8 +222,8 @@ const StateInfo = () => {
           <h2 className="text-xl font-bold mb-4">Fill Enquiry Form Below</h2>
           <form
             className="booking"
-            name="contactus"
-            id="contactus"
+            name="contactUs"
+            id="contactUs"
             method="post"
             action=""
           >

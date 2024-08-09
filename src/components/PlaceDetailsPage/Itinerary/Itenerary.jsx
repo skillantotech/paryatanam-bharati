@@ -199,7 +199,7 @@ const Itinerary = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-4 xl:mx-auto  flex flex-col lg:flex-row">
+    <div className="max-w-7xl mx-4 xl:mx-auto flex flex-col lg:flex-row">
       <div className="w-full lg:w-2/3">
         <h3 className="text-3xl font-bold mb-4">Itinerary</h3>
         <div className="">
@@ -274,75 +274,80 @@ const Itinerary = () => {
         </div>
       </div>
       {/* Form */}
-      <div className="w-full lg:w-1/4 lg:ml-8 mt-8 lg:mt-0 sticky top-20 border shadow-lg p-6 rounded-lg bg-white text-left">
-        <h2 className="text-2xl font-bold mb-5 text-gray-800 text-center">
-          Book Now
-        </h2>
-        <form name="contactus" method="post" action="">
-          <div className="mb-5">
-            <label className="block mb-1 text-gray-700">Your Full Name</label>
+      <div className="w-full lg:w-1/4 ml-0 lg:ml-8 mt-8 lg:mt-0 sticky top-20 border shadow-lg p-4 rounded-lg bg-white">
+        <h2 className="text-xl font-bold mb-4">Fill Enquiry Form Below</h2>
+        <form
+          className="booking"
+          name="contactUs"
+          id="contactUs"
+          method="post"
+          action=""
+        >
+          <div className="form-group mb-4">
+            <label className="block mb-2">Full Name</label>
             <input
               type="text"
               name="fname"
               id="to"
-              className="border p-1 w-full rounded-lg focus:ring-2 focus:ring-blue-500"
+              className="border p-2 w-full"
+              placeholder="Your Full Name"
               autoComplete="off"
             />
           </div>
-          <div className="mb-5">
-            <label className="block mb-1 text-gray-700">Tour Description</label>
+          <div className="form-group mb-4">
+            <label className="block mb-2">Tour Description</label>
             <textarea
               name="message"
               id="from"
-              className="border p-1 w-full rounded-lg focus:ring-2 focus:ring-blue-500"
+              className="border p-2 w-full"
+              placeholder="Write your tour description here"
               autoComplete="off"
               rows="4"
+              cols="50"
             ></textarea>
           </div>
-          <div className="mb-5">
-            <label className="block mb-1 text-gray-700">Departure Date</label>
+          <div className="form-half mb-4">
+            <label className="block mb-2">Departure Date</label>
             <Datepicker
               id="datepicker"
               name="date"
-              className="border p-1 w-full rounded-lg focus:ring-2 focus:ring-blue-500"
               theme={DatePickerTheme}
+              className="[&_input]:rounded-none [&_input]:border-gray-200 [&_input]:bg-white"
             />
           </div>
-          <div className="mb-5">
-            <label className="block mb-2 text-gray-700">Number of Days</label>
+          <div className="form-half mb-4">
+            <label className="block mb-2">Number of Days</label>
             <input
-              type="number"
               name="duration_of_stay"
               id="duration_of_stay"
-              className="border p-1 w-full rounded-lg focus:ring-2 focus:ring-blue-500"
+              className="border p-2 w-full"
+              placeholder="Write your number of days here"
               autoComplete="off"
             />
           </div>
-          <div className="mb-5">
-            <label className="block mb-2 text-gray-700">Email</label>
+          <div className="form-group mb-4">
             <input
+              className="border p-2 w-full"
               type="email"
               id="email"
               name="email"
-              className="border p-2 w-full rounded-lg focus:ring-2 focus:ring-blue-500"
               placeholder="Email"
               required
             />
           </div>
-          <div className="mb-5">
-            <label className="block mb-1 text-gray-700">Contact No</label>
+          <div className="form-group mb-4">
             <input
+              className="border p-2 w-full"
               type="tel"
               id="contact"
               name="contact"
-              className="border p-1 w-full rounded-lg focus:ring-2 focus:ring-blue-500"
               placeholder="Contact No"
             />
           </div>
           <input type="hidden" name="itinerary" value="" />
-          <div>
+          <div className="form-group mb-4">
             <button
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg w-full"
+              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded w-full"
               type="submit"
               name="submit"
             >

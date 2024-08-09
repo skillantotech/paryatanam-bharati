@@ -28,7 +28,8 @@ const Breadcrumbs = () => {
         Home
       </Breadcrumb.Item>
       <Breadcrumb.Item>State</Breadcrumb.Item>
-    </Breadcrumb>  
+      <Breadcrumb.Item>Place Details</Breadcrumb.Item>
+    </Breadcrumb>
   );
 };
 
