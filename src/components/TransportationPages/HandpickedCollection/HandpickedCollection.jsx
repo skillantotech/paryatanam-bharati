@@ -77,14 +77,14 @@ const HandpickedCollection = () => {
                   {group.map((item) => (
                     <div
                       key={item.id}
-                      className="w-full md:w-1/2 lg:w-1/5 relative"
+                      className="w-full md:w-1/2 lg:w-1/5 relative overflow-hidden rounded-lg group"
                     >
                       <img
                         src={item.thumbnail}
                         alt={item.tourname}
-                        className="w-full h-[200px] object-cover rounded-lg"
+                        className="w-full h-[200px] object-cover transition-all duration-300 ease-in-out group-hover:scale-105"
                       />
-                      <div className="absolute top-0 left-0 w-full h-[200px] flex items-end justify-center bg-transparent rounded-lg transition-colors duration-300 hover:bg-black/50">
+                      <div className="absolute top-0 left-0 w-full h-[200px] flex items-end justify-center bg-transparent rounded-lg">
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-lg"></div>
                         <h4 className="text-xl text-white font-semibold text-center z-10 mb-2">
                           {item.tourname}
@@ -100,14 +100,14 @@ const HandpickedCollection = () => {
                   {group.map((item) => (
                     <div
                       key={item.id}
-                      className="w-full md:w-1/2 lg:w-1/5 relative"
+                      className="w-full md:w-1/2 lg:w-1/5 relative overflow-hidden rounded-lg group"
                     >
                       <img
                         src={item.thumbnail}
                         alt={item.tourname}
-                        className="w-full h-[200px] object-cover rounded-lg"
+                        className="w-full h-[200px] object-cover transition-all duration-300 ease-in-out group-hover:scale-105"
                       />
-                      <div className="absolute top-0 left-0 w-full h-[200px] flex items-end justify-center bg-transparent rounded-lg transition-colors duration-300 hover:bg-black/50">
+                      <div className="absolute top-0 left-0 w-full h-[200px] flex items-end justify-center bg-transparent rounded-lg">
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-lg"></div>
                         <h4 className="text-xl text-white font-semibold text-center z-10 mb-2">
                           {item.tourname}
@@ -122,14 +122,14 @@ const HandpickedCollection = () => {
                   {group.map((item) => (
                     <div
                       key={item.id}
-                      className="w-full md:w-1/2 lg:w-1/5 relative"
+                      className="w-full md:w-1/2 lg:w-1/5 relative overflow-hidden rounded-lg group"
                     >
                       <img
                         src={item.thumbnail}
                         alt={item.tourname}
-                        className="w-full h-[200px] object-cover rounded-lg"
+                        className="w-full h-[200px] object-cover transition-all duration-300 ease-in-out group-hover:scale-105"
                       />
-                      <div className="absolute top-0 left-0 w-full h-[200px] flex items-end justify-center bg-transparent rounded-lg transition-colors duration-300 hover:bg-black/50">
+                      <div className="absolute top-0 left-0 w-full h-[200px] flex items-end justify-center bg-transparent rounded-lg">
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-lg"></div>
                         <h4 className="text-xl text-white font-semibold text-center z-10 mb-2">
                           {item.tourname}

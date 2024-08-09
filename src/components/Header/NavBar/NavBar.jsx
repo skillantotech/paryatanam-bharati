@@ -107,8 +107,8 @@ const NavBar = ({ isSticky }) => {
                             {
                               return (
                                 <Link
-                                  to={submenu.link}
-                                  key={`ArtAndCultureSubmenu${index} `}
+                                  to={`accomodation/${submenu.link}`}
+                                  key={`AccomodationSubMenu${index} `}
                                   className="flex px-3 p-2 font-semibold w-[180px] text-blue-800 hover:bg-gray-100 ease-linear duration-300"
                                 >
                                   {submenu.submenu_name}

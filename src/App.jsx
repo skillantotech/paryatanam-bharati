@@ -23,6 +23,7 @@ import BlogDetails from "./components/BlogDetailsPage/BlogDetails";
 import PlaceDetailsPage from "./pages/PlaceDetailsPage/PlaceDetailsPage";
 import PackagesPage from "./pages/PackagesPage/PackagesPage";
 import CultureDetailsPage from "./pages/CultureDetailsPage/CultureDetailsPage";
+import Hotels from "./pages/AccomodationPage/Hotels";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -37,15 +38,18 @@ const router = createBrowserRouter(
             <Route path="place-details" element={<PlaceDetailsPage />} />
           </Route>
 
-          {/* <Route path="accomodation">
-            <Route path="" element={<Hotels />} />
-          </Route> */}
+          <Route path="accomodation">
+            <Route path="self-staying" element={<Hotels />} />
+            <Route path="hotels" element={<Hotels />} />
+            <Route path="guest-house" element={<Hotels />} />
+            <Route path="camping" element={<Hotels />} />
+          </Route>
 
           <Route path="transportation">
-          <Route path="air" element={<Air />} />
-          <Route path="rail" element={<Rail />} />
-          <Route path="bus" element={<Bus />} />
-          <Route path="cabs" element={<Cabs />} />
+            <Route path="air" element={<Air />} />
+            <Route path="rail" element={<Rail />} />
+            <Route path="bus" element={<Bus />} />
+            <Route path="cabs" element={<Cabs />} />
           </Route>
 
           <Route path="packages">
