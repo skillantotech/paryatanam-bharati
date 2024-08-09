@@ -15,6 +15,5 @@ const ArtAndCulture = () => {
       <Popularartcard />
     </div>
   );
-};
-
-export default ArtAndCulture;
+}
+export default ArtAndCulture
