@@ -1,4 +1,4 @@
-import { HandpickedCollectionData } from "../../../Data/TransportationData/HandpickedCollectionData";
+import { HandpickedCollectionData } from "../../../Data/TransportationData/HandpickedCollectionData.js";
 import { Carousel } from "flowbite-react";
 import { useState, useEffect } from "react";
 
@@ -84,18 +84,18 @@ const HandpickedCollection = () => {
                         alt={item.tourname}
                         className="w-full h-[200px] object-cover rounded-lg"
                       />
-                      <div className="absolute top-0 left-0 w-full h-[200px] flex items-center justify-center bg-transparent rounded-lg transition-colors duration-300 hover:bg-black/50">
+                      <div className="absolute top-0 left-0 w-full h-[200px] flex items-end justify-center bg-transparent rounded-lg transition-colors duration-300 hover:bg-black/50">
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-lg"></div>
-                        <h3 className="text-2xl text-white font-bold text-center z-10">
+                        <h4 className="text-xl text-white font-semibold text-center z-10 mb-2">
                           {item.tourname}
-                        </h3>
+                        </h4>
                       </div>
                     </div>
                   ))}
                 </div>
               ))
             : windowWidth <= 1024
-              ? exploreReview3.map((group, index) => (
+            ? exploreReview3.map((group, index) => (
                 <div key={index} className="flex gap-5 h-full">
                   {group.map((item) => (
                     <div
@@ -107,11 +107,11 @@ const HandpickedCollection = () => {
                         alt={item.tourname}
                         className="w-full h-[200px] object-cover rounded-lg"
                       />
-                      <div className="absolute top-0 left-0 w-full h-[200px] flex items-center justify-center bg-transparent rounded-lg transition-colors duration-300 hover:bg-black/50">
+                      <div className="absolute top-0 left-0 w-full h-[200px] flex items-end justify-center bg-transparent rounded-lg transition-colors duration-300 hover:bg-black/50">
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-lg"></div>
-                        <h3 className="text-2xl text-white font-bold text-center z-10">
+                        <h4 className="text-xl text-white font-semibold text-center z-10 mb-2">
                           {item.tourname}
-                        </h3>
+                        </h4>
                       </div>
                     </div>
                   ))}
@@ -129,11 +129,11 @@ const HandpickedCollection = () => {
                         alt={item.tourname}
                         className="w-full h-[200px] object-cover rounded-lg"
                       />
-                      <div className="absolute top-0 left-0 w-full h-[200px] flex items-center justify-center bg-transparent rounded-lg transition-colors duration-300 hover:bg-black/50">
+                      <div className="absolute top-0 left-0 w-full h-[200px] flex items-end justify-center bg-transparent rounded-lg transition-colors duration-300 hover:bg-black/50">
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-lg"></div>
-                        <h3 className="text-2xl text-white font-bold text-center z-10">
+                        <h4 className="text-xl text-white font-semibold text-center z-10 mb-2">
                           {item.tourname}
-                        </h3>
+                        </h4>
                       </div>
                     </div>
                   ))}

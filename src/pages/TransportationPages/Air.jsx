@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { CgArrowsExchange } from "react-icons/cg";
 import HandpickedColletion from "../../components/TransportationPages/HandpickedCollection/HandpickedCollection";
+import FlightBookingFAQs from "../../components/TransportationPages/TransportationFAQs/FlightBookingFAQs";
 
 const cities = [
   { id: 1, city: "Mumbai", state: "Maharashtra", country: "India" },
@@ -150,7 +151,7 @@ const TransportAir = () => {
 
               <div
                 onClick={() => interChange()}
-                className="flex rotate-90 md:rotate-0 items-center p-2 text-2xl border h-fit rounded-full text-white bg-gray-400/20 cursor-pointer"
+                className="flex rotate-90 md:rotate-0 items-center p-2 text-2xl border h-fit rounded-full text-white bg-gray-800/20 cursor-pointer"
               >
                 <CgArrowsExchange />
               </div>
@@ -256,6 +257,7 @@ const TransportAir = () => {
         </div>
       </section>
       <HandpickedColletion />
+      <FlightBookingFAQs />
     </div>
   );
 };

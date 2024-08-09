@@ -7,7 +7,6 @@ import {
 import HomePage from "./pages/HomePage/HomePage";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
-import About from "./pages/About";
 import ArtAndCulturePage from "./pages/ArtAndCulturePage/ArtAndCulturePage";
 import CuisinePage from "./pages/CuisinePage/CuisinePage";
 import FAQsPage from "./pages/FAQsPage/FAQsPage";

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { CgArrowsExchange } from "react-icons/cg";
 import HandpickedColletion from "../../components/TransportationPages/HandpickedCollection/HandpickedCollection";
+import BusBookingFAQs from "../../components/TransportationPages/TransportationFAQs/BusBookingFAQs";
 
 const cities = [
   { id: 1, city: "Mumbai", state: "Maharashtra", country: "India" },
@@ -246,6 +247,7 @@ const Bus = () => {
         </div>
       </section>
       <HandpickedColletion />
+      <BusBookingFAQs />
     </div>
   );
 };
